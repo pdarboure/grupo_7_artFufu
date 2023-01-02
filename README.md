@@ -18,7 +18,7 @@ WIREFRAMES
 TEMÁTICA DEL SITIO Y PÚBLICO OBJETIVO
 El e-commerce tiene como objetivo la venta de artesanías o productos realizados con herramientas sobre diversos tipos de maderas, especialmente fibrofacil.
 El público objetivo es en primer lugar aquel que se encuentre en el rubro de las artesanías. Es principalmente revendedor de productos, los cuales modifica (pintando, dividiendo, etc.) para agregar valor.
-En segundo lugar, se busca un público que le guste el arte y compra estos productos como a fin de pintarlos como pasatiempo.
+En segundo lugar, se busca un público que le guste el arte y que compra estos productos a fin de pintarlos como pasatiempo.
 
 PÁGINAS MODELO
 - https://www.elreydelfibro.com.ar/
