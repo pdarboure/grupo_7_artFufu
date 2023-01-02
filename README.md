@@ -10,7 +10,7 @@ Agustin Santiago Bauman.
 
 WIREFRAMES
 - Home: https://wireframe.cc/Ti9kMC
-- Detalle del producto: https://wireframe.cc/5p4s9t (V1) / https://wireframe.cc/I8QrQ1 (V2)
+- Detalle del producto: https://wireframe.cc/5p4s9t
 - Login: https://wireframe.cc/0LSvoP
 - Register: https://wireframe.cc/C7V4qt
 - Carrito de compra: https://wireframe.cc/kDQoOo
