@@ -10,6 +10,11 @@ app.listen(8000, function () {
     console.log("Levantando un servidor con Express");
 })
 
+app.get("/", (req, res) => {
+    let htmlPath = path.resolve(__dirname,'./views/home.html')
+    res.sendFile(htmlPath);
+}); 
+
 app.get("/detalleproducto", (req, res) => {
     let htmlPath = path.resolve(__dirname,'./views/detalleproducto.html')
     res.sendFile(htmlPath);
