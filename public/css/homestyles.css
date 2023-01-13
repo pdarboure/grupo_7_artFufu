@@ -31,15 +31,41 @@ main{
     width: 90vw;
     margin:auto;
 }
+
 main section article{
     margin-top: 10px;
     border: solid 1px #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 50vw;
 }
-main section{
-    display: flex;
+
+.all-articles{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
+main section{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+}
+
+section{
+    width: 50vw;
+    border: solid 1px #89437f;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+
+.descripciones{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    border-top: solid 1px black;
+    padding-top: 8px;
+}
+
 main section img {
     width: 20vw;
     width: 100%;
@@ -51,3 +77,11 @@ main section img {
 
 
 /* ------------------------------- BREAKPOINTS - MEDIA QUERIES ------------------------------- */
+@media (min-width: 768px){
+    .all-articles{
+        display:flex;
+    }
+    main section article{
+        width: 15vw
+    }
+}
