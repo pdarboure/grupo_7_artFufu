@@ -36,27 +36,22 @@ main section article{
     margin-top: 10px;
     border: solid 1px #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 50vw;
 }
 
 .all-articles{
     display: block;
-    margin-right: auto;
-    margin-left: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: auto;
 }
 main section{
     margin-top: 30px;
     width: 100%;
     height: auto;
-}
-
-section{
-    width: 50vw;
     border: solid 1px #89437f;
     padding: 10px;
     padding-bottom: 20px;
 }
-
 
 .descripciones{
     display: flex;
@@ -64,6 +59,7 @@ section{
     justify-content: space-between;
     border-top: solid 1px black;
     padding-top: 8px;
+    font-size: 12px;
 }
 
 main section img {
@@ -74,12 +70,48 @@ main section img {
 
 /* ------------------------------------------ FOOTER ------------------------------------------ */
 
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c4ab5f;
+    list-style-type: none;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.links-footer{
+    text-align: center;
+}
+
+.footer-link{
+    margin-bottom: 8px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsletter{
+    text-align: center;
+    font-size: 12px;
+}
 
 /* ------------------------------- BREAKPOINTS - MEDIA QUERIES ------------------------------- */
+@media(max-width: 767px){
+    .logo-footer{
+        display: none;
+    }
+}
+
 @media (min-width: 768px){
     .all-articles{
         display:flex;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     main section article{
         width: 15vw
