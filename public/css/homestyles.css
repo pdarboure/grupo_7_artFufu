@@ -1,0 +1,42 @@
+/* ------------ PALETA DE COLORES ------------
+#5fc4ae
+#43897a
+#c45fb5
+#89437f
+#c4ab5f 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------ HEAD ------------------------------------------ */
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #c4ab5f;
+    width: 100%;
+    padding-bottom: 3px;
+}
+
+
+/* ------------------------------------------ MAIN ------------------------------------------*/
+
+main section article{
+    margin-top: 10px;
+    border: solid 1px #ebebeb;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+/* ------------------------------------------ FOOTER ------------------------------------------ */
+
+
+
+/* ------------------------------- BREAKPOINTS - MEDIA QUERIES ------------------------------- */
