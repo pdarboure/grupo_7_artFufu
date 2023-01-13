@@ -20,20 +20,31 @@ a {
 }
 
 header {
-    background-color: #c4ab5f;
+    background-color: #5fc4ae;
     width: 100%;
     padding-bottom: 3px;
 }
 
 
 /* ------------------------------------------ MAIN ------------------------------------------*/
-
+main{
+    width: 90vw;
+    margin:auto;
+}
 main section article{
     margin-top: 10px;
     border: solid 1px #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 50vw;
 }
-
+main section{
+    display: flex;
+}
+main section img {
+    width: 20vw;
+    width: 100%;
+    height: auto;
+}
 
 /* ------------------------------------------ FOOTER ------------------------------------------ */
 
