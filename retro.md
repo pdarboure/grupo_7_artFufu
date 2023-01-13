@@ -2,7 +2,7 @@ ACTIVIDAD RETROSPECTIVA DEL SPRINT #1
 
 Actividad estrella
 
-  1. Comenzar a hacer: - Comunicarnos Mejor
+  1. Comenzar a hacer: Estoy modificando el retro
 
   2. Hacer más:
 
