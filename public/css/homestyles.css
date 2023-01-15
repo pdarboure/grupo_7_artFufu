@@ -69,6 +69,7 @@ main section img {
 footer {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: #c4ab5f;
     list-style-type: none;
@@ -91,39 +92,52 @@ footer section img{
     text-align: center;
     justify-content: space-around;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .footer-link{
     margin-bottom: 8px;
     color: black;
 }
+footer a{
+    color: black;
+}
 
 .social-icons{
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.footer-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+footer section {
+    text-align: center;
+}
+
+section.form{
+    margin:auto;
 }
 
 .newsletter{
     text-align: center;
     font-size: 12px;
+
 }
 
 /* ------------------------------- BREAKPOINTS - MEDIA QUERIES ------------------------------- */
-@media(max-width: 767px){
+@media(max-width: 480px){
     .logo-footer{
         display: none;
     }
+    section.form{
+        display: none;
+    }
+    .footer-link{
+        margin-bottom: 20px;
+    }
 }
 
-@media (min-width: 768px){
+@media (min-width: 481px){
     .all-articles{
         display:flex;
         justify-content: space-between;
@@ -132,5 +146,23 @@ footer section img{
     }
     main section article{
         width: 15vw
+    }
+    .social-icons{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    footer section {
+        text-align: center;
+        width: 25%;
+    }
+    
+    footer {
+    display: flex;
+    flex-direction: row;
+    }
+    footer p{
+    font-size: 16px;
+    margin-bottom: 20px;
     }
 }
