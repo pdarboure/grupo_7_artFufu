@@ -15,10 +15,6 @@
 
 /* ------------------------------------------ HEAD ------------------------------------------ */
 
-a {
-    text-decoration: none;
-}
-
 header {
     background-color: #5fc4ae;
     width: 100%;
@@ -81,17 +77,38 @@ footer {
     padding-bottom: 20px;
 }
 
+footer section img{
+    border-radius: 50%;
+}
+
+.logo-footer div{
+    border-radius: 50%;
+}
+
 .links-footer{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-link{
     margin-bottom: 8px;
+    color: black;
 }
 
 .social-icons{
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+}
+
+.footer-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .newsletter{
