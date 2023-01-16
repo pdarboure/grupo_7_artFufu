@@ -156,7 +156,6 @@ section.form{
         text-align: center;
         width: 25%;
     }
-    
     footer {
     display: flex;
     flex-direction: row;
@@ -164,5 +163,8 @@ section.form{
     footer p{
     font-size: 16px;
     margin-bottom: 20px;
+    }
+    footer .fa-brands{
+        font-size: 20px;
     }
 }
