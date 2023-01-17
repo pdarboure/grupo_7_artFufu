@@ -6,7 +6,7 @@ let path = require("path")
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(8000, function () {
+app.listen(3007, function () {
     console.log("Levantando un servidor con Express");
 })
 
