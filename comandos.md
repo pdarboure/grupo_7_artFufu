@@ -13,8 +13,9 @@ MODULO 2 - Metodologias agiles (GitHub)
     - git remote add origin URL
         o tambien: git clone URL (solo la primera vez que no tenemos los archivos descargados)
     - rm -fr .git (borra la carpeta repositorio de git)
+
         - GIT COMANDOS DEL DIA A DIA:
-            - git pull origin main (actualiza mis archivos desde el repo remoto)
+            - git pull origin main (actualiza mis archivos desde el repo remoto. IMPORTANTE SIEMPRE HACERLO PRIMERO) 
             - git add file.html (guarda los cambios hechos en el repo local)
             - git commit -m ”mensaje” (comitea, o sea, confirma los cambios hechos en el repo local)
             - git push origin main (sube los archivos modificados a la nube)
