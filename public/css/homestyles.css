@@ -59,6 +59,8 @@ html {
 /* ********************************** */
 .container-hero {
 	background-color: var(--background-color);
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 .hero {
@@ -109,14 +111,14 @@ html {
 
 .container-user .fa-user {
 	font-size: 3rem;
-	color:#c4ab5f;
+	color:#5fc4ae;
 	padding-right: 2.5rem;
 	border-right: 1px solid #e2e2e2;
 }
 
 .container-user .fa-basket-shopping {
 	font-size: 3rem;
-	color:#c4ab5f;
+	color:#5fc4ae;
 	padding-left: 1rem;
 }
 
@@ -127,7 +129,9 @@ html {
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background-color:#c4ab5f;
+	background-color:#5fc4ae;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 .navbar {
@@ -208,7 +212,7 @@ html {
 
 .search-form .btn-search {
 	border: none;
-	background-color:#c4ab5f;
+	background-color:#5fc4ae;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -239,6 +243,11 @@ html {
 main{
     width: 90vw;
     margin:auto;
+	margin-bottom: 20px;
+}
+
+main section h3{
+	font-size: 2rem;
 }
 
 main section article{
@@ -248,16 +257,16 @@ main section article{
 }
 
 .all-articles{
-    display: block;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: auto;
+    display: flex;
+	justify-content: space-around;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 main section{
     margin-top: 30px;
     width: 100%;
     height: auto;
-    border: solid 1px #89437f;
+    border: solid 1px rgb(100, 100, 100);
     padding: 10px;
     padding-bottom: 20px;
 }
@@ -273,7 +282,6 @@ main section{
 
 main section img {
     width: 20vw;
-    width: 100%;
     height: auto;
 }
 
@@ -549,9 +557,9 @@ section.form{
 	font-size: 1.6rem;
 }
 
-/* ********************************** */
-/*       MEDIA QUERIES -- 768px       */
-/* ********************************** */
+/* ********************************************* */
+/*       MEDIA QUERIES -- 768px -- TABLETS       */
+/* ********************************************* */
 @media (max-width: 768px) {
 	html {
 		font-size: 55%;
@@ -650,6 +658,16 @@ section.form{
 		align-items: center;
 		gap: 1.5rem;
 	}
+	.all-articles{
+		display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+	}
+	main section img {
+		width: 40vw;
+	}
+
 }
 
 /* ********************************** */
@@ -752,5 +770,8 @@ section.form{
 
 	.content p{
 		font-size: 1.6rem;
+	}
+	main section img {
+		width: 60vw;
 	}
 }
