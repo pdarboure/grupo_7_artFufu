@@ -243,11 +243,16 @@ html {
 main{
     width: 90vw;
     margin:auto;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
-main section h3{
-	font-size: 2rem;
+main section{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    border: solid 1px rgb(100, 100, 100);
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
 main section article{
@@ -256,19 +261,19 @@ main section article{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+main section h3{
+	font-size: 2rem;
+}
+main section h4{
+	font-size: 1.5rem;
+	padding-right: 3%;
+}
+
 .all-articles{
     display: flex;
 	justify-content: space-around;
     padding-left: 2%;
     padding-right: 2%;
-}
-main section{
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
-    border: solid 1px rgb(100, 100, 100);
-    padding: 10px;
-    padding-bottom: 20px;
 }
 
 .descripciones{
@@ -667,7 +672,10 @@ section.form{
 	main section img {
 		width: 40vw;
 	}
-
+	main section h4{
+		font-size: 1.4rem;
+		padding-right: 3%;
+	}
 }
 
 /* ********************************** */
@@ -773,5 +781,9 @@ section.form{
 	}
 	main section img {
 		width: 60vw;
+	}
+	main section h4{
+		font-size: 1.8rem;
+		padding-right: 3%;
 	}
 }
