@@ -12,5 +12,16 @@ Actividad estrella
 
   5. Dejar de hacer:
 
+ACTIVIDAD RETROSPECTIVA DEL SPRINT #2
 
+  Actividad estrella
+
+  1. Comenzar a hacer: Estoy modificando el retro
+
+  2. Hacer más:
+
+  3. Continuar haciendo:
   
+  4. Hacer menos:
+
+  5. Dejar de hacer:
