@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 }); 
 
 app.get("/detalleproducto", (req, res) => {
-    let htmlPath = path.resolve(__dirname,'./views/detalleproducto.html')
+    let htmlPath = path.resolve(__dirname,'./views/detail2.html')
     res.sendFile(htmlPath);
 }); 
 
