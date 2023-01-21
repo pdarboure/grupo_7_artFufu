@@ -1,4 +1,4 @@
-S P R I N T #1
+S P R I N T #
 -------------
 COLABORADORES
 Agustín Darboure, 
