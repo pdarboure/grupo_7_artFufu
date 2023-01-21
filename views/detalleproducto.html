@@ -2,101 +2,335 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/brands.css">
-    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/">
-    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
-    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/solid.css">
-    <script src="https://kit.fontawesome.com/18999ea2fd.js" crossorigin="anonymous"></script>
-    <title>Artistica Fu-fu</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/590d131412.js" crossorigin="anonymous"></script>
+	<title>Artistica FuFu</title>
+	<link rel="stylesheet" href="/css/detalleproducto.css" />
+	<link rel="shortcut icon" href="/images/logo_size.jpg">
 </head>
 
 <body>
-    <header>
-        <!-- <h4>Sobre nosotros</h4>
-<h4>Contacto</h4> -->
+	<header>
+		<div class="container-hero">
+			<div class="container hero">
+				<div class="customer-support">
+					<i class="fa-solid fa-headset"></i>
+					<div class="content-customer-support">
+						<span class="text">Soporte al cliente</span>
+						<span class="number">123-456-7890</span>
+					</div>
+				</div>
 
+				<div class="container-logo">
+					<i class="fa-solid fa-paintbrush"></i>
+					<h1 class="logo"><a href="/">Artistica Fufu</a></h1>
+				</div>
 
-        <img src="/images/logo_size.jpg" alt="logo">
+				<div class="container-user">
+					<a href="/register" target="_blank"><i class="fa-solid fa-user"></i></a>
+					<a href="/carritoDeCompras"> <i class="fa-solid fa-basket-shopping"></i> </a>
+					<div class="content-shopping-cart">
+						<span class="text">Carrito</span>
+						<span class="number">(0)</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<i class="fa-solid fa-bars"></i>
+				<ul class="menu">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Productos</a></li>
+					<li><a href="#">Pinturas</a></li>
+					<li><a href="#">Fibrofacil</a></li>
+					<li><a href="#">Más</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
 
-        <div class="search_bar">
-            <input type="text" placeholder="Que buscás?">
-        </div>
+				<form class="search-form">
+					<input type="search" placeholder="Buscar..." />
+					<button class="btn-search">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+	</header>
 
+	<main class="container-detalles" id="detalles">
+		<article class="detalle-grid">
+			<img src="/images/helado-1321.jpg" class="img-fluid">
+			<div class="detalles-content">
+				<h3 class="nombre-producto">Producto</h3>
+				<div class="rating">
+				</div>
+				<p class="price"><b>Precio: </b> $55.00</p>
+				<p class="description">
+					<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad
+						ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores.
+						Repudiandae delectus iste exercitationem vel?</span>
+				</p>
+				<p class="description">
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates consequuntur in
+						assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam iusto magnam vero maxime
+						quisquam voluptatibus minima aliquam molestias, iure ratione commodi, reiciendis quasi.</span>
+				</p>
+				<div class="bottom">
+					<div class="btn__group">
+						<a>Añadir carrito</a>
+					</div>
+				</div>
+			</div>
+	</main>
 
-        <div> <i class="fa-solid fa-user"></i></div>
-        <div><i class="fa-solid fa-cart-shopping"></i></div>
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="fa-solid fa-plane-up"></i>
+				<div class="feature-content">
+					<span>Envío gratuito a todo el pais</span>
+					<p>En pedido superior a $150</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-wallet"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-gift"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="fa-solid fa-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al 123-456-7890</p>
+				</div>
+			</div>
+		</section>
+		<section class="container top-products">
+			<h1 class="heading-1">Mejores Productos</h1>
 
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span>Más recientes</span>
+				<span>Mejores Vendidos</span>
+			</div>
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="/images/globo-1256.jpg" alt="Cafe Irish" />
+						<span class="discount">-13%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Globo</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$4.60 <span>$5.30</span></p>
+					</div>
+				</div>
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="/images/te-amo-3.jpg" alt="Cafe incafe-ingles.jpg" />
+						<span class="discount">-22%</span>
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Te amo</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$5.70 <span>$7.30</span></p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="/images/pinches-12.jpg" alt="Cafe Australiano" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Pinches</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$3.20</p>
+					</div>
+				</div>
+				<!--  -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="/images/arco-iris-1982.jpg" alt="Cafe Helado" />
+						<div class="button-group">
+							<span>
+								<i class="fa-regular fa-eye"></i>
+							</span>
+							<span>
+								<i class="fa-regular fa-heart"></i>
+							</span>
+							<span>
+								<i class="fa-solid fa-code-compare"></i>
+							</span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Arcoiris</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$5.60</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: Av. Rivadavia 4717, Ciudad de Buenos Aires.
+							</li>
+							<li>Atencion al cliente: 0800-456-7890</li>
+							<li>Whatapp: 11-6778-9698</li>
+							<li>Email: artfufu@soporte.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
 
-        <div class="burger"><i class="fa fa-bars burger"></i></div>
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
 
-    </header>
-    <!-- <section class="banner">
-    <img src="./images/img-home-banner.jpg" alt="Banner de ofertas">
-</section> -->
-    <nav>
-        <h3><a href="#">Home</a></h3>
-        <h3><a href="#">Contact</a></h3>
-        <h3><a href="#">About</a></h3>
-    </nav>
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
 
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
 
-    <main>
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
 
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
 
+				<div class="copyright">
+					<p>
+						Desarrollado por Grupo#7 &copy; 2022
+					</p>
 
-        <img src="/images/10100303.jpg" alt="">
-
-        <div class="main-content-box">
-
-
-            <h1 class="main-title">Casa Americana con 30 muebles para barbie + accesorios de regalo!</h1><br>
-            <h2>$ 5.700</h2><br>
-            <p class="main-text">
-
-                SKU: 101F-INF-100-ST<br><br>
-
-                Medida: 80x60x40cm <br>
-                Material: Mdf de 3mm - Corte Laser<br>
-                Accesorios de regalo: Stickers, muñequitas de madera, sello de goma eva, cola vinilica y un acrilico de
-                50cc.
-                El producto se vende desarmado e incluye instructivo.<br>
-                El Set de muebles Incluye:<br>
-                1 Cama (27x9x9)<br>
-                1 Ropero (18x10x8<br>
-                1 Cuna Grande (14x11x10)<br>
-                1 Perchero (17x17x7)<br>
-                1 Perchero de pie (17x5x5)<br>
-                1 Mesa oval (14x9x8)<br>
-                4 Sillas (12x6x5)<br>
-                1 Placard (11x7x6)<br>
-                1 Mesa Ratona (12x7x3)<br>
-                1 Televisor LED(10x7)<br>
-                1 Sillon 2 cuerpos (9x8x6)<br>
-                1 Sillón 1 cuerpo (4x8x6)<br>
-                1 Heladera con puerta (20x7x7)<br>
-                1 Bajo mesada (14x10x6)<br>
-                1 Cocina con puerta (10x7x7)<br>
-                1 Alacena (18x10x6)<br>
-                1 Lavarropas (10x7x7)<br>
-                1 Microondas (7x4x4)<br>
-                9 Perchas laser<br>
-            </p>
-
-        </div>
-
-
-    </main>
-
-</body>
-
-</html>
+					<img src="/images/payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>

@@ -30,4 +30,8 @@ app.get("/register", (req, res) => {
     res.sendFile(htmlPath);
 }); 
 
+app.get("/carritoDeCompras", (req, res) => {
+    let htmlPath = path.resolve(__dirname,'./views/carritoDeCompras.html')
+    res.sendFile(htmlPath);
+}); 
 app.use(express.static(path.resolve(__dirname, 'public')));
