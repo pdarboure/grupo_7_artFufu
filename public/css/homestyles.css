@@ -525,6 +525,7 @@ section.form{
 	margin-top: 2rem;
 	width: 100%;
 	font-family: inherit;
+	border-radius: 4px solid black;
 }
 
 .content input::-webkit-input-placeholder {
