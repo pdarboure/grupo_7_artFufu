@@ -24,7 +24,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
 
 :root {
-	--primary-color: #c7a17a;
+	--primary-color:#5fc4ae;			/*  #c7a17a; */
 	--background-color: #f9f5f0;
 	--dark-color: #151515;
 }
@@ -397,7 +397,7 @@ section.form{
 
 
 .footer {
-	background-color: #c4ab5f;
+	background-color: #5fc4ae;
 }
 
 .container-footer {
@@ -441,7 +441,7 @@ section.form{
 .information ul li,
 .my-account ul li {
 	list-style: none;
-	color: #fff;
+	color: black;
 	font-size: 1.4rem;
 	font-weight: 300;
 }
@@ -449,7 +449,7 @@ section.form{
 .information ul li a,
 .my-account ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -508,7 +508,7 @@ section.form{
 
 .content p {
 	font-size: 1.4rem;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -516,7 +516,7 @@ section.form{
 	outline: none;
 	background: none;
 	border: none;
-	border-bottom: 2px solid #d2b495;
+	border-bottom: 2px solid #5fc4ae;
 	cursor: pointer;
 	padding: 0.5rem 0 1.2rem;
 	color: var(--dark-color);
@@ -546,7 +546,7 @@ section.form{
 
 .content button:hover {
 	background-color: var(--background-color);
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .copyright {
@@ -554,7 +554,7 @@ section.form{
 	justify-content: space-between;
 	padding-top: 2rem;
 
-	border-top: 1px solid #d2b495;
+	border-top: 1px solid #5fc4ae;
 }
 
 .copyright p {

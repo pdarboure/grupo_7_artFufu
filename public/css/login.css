@@ -109,14 +109,14 @@ cursor: pointer;
 
 .container-user .fa-user {
 font-size: 3rem;
-color:#c4ab5f;
+color:#5fc4ae;
 padding-right: 2.5rem;
 border-right: 1px solid #e2e2e2;
 }
 
 .container-user .fa-basket-shopping {
 font-size: 3rem;
-color:#c4ab5f;
+color:#5fc4ae;
 padding-left: 1rem;
 }
 
@@ -208,7 +208,7 @@ appearance: none;
 
 .search-form .btn-search {
 border: none;
-background-color:#c4ab5f;
+background-color:#5fc4ae;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -384,7 +384,7 @@ section.form{
 
 
 .footer {
-background-color: #c4ab5f;
+background-color:#5fc4ae;
 }
 
 .container-footer {
@@ -428,7 +428,7 @@ gap: 1rem;
 .information ul li,
 .my-account ul li {
 list-style: none;
-color: #fff;
+color: black;
 font-size: 1.4rem;
 font-weight: 300;
 }
@@ -436,13 +436,13 @@ font-weight: 300;
 .information ul li a,
 .my-account ul li a {
 text-decoration: none;
-color: #fff;
+color: black;
 font-weight: 300;
 }
 
 .information ul li a:hover,
 .my-account ul li a:hover {
-color: var(--dark-color);
+color: black;
 }
 
 .social-icons {
@@ -495,7 +495,7 @@ background: linear-gradient(
 
 .content p {
 font-size: 1.4rem;
-color: #fff;
+color: black;
 font-weight: 300;
 }
 
@@ -512,6 +512,7 @@ margin-bottom: 3rem;
 margin-top: 2rem;
 width: 100%;
 font-family: inherit;
+border-radius: 4px;
 }
 
 .content input::-webkit-input-placeholder {
@@ -533,7 +534,7 @@ font-weight: 600;
 
 .content button:hover {
 background-color: var(--background-color);
-color: #c4ab5f;
+color:#5fc4ae;
 }
 
 .copyright {
@@ -541,7 +542,7 @@ display: flex;
 justify-content: space-between;
 padding-top: 2rem;
 
-border-top: 1px solid #d2b495;
+border-top: 1px solid #5fc4ae;
 }
 
 .copyright p {

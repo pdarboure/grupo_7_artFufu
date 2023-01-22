@@ -7,7 +7,7 @@
 header {
     display: flex;
     background-color: #43897a;
-    color: bisque;
+    color:#5fc4ae;
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;

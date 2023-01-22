@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
 
 :root {
-	--primary-color: #c7a17a;
+	--primary-color:#5fc4ae;
 	--background-color: #f9f5f0;
 	--dark-color: #151515;
 }
@@ -86,14 +86,14 @@ html {
 
 .container-user .fa-user {
 	font-size: 3rem;
-	color:#c4ab5f;
+	color:#5fc4ae;
 	padding-right: 2.5rem;
 	border-right: 1px solid #e2e2e2;
 }
 
 .container-user .fa-basket-shopping {
 	font-size: 3rem;
-	color:#c4ab5f;
+	color:#5fc4ae;
 	padding-left: 1rem;
 }
 
@@ -185,7 +185,7 @@ html {
 
 .search-form .btn-search {
 	border: none;
-	background-color:#c4ab5f;
+	background-color:#5fc4ae;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -360,12 +360,12 @@ html {
 }
 
 .container-options span:hover {
-	background-color: #c4ab5f;
+	background-color:#5fc4ae;
 	color: #fff;
 }
 
 .container-options span.active {
-	background-color: #c4ab5f;
+	background-color:#5fc4ae;
 	color: #fff;
 }
 .container-products {
@@ -393,7 +393,7 @@ html {
 .container-img .discount {
 	position: absolute;
 	left: 0;
-	background-color: #c4ab5f;
+	background-color: #5fc4ae;
 	color: #fff;
 	padding: 2px 1.2rem;
 	border-radius: 1rem;
@@ -417,7 +417,7 @@ html {
 }
 
 .button-group span {
-	border: 1px solid #c4ab5f;
+	border: 1px solid #5fc4ae;
 	padding: 0.8rem;
 
 	display: flex;
@@ -429,12 +429,12 @@ html {
 }
 
 .button-group span:hover {
-	background-color: #c4ab5f;
+	background-color:#5fc4ae;
 }
 
 .button-group span i {
 	font-size: 1.5rem;
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .button-group span:hover i {
@@ -461,7 +461,7 @@ html {
 
 .stars i {
 	font-size: 1.3rem;
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .content-card-product h3 {
@@ -475,12 +475,12 @@ html {
 }
 
 .content-card-product h3:hover {
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .add-cart {
 	justify-self: start;
-	border: 2px solid #c4ab5f;
+	border: 2px solid #5fc4ae;
 	padding: 1rem;
 	border-radius: 50%;
 	cursor: pointer;
@@ -492,12 +492,12 @@ html {
 }
 
 .add-cart:hover {
-	background-color: #c4ab5f;
+	background-color:#5fc4ae;
 }
 
 .add-cart i {
 	font-size: 1.5rem;
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .add-cart:hover i {
@@ -522,7 +522,7 @@ html {
 
 
 .footer {
-	background-color: #c4ab5f;
+	background-color:#5fc4ae;
 }
 
 .container-footer {
@@ -566,7 +566,7 @@ html {
 .information ul li,
 .my-account ul li {
 	list-style: none;
-	color: #fff;
+	color: black;
 	font-size: 1.4rem;
 	font-weight: 300;
 }
@@ -574,7 +574,7 @@ html {
 .information ul li a,
 .my-account ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -633,7 +633,7 @@ html {
 
 .content p {
 	font-size: 1.4rem;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -650,6 +650,7 @@ html {
 	margin-top: 2rem;
 	width: 100%;
 	font-family: inherit;
+	border-radius: 4px solid black;
 }
 
 .content input::-webkit-input-placeholder {
@@ -671,7 +672,7 @@ html {
 
 .content button:hover {
 	background-color: var(--background-color);
-	color: #c4ab5f;
+	color:#5fc4ae;
 }
 
 .copyright {

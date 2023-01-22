@@ -442,7 +442,7 @@ section.form{
 .information ul li,
 .my-account ul li {
 	list-style: none;
-	color: #fff;
+	color: black;
 	font-size: 1.4rem;
 	font-weight: 300;
 }
@@ -450,7 +450,7 @@ section.form{
 .information ul li a,
 .my-account ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -509,7 +509,7 @@ section.form{
 
 .content p {
 	font-size: 1.4rem;
-	color: #fff;
+	color: black;
 	font-weight: 300;
 }
 
@@ -526,6 +526,7 @@ section.form{
 	margin-top: 2rem;
 	width: 100%;
 	font-family: inherit;
+	border-radius: 4px solid black;
 }
 
 .content input::-webkit-input-placeholder {
