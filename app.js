@@ -4,9 +4,11 @@ let app = express()
 
 let path = require("path")
 
+const PORT = process.env.PORT || 3007;
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(3007, function () {
+app.listen(PORT, function () {
     console.log("Levantando un servidor con Express");
 })
 
