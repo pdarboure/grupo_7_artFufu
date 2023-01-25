@@ -220,7 +220,12 @@ padding: 1rem;
 font-size: 2rem;
 color: #fff;
 }
-
+/* Para los links*/
+a {
+	text-decoration: none;
+	color: black;
+  }
+/* ----
 /* ********************************** */
 /*               BANNER               */
 /* ********************************** */

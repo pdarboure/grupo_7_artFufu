@@ -687,6 +687,12 @@ html {
 	font-weight: 400;
 	font-size: 1.6rem;
 }
+/* Para los links*/
+a {
+	text-decoration: none;
+	color: black;
+  }
+/* ----
 
 /* ********************************** */
 /*       MEDIA QUERIES -- 768px       */

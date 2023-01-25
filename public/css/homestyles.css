@@ -289,7 +289,11 @@ main section img {
     width: 20vw;
     height: auto;
 }
-
+/* Para los links*/
+a {
+	text-decoration: none;
+	color: black;
+  }
 /* ------------------------------------------ FOOTER ------------------------------------------ */
 /* 
 footer {

@@ -147,3 +147,9 @@ main img {
   
     
     }
+    /* Para los links*/
+a {
+	text-decoration: none;
+	color: black;
+  }
+/* ----
