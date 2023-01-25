@@ -39,6 +39,12 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+/* Para los links*/
+a {
+	text-decoration: none;
+	color: black;
+  }
+/* ----
 
 /* ********************************** */
 /*             UTILIDADES             */
