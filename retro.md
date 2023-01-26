@@ -1,27 +1,24 @@
-ACTIVIDAD RETROSPECTIVA DEL SPRINT #1
-
-Actividad estrella
-
-  1. Comenzar a hacer: Estoy modificando el retro
-
-  2. Hacer más:
-
-  3. Continuar haciendo:
+Retrospectiva del SPRINT #1.
   
-  4. Hacer menos:
+  COMENZAR A HACER: Reunirnos TODOS en el dia y horario establecido para que vayamos siguiendo mejor y más de cerca el proyecto.
 
-  5. Dejar de hacer:
+  HACER MÁS/MEJOR: Tener un mejor registro de las cosas que vamos haciendo en el dia a dia y las cosas que nos faltan también.
 
-ACTIVIDAD RETROSPECTIVA DEL SPRINT #3
+  CONTINUAR HACIENDO: La asignación de tareas de manera ordenada y con roles específicos establecidos. 
 
-  Actividad estrella
+  HACER MENOS: Posponer menos las tareas para poder entregar a tiempo los sprints.
 
-  1. Comenzar a hacer: Sprint 3
-
-  2. Hacer más: Reuniones de grupo.
-
-  3. Continuar haciendo: Consultas entre todos.
+  DEJAR DE HACER: No contestar o comunicar a los compañeros mis tiempos o mis complicaciones.
   
-  4. Hacer menos: 
+  
+Retrospectiva del SPRINT #2.
+  
+  COMENZAR A HACER: 
 
-  5. Dejar de hacer:
+  HACER MÁS/MEJOR: 
+
+  CONTINUAR HACIENDO: 
+
+  HACER MENOS: 
+
+  DEJAR DE HACER:
