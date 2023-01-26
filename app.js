@@ -1,16 +1,10 @@
-let express = require("express");
-
-let app = express()
-
-let path = require("path")
-
+const express = require("express");
+const app = express();
 const PORT = process.env.PORT || 3007;
 
-app.use(express.static(path.join(__dirname, 'public')));
+const path = require("path");
 
-app.listen(PORT, function () {
-    console.log("Levantando un servidor con Express");
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/", (req, res) => {
     let htmlPath = path.resolve(__dirname,'./views/home.html')
@@ -36,4 +30,9 @@ app.get("/carritoDeCompras", (req, res) => {
     let htmlPath = path.resolve(__dirname,'./views/carritoDeCompras.html')
     res.sendFile(htmlPath);
 }); 
+
 app.use(express.static(path.resolve(__dirname, 'public')));
+
+app.listen(PORT, function () {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
