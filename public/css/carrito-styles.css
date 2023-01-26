@@ -338,7 +338,7 @@ a {
 	background-color: tomato;
 	color: white;
 	text-decoration: none;
-	margin-bottom: 20px;
+	margin: 20px;
 }
 
 .cart-total a:hover{
