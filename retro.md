@@ -13,12 +13,15 @@ Retrospectiva del SPRINT #1.
   
 Retrospectiva del SPRINT #2.
   
-  COMENZAR A HACER: 
+  COMENZAR A HACER: Tener "mini reuniones" de 15min para establecer lo que vamos a hacer en la "reunión posta".
 
-  HACER MÁS/MEJOR: 
+  HACER MÁS/MEJOR: Comunicar a todos cuando se hace un PUSH y cuando se termina una tarea en el propyecto.
 
-  CONTINUAR HACIENDO: 
+  CONTINUAR HACIENDO: Reuniones semanales para tener siempre cerca el proyecto.
 
-  HACER MENOS: 
+  HACER MENOS: No comunicarnos o estar al tanto de lo que van haciendo los compañeros en el proyecto.
 
-  DEJAR DE HACER:
+  DEJAR DE HACER: No entregar en tiempo y forma.
+  
+  
+  Retrospectiva del SPRINT #3.
