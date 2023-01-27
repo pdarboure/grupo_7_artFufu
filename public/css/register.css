@@ -41,8 +41,7 @@ box-sizing: border-box;
 }
 /* Para los links*/
 a {
-	text-decoration: none;
-	color: black;
+	color: rgb(0, 55, 255);
   }
 /* ----
 
@@ -282,113 +281,12 @@ main section img {
   width: 100%;
   height: auto;
 }
-
-/* ------------------------------------------ FOOTER ------------------------------------------ */
-/* 
-footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #c4ab5f;
-  list-style-type: none;
-  margin-top: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-footer section img{
-  border-radius: 50%;
-}
-
-.logo-footer div{
-  border-radius: 50%;
-}
-
-.links-footer{
-  display: flex;
-  flex-direction: column;
+.boton-register{
   text-align: center;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.footer-link{
-  margin-bottom: 8px;
-  color: black;
-}
-footer a{
-  color: black;
-}
-
-.social-icons{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-footer section {
-  text-align: center;
-}
-
-section.form{
-  margin:auto;
-}
-
-.newsletter{
-  text-align: center;
-  font-size: 12px;
-
-} */
-
-/* ------------------------------- BREAKPOINTS - MEDIA QUERIES ------------------------------- */
-/* @media(max-width: 480px){
-  .logo-footer{
-      display: none;
-  }
-  section.form{
-      display: none;
-  }
-  .footer-link{
-      margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 481px){
-  .all-articles{
-      display:flex;
-      justify-content: space-between;
-      padding-left: 5%;
-      padding-right: 5%;
-  }
-  main section article{
-      width: 15vw
-  }
-  .social-icons{
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-  }
-  footer section {
-      text-align: center;
-      width: 25%;
-  }
-  footer {
-  display: flex;
-  flex-direction: row;
-  }
-  footer p{
   font-size: 16px;
-  margin-bottom: 20px;
-  }
-  footer .fa-brands{
-      font-size: 20px;
-  }
-} */
+  margin-left: 85px;
 
-
+}
 .footer {
 background-color:#5fc4ae;
 }

@@ -335,14 +335,14 @@ a {
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	background-color: tomato;
+	background-color: black;
 	color: white;
 	text-decoration: none;
 	margin: 20px;
 }
 
 .cart-total a:hover{
-	background-color: red;
+	background-color: #6666;
 }
 
 @media screen and (max-width: 700px){
