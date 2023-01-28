@@ -11,6 +11,10 @@ const mainController = require("./routes/mainRouters");
 
 app.use(mainController);
 
+app.set("view engine", "ejs"); 
+
+// app.set("views",( path.resolve(__dirname,) "views"));
+
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
 });
