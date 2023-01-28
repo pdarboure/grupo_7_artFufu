@@ -31,6 +31,11 @@ app.get("/carritoDeCompras", (req, res) => {
     res.sendFile(htmlPath);
 }); 
 
+app.get("/fibrofacil", (req, res) => {
+    let htmlPath = path.resolve(__dirname,'./views/fibrofacil.html')
+    res.sendFile(htmlPath);
+}); 
+
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.listen(PORT, function () {

@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/carrito-styles.css">
+    <link rel="stylesheet" href="./css/homestyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="/images/logo_size.jpg">
-    <title>Carro De Compras</title>
+    <link rel="shortcut icon" href="./images/logo_size.jpg">
+    <title>FUFU</title>
 </head>
 
 <body>
-    <header>
+	<header>
         <div class="container-hero">
             <div class="container hero">
                 <div class="customer-support">
@@ -38,15 +37,15 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 
         <div class="container-navbar">
             <nav class="navbar container">
                 <i class="fa-solid fa-bars"></i>
                 <ul class="menu">
-                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#">Pinturas</a></li>
-                    <li><a href="/views/fibrofacil.html">Fibrofacil</a></li>
+                    <li><a href="#">Fibrofacil</a></li>
                     <li><a href="#">Más</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
@@ -61,55 +60,50 @@
         </div>
     </header>
 
-  <div class="container">
-    <h1>Shopping Cart</h1>
-    <div class="cart">
-      <div class="products">
-        <div class="product">
-          <img src="/images/helado-1321.jpg" class="carrito-img">
-          <div class="product-info">
-            <h2 class="product-name">Producto</h2>
-            <h2 class="product-price">$ 1,000</h2>
-            <h2 class="product-offer">50%</h2>
-            <p class="product-quantity">Cantidad: <input value="1" name="">
-            <p class="product-remove">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-              <span class="remove">Remover</span>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <img src='/images/arco-iris-1982.jpg' class="carrito-img" >
-          <div class="product-info">
-            <h2 class="product-name">Producto</h2>
-            <h2 class="product-price">$ 2,000</h2>
-            <h2 class="product-offer">40%</h2>
-            <p class="product-quantity">Cantidad: <input value="1" name="">
-            <p class="product-remove">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-              <span class="remove">Remover</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="cart-total">
-        <p>
-          <span>Total</span>
-          <span>$ 3,000</span>
-        </p>
-        <p>
-          <span>Productos</span>
-          <span>2</span>
-        </p>
-        <p>
-          <span>You Save</span>
-          <span>$ 1,000</span>
-        </p>
-        <a href="#">Comprar</a>
-        <a href="#">Eliminar producto</a>
-      </div>
-    </div>
-  </div>
+
+
+
+    <main>
+        <section>
+            <h3>Nuevos Lanzamientos</h3>
+            <div class="all-articles">
+                <a href="/detalleproducto"><article>
+                    <img src='/images/10100303.jpg' alt=''>
+                    <div class="descripciones">
+                            <h4>Combo casa + Regalo</h4>
+                            <p class="precio">$9.499</p>
+                    </div>
+                </article></a>
+    
+                <a href="/detalleproducto"><article>
+                    <img src='/images/arco-iris-1982.jpg' alt=''>
+                    <div class="descripciones">
+                            <h4>Arcoiris</h4>
+                            <p class="precio">$1.500</p>
+                    </div>
+                </article></a>
+    
+                <a href="/detalleproducto"><article>
+                    <img src='/images/helado-1321.jpg' alt=''>
+                    <div class="descripciones">
+                            <h4>Helado</h4>
+                            <p class="precio">$2.800</p>
+                    </div>
+                </article></a>
+    
+                <a href="/detalleproducto"><article>
+                    <img src='/images/globo-1256.jpg' alt=''>
+                    <div class="descripciones">
+                            <h4>Globo</h4>
+                            <p class="precio">$2.000</p>
+                    </div>
+                </article></a>
+              </div>
+        </section>
+
+
+
+
     <footer class="footer">
         <div class="container container-footer">
           <div class="menu-footer">
@@ -189,5 +183,4 @@
         </div>
       </footer>
 </body>
-
 </html>
