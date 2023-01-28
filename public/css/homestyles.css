@@ -250,7 +250,6 @@ main section{
     margin-top: 30px;
     width: 100%;
     height: auto;
-    border: solid 1px rgb(100, 100, 100);
     padding: 10px;
     padding-bottom: 20px;
 }
@@ -274,6 +273,7 @@ main section h4{
 	justify-content: space-around;
     padding-left: 2%;
     padding-right: 2%;
+	padding: 20px;
 }
 
 .descripciones{
