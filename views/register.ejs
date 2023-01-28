@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="./css/register.css">
+  <title>FUFU</title>
+<body>
+  <%- include('./partials/header.ejs') %> 
+    <br><br>
+    <main class="register">
+        <form class= "register-form" action="/register" method="post">
+            <h2 class="text">Creá tu cuenta</h2><br><br>
+            <label class="form-label" for="name">Nombre:</label>
+            <input class="form-input" type="text" id="name" name="name"><br><br>
+            <label class="form-label" for="name">Apellido:</label>
+            <input class="form-input" type="text" id="name2" name="name2"><br><br>
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-input" type="email" id="email" name="email"><br><br>
+            <label class="form-label" for="password">Contraseña:</label>
+            <input class="form-input" type="password" id="password" name="password"><br><br>
+            <label class="form-label" type="password" id="confirm-password" name="confirm-password">Confirmar Contraseña:<label>
+            <input class="form-input" type="password" id="confirm-password" name="confirm-password"><br><br>
+            <div>            
+            <input class="boton-register" type="submit" value="Registrarse">
+          </div>
+            <br>
+            <div>
+                  ¿Ya tenes cuenta? 
+                  <a href="/login" class="login">Inicia sesión.</a>
+              </div>
+          </div>
+        <form>
+    </main>
+    <br><br>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

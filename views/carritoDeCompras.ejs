@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%> 
+    <link rel="stylesheet" href="/css/carrito-styles.css">
+    <title>Carro De Compras</title>
+<body>
+  <%- include('./partials/header.ejs') %> 
+  <div class="container">
+    <h1>Shopping Cart</h1>
+    <div class="cart">
+      <div class="products">
+        <div class="product">
+          <img src="/images/helado-1321.jpg" class="carrito-img">
+          <div class="product-info">
+            <h2 class="product-name">Producto</h2>
+            <h2 class="product-price">$ 1,000</h2>
+            <h2 class="product-offer">50%</h2>
+            <p class="product-quantity">Cantidad: <input value="1" name="">
+            <p class="product-remove">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span class="remove">Remover</span>
+            </p>
+          </div>
+        </div>
+        <div class="product">
+          <img src='/images/arco-iris-1982.jpg' class="carrito-img" >
+          <div class="product-info">
+            <h2 class="product-name">Producto</h2>
+            <h2 class="product-price">$ 2,000</h2>
+            <h2 class="product-offer">40%</h2>
+            <p class="product-quantity">Cantidad: <input value="1" name="">
+            <p class="product-remove">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span class="remove">Remover</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cart-total">
+        <p>
+          <span>Total</span>
+          <span>$ 3,000</span>
+        </p>
+        <p>
+          <span>Productos</span>
+          <span>2</span>
+        </p>
+        <p>
+          <span>You Save</span>
+          <span>$ 1,000</span>
+        </p>
+        <a href="#">Comprar</a>
+        <a href="#">Eliminar producto</a>
+      </div>
+    </div>
+  </div>
+  <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

@@ -241,9 +241,8 @@ html {
 
 /* ------------------------------------------ MAIN NACHO/OLIVER!!!! ------------------------------------------*/
 main{
-    width: 90vw;
+    width: auto;
     margin:auto;
-	margin-bottom: 30px;
 }
 
 main section{

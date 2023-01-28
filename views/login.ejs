@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="./css/login.css">
+  <title>FUFU</title>
+<body>
+  <%- include('./partials/header.ejs') %> 
+    <br><br>
+    <main class="login">
+      <form class="login-form" action="/login" method="post">
+        <h2 class="text">Entrá a tu cuenta</h2><br><br>
+          <label class="form-label" for="email">Email:</label>
+          <input class="form-input" type="email" id="email" name="email"><br><br>
+            <label class="form-label" for="password">Contraseña:</label>
+            <input class="form-input" type="password" id="password" name="password">
+            <br><br>
+            <label class="form-rememberme" for="rememberme">
+              <input type="checkbox" id="rememberme" name="rememberme" checked>Recordarme
+            </label>
+            <br><br>
+            <a href="/reset-password" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            <br><br>
+            <a href="/register" class="register">Registrate</a>
+            <br><br>
+            <input type="submit" value="Iniciar sesión">
+      </form> 
+  </main>
+  <br><br>
+  <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

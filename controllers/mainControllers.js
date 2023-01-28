@@ -6,22 +6,22 @@ const path = require("path");
 
 const mainController = {
     home: (req, res) => {
-        res.sendFile(path.resolve('./views/home.html'));
+        res.render(path.resolve('./views/home.ejs'));
     },
     login: (req, res) => {
-        res.sendFile(path.resolve('./views/login.html'));
+        res.render(path.resolve('./views/login.ejs'));
     },
     register: (req, res) => {
-        res.sendFile(path.resolve('./views/register.html'));
+        res.render(path.resolve('./views/register.ejs'));
     },
     detalleproducto: (req, res) => {
-        res.sendFile(path.resolve('./views/detalleproducto.html'));
+        res.render(path.resolve('./views/detalleproducto.ejs'));
     },
     fibrofacil: (req, res) => {
-        res.sendFile(path.resolve('./views/fibrofacil.html'));
+        res.render(path.resolve('./views/fibrofacil.ejs'));
     },
     carritoDeCompras: (req, res) => {
-        res.sendFile(path.resolve('./views/carritoDeCompras.html'));
+        res.render(path.resolve('./views/carritoDeCompras.ejs'));
     }
 };
 
