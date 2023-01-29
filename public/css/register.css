@@ -239,6 +239,35 @@ background-color: var(--background-color);
 }
 
 
+/* ********************************** */
+/*            BOTONES /ADMIN            */
+/* ********************************** */
+
+.div-botones-admin{
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.botones-admin {
+  border-radius: 2px solid #c4ab5f ;
+  color: black ;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5% 20%
+  }
+  
+  .botones-admin:hover {
+  background-color: white;
+  color:#c4ab5f ;
+  }
+
+
 
 /* ------------------------------------------ MAIN NACHO/OLIVER!!!! ------------------------------------------*/
 main{
