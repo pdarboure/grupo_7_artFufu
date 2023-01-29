@@ -707,8 +707,6 @@ section.form{
 	display: flex;
 	justify-content: space-between;
 	padding-top: 2rem;
-
-	border-top: 1px solid #d2b495;
 }
 
 .copyright p {

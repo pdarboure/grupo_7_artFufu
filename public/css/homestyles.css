@@ -454,8 +454,6 @@ a {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 2rem;
-
-	border-top: 1px solid #5fc4ae;
 }
 
 .copyright p {
