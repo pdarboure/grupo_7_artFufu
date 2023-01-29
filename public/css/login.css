@@ -758,7 +758,7 @@ html {
   font-size: 1.6rem;
 }
 }
-
+/* 
 .login-form {
   width: 300px;
   margin: 0 auto;
@@ -778,4 +778,150 @@ html {
   margin-bottom: 8px;
 }
 .form-rememberme {
-  margin-top: 16px;}
+  margin-top: 16px;} */
+
+  .login{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    }
+  .container{
+    background: #fff;
+    /* max-width: 350px; */
+    width: 380px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  }
+  .container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .container-logo i {
+    font-size: 3rem;
+  }
+  
+  .container-logo h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+  .container form .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    position: relative;
+  }
+  .container form .title:before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 33px;
+    left: 0px;
+    bottom: 3px;
+    border-radius: 5px;
+  }
+  .container form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+  }
+  .container form .input-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+  }
+  .container form .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+  }
+  .container form .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+  }
+  .container form .input-box input:focus ~ .underline::after,
+  .container form .input-box input:valid ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .container form .button{
+    margin: 40px 0 20px 0;
+  }
+  .container .input-box input[type="submit"]{
+    background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .container .input-box input[type="submit"]:hover{
+    letter-spacing: 1px;
+    background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
+  }
+  .container .option{
+    font-size: 18px;
+    text-align: center;
+  }
+  .container .option a{
+    font-size: 18px;
+    text-align: center;
+    color: #3b5998;
+  }
+  .container .facebook a,
+  .container .twitter a{
+    display: block;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 45px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .container .facebook i,
+  .container .twitter i{
+    padding-right: 12px;
+    font-size: 20px;
+  }
+  .container .twitter a{
+    background: linear-gradient(to right,  #434343 0%, #434343 100%);
+    margin: 20px 0 15px 0;
+  }
+  .container .twitter a:hover{
+    background: linear-gradient(to left,  #00acee 0%, #1abeff 100%);
+    margin: 20px 0 15px 0;
+  }
+  .container .facebook a{
+    background: linear-gradient( to right,  #3b5998 0%, #476bb8 100%);
+    margin: 20px 0 50px 0;
+  }
+  .container .facebook a:hover{
+    background: linear-gradient( to left,  #3b5998 0%, #476bb8 100%);
+    margin: 20px 0 50px 0;
+  }

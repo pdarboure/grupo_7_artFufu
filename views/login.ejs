@@ -4,28 +4,36 @@
   <link rel="stylesheet" href="./css/login.css">
   <title>FUFU</title>
 <body>
-  <%- include('./partials/header.ejs') %> 
-    <br><br>
-    <main class="login">
-      <form class="login-form" action="/login" method="post">
-        <h2 class="text">Entrá a tu cuenta</h2><br><br>
-          <label class="form-label" for="email">Email:</label>
-          <input class="form-input" type="email" id="email" name="email"><br><br>
-            <label class="form-label" for="password">Contraseña:</label>
-            <input class="form-input" type="password" id="password" name="password">
-            <br><br>
-            <label class="form-rememberme" for="rememberme">
-              <input type="checkbox" id="rememberme" name="rememberme" checked>Recordarme
-            </label>
-            <br><br>
-            <a href="/reset-password" class="forgot-password">¿Olvidaste tu contraseña?</a>
-            <br><br>
-            <a href="/register" class="register">Registrate</a>
-            <br><br>
-            <input type="submit" value="Iniciar sesión">
-      </form> 
-  </main>
-  <br><br>
-  <%- include('./partials/footer.ejs') %> 
+  <!-- <%- include('./partials/header.ejs') %>  -->
+  <div class="container-logo">
+    <i class="fa-solid fa-paintbrush"></i>
+                <h1 class="logo"><a href="/">Artistica Fufu</a></h1>
+            </div>
+  <main class="login"> 
+  <div class="container">
+    <form action="#">
+      <div class="title">Login</div>
+      <div class="input-box underline">
+        <input type="text" placeholder="Ingrese su Email" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Ingrese su Contraseña" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box button">
+        <input type="submit" name="" value="Ingresar">
+      </div>
+    </form>
+      <div class="option">No tienes cuenta? <a href="/login">Registrate </a></div>
+      <div class="twitter">
+        <a href="#"><i class="fa-brands fa-google"></i>Sign in With Google</a>
+      </div>
+      <div class="facebook">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i>Sign in With Facebook</a>
+      </div>
+  </div>
+</main>
+  <!-- <%- include('./partials/footer.ejs') %>  -->
 </body>
 </html> 
