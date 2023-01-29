@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%> 
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Admin</title>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+        <main>
+            <form class= "register-form" action="/register" method="post">
+                <h2 class="text">Editá un producto</h2><br><br>
+
+                <input type="search" placeholder="Ingrese código de producto" />
+                <input class="boton-register" type="submit" value="Buscar"><br><br>
+
+                <label class="form-label" for="name">Nombre del producto:</label>
+                <input class="form-input" type="text" id="name" name="name"><br><br>
+
+                <label class="form-label" for="name">Descripción:</label>
+                <input class="form-input" type="text" id="name2" name="name2"><br><br>
+
+                <label class="form-label" for="name">Seleccionar una imagen para el producto:</label>
+                <input class="form-input" type="file" id="file" name="file" accept=".jpg" multiple><br><br>
+
+                <label class="form-label" for="name">Precio:</label>
+                <input class="form-input" type="text" id="name2" name="name2"><br><br>
+
+                <label class="form-label" for="categoria">Categoría:</label>
+                <select name="Categoria">
+                    <option value="1"></option>
+                    <option value="2">Fibrofacil</option>
+                    <option value="3">Pintura</option>
+                    <option value="4">Otro</option>
+
+                <div>            
+                    <a href="/"><input class="boton-register" type="submit" value="Editar producto"></a>
+                </div><br>
+
+            <form>
+
+        </main>
+    
+        <%- include('./partials/footer.ejs') %> 
+    </body>
+</html>

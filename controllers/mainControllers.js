@@ -22,7 +22,16 @@ const mainController = {
     },
     carritoDeCompras: (req, res) => {
         res.render('carritoDeCompras');
-    }
+    },
+    admin: (req, res) => {
+        res.render('admin');
+    },
+    crearProducto: (req, res) => {
+        res.render('crearProducto');
+    },
+    editarProducto: (req, res) => {
+        res.render('editarProducto');
+    },
 };
 
 module.exports = mainController;
