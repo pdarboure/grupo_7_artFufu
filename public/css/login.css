@@ -92,7 +92,7 @@
   margin: 40px 0 20px 0;
 }
 .container .input-box input[type="submit"]{
-  background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
+  background: linear-gradient(to right,#71b7e6 0%, #9b59b6 100%);
   font-size: 17px;
   color: #fff;
   border-radius: 5px;
@@ -101,8 +101,9 @@
 }
 .container .input-box input[type="submit"]:hover{
   letter-spacing: 1px;
-  background: linear-gradient(to left, #89437f 0%, #c45fb5 100%);
+  background: linear-gradient(to left, #71b7e6 0%, #9b59b6 100%);
 }
+
 .container .option{
   font-size: 18px;
   text-align: center;
@@ -131,12 +132,13 @@
   padding-right: 12px;
   font-size: 20px;
 }
+/* background: linear-gradient(to right,  #06c418 0%,#002bff   100%); */
 .container .twitter a{
-  background: linear-gradient(to right,  #ff0000 0%,#002bff   100%);
+  background-color: rgba(85, 82, 82, 0.617);
   margin: 20px 0 15px 0;
 } 
 .container .twitter a:hover{
-  background: linear-gradient(to left, #dccf03   0%, #06c418 100%);
+  background-color:rgb(85, 82, 82);
   margin: 20px 0 15px 0;
 } 
 .container .facebook a{
