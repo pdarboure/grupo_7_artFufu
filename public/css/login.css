@@ -1,3 +1,18 @@
+/* ------------ PALETA DE COLORES ------------
+#5fc4ae
+#43897a
+#c45fb5
+#89437f
+#c4ab5f 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
 /* ********************************** */
 /*               LOGIN               */
 /* ********************************** */
@@ -6,7 +21,7 @@
   width: 100%;
   height: 100vh;
   place-items: center;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  /* background: linear-gradient(135deg, #5fc4ae, #43897a); */
   }
 .container{
   background: #fff;
@@ -14,14 +29,19 @@
   width: 380px;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 .container-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  /* background: linear-gradient(135deg, #5fc4ae, #43897a); */
+  border-bottom: 2px solid #c4ab5f;
+  width: 45%;
+  margin: 20px auto 0px auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .container-logo i {
@@ -92,16 +112,19 @@
   margin: 40px 0 20px 0;
 }
 .container .input-box input[type="submit"]{
-  background: linear-gradient(to right,#71b7e6 0%, #9b59b6 100%);
+  background-color: #fff;
   font-size: 17px;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #000;
+  border: 1px solid grey;
 }
 .container .input-box input[type="submit"]:hover{
   letter-spacing: 1px;
   background: linear-gradient(to left, #71b7e6 0%, #9b59b6 100%);
+  color: #fff;
 }
 
 .container .option{
@@ -117,7 +140,6 @@
 .container .twitter a{
   display: block;
   height: 45px;
-  width: 330px;
   font-size: 15px;
   text-decoration: none;
   padding-left: 20px;

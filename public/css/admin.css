@@ -226,67 +226,36 @@ font-size: 2rem;
 color: #fff;
 }
 
-/* ********************************** */
-/*               BANNER               */
-/* ********************************** */
 
+/* ------------------------------------------ MAIN ------------------------------------------*/
 
-/* ********************************** */
-/*            MAIN CONTENT            */
-/* ********************************** */
-.main-content {
-background-color: var(--background-color);
-}
-
-
-
-/* ------------------------------------------ MAIN NACHO/OLIVER!!!! ------------------------------------------*/
-main{
-  width: 90vw;
-  margin:auto;
-}
-
-main section article{
-  margin-top: 10px;
-  border: solid 1px #ebebeb;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.all-articles{
-  display: block;
-  padding-left: 10%;
-  padding-right: 10%;
-  width: auto;
-}
-main section{
-  margin-top: 30px;
-  width: 100%;
-  height: auto;
-  border: solid 1px #89437f;
-  padding: 10px;
-  padding-bottom: 20px;
-}
-
-.descripciones{
-  display: flex;
-  margin: 10px;
-  justify-content: space-between;
-  border-top: solid 1px black;
-  padding-top: 8px;
-  font-size: 12px;
-}
-
-main section img {
-  width: 20vw;
-  width: 100%;
-  height: auto;
-}
-.boton-register{
+.div-botones-admin{
   text-align: center;
-  font-size: 16px;
-  margin-left: 85px;
-
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
+.botones-admin {
+  background-color: #c6b1776d;
+  border: 1px solid black ;
+  color: black ;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5% 20%
+  }
+
+  .botones-admin:hover {
+  background-color: white;
+  color:#c4ab5f ;
+  }
+
+/* ------------------------------------------ FOOTER ------------------------------------------*/
+
 .footer {
 background-color:#5fc4ae;
 }
