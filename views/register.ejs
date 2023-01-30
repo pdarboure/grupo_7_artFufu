@@ -4,33 +4,61 @@
   <link rel="stylesheet" href="./css/register.css">
   <title>FUFU</title>
 <body>
-  <%- include('./partials/header.ejs') %> 
-    <br><br>
-    <main class="register">
-        <form class= "register-form" action="/register" method="post">
-            <h2 class="text">Creá tu cuenta</h2><br><br>
-            <label class="form-label" for="name">Nombre:</label>
-            <input class="form-input" type="text" id="name" name="name"><br><br>
-            <label class="form-label" for="name">Apellido:</label>
-            <input class="form-input" type="text" id="name2" name="name2"><br><br>
-            <label class="form-label" for="email">Email:</label>
-            <input class="form-input" type="email" id="email" name="email"><br><br>
-            <label class="form-label" for="password">Contraseña:</label>
-            <input class="form-input" type="password" id="password" name="password"><br><br>
-            <label class="form-label" type="password" id="confirm-password" name="confirm-password">Confirmar Contraseña:<label>
-            <input class="form-input" type="password" id="confirm-password" name="confirm-password"><br><br>
-            <div>            
-            <input class="boton-register" type="submit" value="Registrarse">
+  <div class="container">
+    <div class="title">Registro</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nombre Completo</span>
+            <input type="text" placeholder="Ingrese nombre" required>
           </div>
-            <br>
-            <div>
-                  ¿Ya tenes cuenta? 
-                  <a href="/login" class="login">Inicia sesión.</a>
-              </div>
+          <div class="input-box">
+            <span class="details">Nombre de Usuario</span>
+            <input type="text" placeholder="Ingrese usuario" required>
           </div>
-        <form>
-    </main>
-    <br><br>
-    <%- include('./partials/footer.ejs') %> 
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Ingrese email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Numero de Telefono</span>
+            <input type="text" placeholder="Ingrese numero" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Contraseña</span>
+            <input type="password" placeholder="Ingrese contraseña" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirme Contraseña</span>
+            <input type="password" placeholder="Confirme contraseña" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Acepto Terminos y Condiciones</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Acepto</span>
+          </label>
+          <!-- <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Femenino</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefiero no decirlo</span>
+            </label> -->
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Registrarse">
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html> 
