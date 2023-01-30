@@ -466,8 +466,8 @@ font-weight: 600;
 }
 
 .content button:hover {
-background-color: var(--background-color);
-color:#5fc4ae;
+background-color: #fff;
+color:#000;
 }
 
 .copyright {

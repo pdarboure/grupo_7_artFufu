@@ -104,7 +104,7 @@ html {
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 }
 
 .navbar {
@@ -185,7 +185,7 @@ html {
 
 .search-form .btn-search {
 	border: none;
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -262,7 +262,7 @@ html {
 }
 
 .btn__group:hover{
-    color: #1bbeb4
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
    
 }
 .price{
@@ -273,7 +273,7 @@ html {
 /* FOOTER */
 
 .footer {
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 }
 
 .container-footer {
@@ -422,8 +422,8 @@ html {
 }
 
 .content button:hover {
-	background-color: var(--background-color);
-	color:#5fc4ae;
+	background-color: #fff;
+	color:#000;
 }
 
 .copyright {

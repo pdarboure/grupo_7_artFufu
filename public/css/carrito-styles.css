@@ -129,7 +129,7 @@ html {
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 	padding-left: 2%;
 	padding-right: 2%;
 }
@@ -212,7 +212,7 @@ html {
 
 .search-form .btn-search {
 	border: none;
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -335,14 +335,15 @@ a {
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	background-color: black;
-	color: white;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
+	color: #000;
 	text-decoration: none;
 	margin: 20px;
+	font-size: 16px;
 }
 
 .cart-total a:hover{
-	background-color: rgba(39, 0, 90, 0.62);
+	background: linear-gradient(to left, #89437f 0%, #c45fb5 100%);
 	color: black;
 }
 
@@ -383,7 +384,7 @@ a {
 }
 
 .footer {
-	background-color: #5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 }
 
 .container-footer {
@@ -532,8 +533,8 @@ a {
 }
 
 .content button:hover {
-	background-color: var(--background-color);
-	color: #c4ab5f;
+	background: linear-gradient(to left, #89437f 0%, #c45fb5 100%);
+	color:#000;
 }
 
 .copyright {

@@ -129,7 +129,7 @@ html {
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 	padding-left: 2%;
 	padding-right: 2%;
 }
@@ -212,7 +212,7 @@ html {
 
 .search-form .btn-search {
 	border: none;
-	background-color:#5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -296,7 +296,7 @@ a {
 /* ------------------------------------------ FOOTER ------------------------------------------ */
 
 .footer {
-	background-color: #5fc4ae;
+	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
 }
 
 .container-footer {
@@ -445,8 +445,8 @@ a {
 }
 
 .content button:hover {
-	background-color: var(--background-color);
-	color:#5fc4ae;
+	background-color: #fff;
+color:#000;
 }
 
 .copyright {
@@ -568,7 +568,7 @@ a {
         flex-direction: row;
 	}
 	main section img {
-		width: 40vw;
+		width: 28vw;
 	}
 	main section h4{
 		font-size: 1.4rem;
