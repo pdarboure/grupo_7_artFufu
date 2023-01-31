@@ -21,6 +21,8 @@
   width: 100%;
   height: 100vh;
   place-items: center;
+  background-color: #ebebeb ;
+  opacity: 0.9;
   /* background: linear-gradient(135deg, #5fc4ae, #43897a); */
   }
 .container{
@@ -112,7 +114,7 @@
   margin: 40px 0 20px 0;
 }
 .container .input-box input[type="submit"]{
-  background-color: #fff;
+  background: linear-gradient(to left, #5fc4ae 0%, #89437f 100%);
   font-size: 17px;
   color: #fff;
   border-radius: 5px;

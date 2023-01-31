@@ -1,18 +1,22 @@
 body{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+    flex-direction: column;
+    background-color: #ebebeb ;
+    opacity: 0.9;
   }
   .container{
     max-width: 700px;
     width: 100%;
     background-color: #fff;
     padding: 25px 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
+    margin-top: 40px;
   }
   .container .title{
     font-size: 25px;
@@ -41,26 +45,32 @@ body{
   }
   form .input-box span.details{
     display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
+    font-weight: 750;
+    margin-bottom: 4px;
+    font-size: 16px;
   }
   .user-details .input-box input{
     height: 45px;
-    width: 300px;
+    /* width: 300px; */
     outline: none;
     font-size: 16px;
     border-radius: 5px;
     padding-left: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 0);
     border-bottom-width: 2px;
     transition: all 0.3s ease;
   }
+
+  .user-details .input-box input::placeholder{
+  color: #000;
+  }
+
   .user-details .input-box input:focus,
   .user-details .input-box input:valid{
     border-color: #9b59b6;
   }
    form .gender-details .gender-title{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
    }
    form .category{
@@ -73,6 +83,7 @@ body{
      display: flex;
      align-items: center;
      cursor: pointer;
+     font-size: 12px;
    }
    form .category label .dot{
     height: 18px;
@@ -137,4 +148,26 @@ body{
       flex-direction: column;
     }
   }
-   
+  .container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    /* background: linear-gradient(135deg, #5fc4ae, #43897a); */
+    border-bottom: 2px solid #c4ab5f;
+    width: 45%;
+    margin: 20px auto 0px auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .container-logo i {
+    font-size: 2rem;
+  }
+  
+  .container-logo h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
