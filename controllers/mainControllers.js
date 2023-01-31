@@ -12,19 +12,19 @@ const mainController = {
         });
     },
     login: (req, res) => {
-        res.render('login',{
+        res.render('./user/login',{
             css: './css/login.css',
             title: 'Login'
         });
     },
     register: (req, res) => {
-        res.render('register',{
+        res.render('./user/register',{
            css: './css/register.css',
            title: 'Registro' 
         });
     },
     detalleproducto: (req, res) => {
-        res.render('detalleproducto',{
+        res.render('./products/detalleproducto',{
             css: './css/detalleproducto.css',
             title: 'Detalle Producto'
         });
@@ -36,8 +36,9 @@ const mainController = {
         });
     },
     carritoDeCompras: (req, res) => {
-        res.render('carritoDeCompras',{
-            css: './css/carrito-styles.css'
+        res.render('./products/carritoDeCompras',{
+            css: './css/carrito-styles.css',
+            title: 'Carrito de Compras'
         });
     },
     admin: (req, res) => {
@@ -47,13 +48,13 @@ const mainController = {
         });
     },
     crearProducto: (req, res) => {
-        res.render('crearProducto',{
+        res.render('./products/crearProducto',{
             css:'./css/admin.css',
             title: 'Crear Producto'
         });
     },
     editarProducto: (req, res) => {
-        res.render('editarProducto',{
+        res.render('./products/editarProducto',{
             css: './css/admin.css',
             title: 'Editar Producto'
         });
