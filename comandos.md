@@ -12,6 +12,7 @@
             - git pull origin main (actualiza mis archivos desde el repo remoto.   
             - git add -A (guarda los cambios hechos en el repo local)
             - git commit -m ”mensaje” (comitea, o sea, confirma los cambios hechos en el repo local)
+                            -(ANTES DE PUSHEAR UN GIT PULL)-
             - git push origin main (sube los archivos modificados a la nube)
             - git log (muestra todos los commits)
 

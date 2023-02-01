@@ -6,64 +6,64 @@
 #c4ab5f 
 */
 
+/* ********************************** */
+/*               LOGIN               */
+/* ********************************** */
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
-
-/* ********************************** */
-/*               LOGIN               */
-/* ********************************** */
 .login{
   display: grid;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   place-items: center;
   background-color: #ebebeb ;
   opacity: 0.9;
 }  
 
-.container{
+.container-login{
   background: #fff;
   max-width: 350px;
   width: 380px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 5px;
-  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
+  /* margin-top: 12px; */
 }
 
-.container-logo {
+.titulo-fufu {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
-  border-bottom: 2px solid #5fc4ae;
+  /* border-bottom: 2px solid #5fc4ae; */
   margin: 0px auto 0px auto;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   padding-bottom: 25px;
-  background-color: #ebebeb ;
+  background-color: #ebebeb;
 }
-
-.container-logo i {
+  
+.titulo-fufu i {
   font-size: 2rem;
 }
-
-.container-logo h1 a {
+  
+.titulo-fufu h1 a {
   text-decoration: none;
   color: #000;
   font-size: 4rem;
   text-transform: uppercase;
 }
-
-.container form .title{
+.container-login form .title{
   font-size: 30px;
   font-weight: 600;
   margin: 20px 0 10px 0;
   position: relative;
 }
-.container form .title:before{
+.container-login form .title:before{
   content: '';
   position: absolute;
   height: 4px;
@@ -72,20 +72,20 @@
   bottom: 3px;
   border-radius: 5px;
 }
-.container form .input-box{
+.container-login form .input-box{
   width: 100%;
   height: 45px;
   margin-top: 25px;
   position: relative;
 }
-.container form .input-box input{
+.container-login form .input-box input{
   width: 100%;
   height: 100%;
   outline: none;
   font-size: 16px;
   border: none;
 }
-.container form .underline::before{
+.container-loginform .underline::before{
   content: '';
   position: absolute;
   height: 2px;
@@ -94,7 +94,7 @@
   left: 0;
   bottom: 0;
 }
-.container form .underline::after{
+.container-login form .underline::after{
   content: '';
   position: absolute;
   height: 2px;
@@ -106,15 +106,15 @@
   transform-origin: left;
   transition: all 0.3s ease;
 }
-.container form .input-box input:focus ~ .underline::after,
-.container form .input-box input:valid ~ .underline::after{
+.container-login form .input-box input:focus ~ .underline::after,
+.container-login form .input-box input:valid ~ .underline::after{
   transform: scaleX(1);
   transform-origin: left;
 }
-.container form .button{
+.container-login form .button{
   margin: 40px 0 20px 0;
 }
-.container .input-box input[type="submit"]{
+.container-login .input-box input[type="submit"]{
   background-color: #5fc4ae;
   font-size: 17px;
   color: #fff;
@@ -123,24 +123,24 @@
   transition: all 0.3s ease;
   color: #000;
 }
-.container .input-box input[type="submit"]:hover{
+.container-login .input-box input[type="submit"]:hover{
   letter-spacing: 1px;
   background-color: #fff;
   color: #5fc4ae;
   border: 1px solid #5fc4ae;
 }
 
-.container .option{
+.container-login .option{
   font-size: 18px;
   text-align: center;
 }
-.container .option a{
+.container-login .option a{
   font-size: 18px;
   text-align: center;
   color: #3b5998;
 }
-.container .facebook a,
-.container .twitter a{
+.container-login .facebook a,
+.container-login .twitter a{
   display: block;
   height: 45px;
   font-size: 15px;
@@ -152,25 +152,25 @@
   transition: all 0.3s ease;
 }
 
-.container .facebook i,
-.container .twitter i{
+.container-login .facebook i,
+.container-login .twitter i{
   padding-right: 12px;
   font-size: 20px;
 }
 /* background: linear-gradient(to right,  #06c418 0%,#002bff   100%); */
-.container .twitter a{
+.container-login .twitter a{
   background-color: rgba(85, 82, 82, 0.617);
   margin: 20px 0 15px 0;
 } 
-.container .twitter a:hover{
+.container-login .twitter a:hover{
   background-color:rgb(85, 82, 82);
   margin: 20px 0 15px 0;
 } 
-.container .facebook a{
+.container-login .facebook a{
   background: linear-gradient( to right,  #3b5998 0%, #476bb8 100%);
   margin: 20px 0 50px 0;
 }
-.container .facebook a:hover{
+.container-login .facebook a:hover{
   background: linear-gradient( to left,  #3b5998 0%, #4d86ff 100%);
   margin: 20px 0 50px 0;
 }

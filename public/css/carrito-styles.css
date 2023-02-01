@@ -110,7 +110,7 @@ a {
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	background: linear-gradient(to right,#5fc4ae 0%, #43897a 100%);
+	background-color: #5fc4ae;
 	color: #000;
 	text-decoration: none;
 	margin: 20px;
@@ -118,8 +118,9 @@ a {
 }
 
 .cart-total a:hover{
-	background: linear-gradient(to left, #89437f 0%, #c45fb5 100%);
-	color: black;
+	background-color: #fff;
+	color: #5fc4ae;
+	border: 1px solid #5fc4ae;
 }
 
 @media screen and (max-width: 700px){
