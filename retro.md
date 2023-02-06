@@ -1,4 +1,4 @@
-Retrospectiva del SPRINT #1.
+----- Retrospectiva del SPRINT 1️⃣ ----- 
   
   COMENZAR A HACER: Reunirnos TODOS en el dia y horario establecido para que vayamos siguiendo mejor y más de cerca el proyecto.
 
@@ -11,7 +11,7 @@ Retrospectiva del SPRINT #1.
   DEJAR DE HACER: No contestar o comunicar a los compañeros mis tiempos o mis complicaciones.
   
   
-Retrospectiva del SPRINT #2.
+----- Retrospectiva del SPRINT 2️⃣ ----- 
   
   COMENZAR A HACER: Tener "mini reuniones" de 15min para establecer lo que vamos a hacer en la "reunión posta".
 
@@ -24,4 +24,16 @@ Retrospectiva del SPRINT #2.
   DEJAR DE HACER: No entregar en tiempo y forma.
   
   
-  Retrospectiva del SPRINT #3.
+----- Retrospectiva del SPRINT 3️⃣ -----
+
+  COMENZAR A HACER: Estar todos presentes a la hora de leer un sprint por primera vez para ver cómo lo vamos a encarar y cómo nos vamos a dividir las tareas.
+
+  HACER MÁS/MEJOR: Comunicarnos entre nosotros las dudas que tengamos del proyecto. Eso ayuda a llevar registro de los problemas que vamos teniendo.
+
+  CONTINUAR HACIENDO: Entregar en tiempo y forma.
+
+  HACER MENOS: No avisar cuando estamos conectados o trabajando en el proyecto. 
+
+  DEJAR DE HACER: Estresarse menos por la apariencia momentánea del proyecto. Estamos aprendiendo.
+  
+  
