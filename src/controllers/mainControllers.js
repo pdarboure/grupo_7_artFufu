@@ -58,6 +58,12 @@ const mainController = {
             title: 'Editar Producto'
         });
     },
+    // error: (req, res) => {
+    //     res.render('error', {
+    //         css: '',
+    //         title: 'Error'
+    //     })
+    // }
 };
 
 module.exports = mainController;
