@@ -17,6 +17,8 @@ const productRoutes = require('./routes/productsRoutes');
 
 app.use(mainController);
 
+app.use('/products', productRoutes);
+
 app.set("view engine", "ejs"); 
 
 app.set('views', path.resolve(__dirname, 'views'));
@@ -24,6 +26,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
+
+app.use(methodOverride('_method'))
 
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
