@@ -4,13 +4,13 @@ const productsPath = path.join(__dirname, '../data/products.json');
 
 //Date.now()
 const productController = {
-    productList: () => {
+    getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
     index: (req, res) => {
         res.render('products/index', {
             title: 'Listado de productos',
-            productsList: productController.productlist()
+            productsList: productController.getProducts()
         });
     },
     show: (req, res) => {

@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 const methodOverride = require('method-override');
 
-const mainController = require("./routes/mainRouters");
+const mainRouters = require("./routes/mainRouters");
 const productRoutes = require('./routes/productsRoutes');
 
 // Error 404
@@ -17,7 +17,7 @@ const productRoutes = require('./routes/productsRoutes');
 //     res.status(404).render('error');
 // });
 
-app.use(mainController);
+app.use(mainRouters);
 
 app.use('/products', productRoutes);
 
