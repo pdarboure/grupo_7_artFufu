@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Listado de productos</h1>
+<a href="/products/create">Crear products</a>
+<ul>
+    <% productsList.forEach(products => { %>
+        <li>
+            <a href="/products/<%= products.id %>"><%= products.name %></a>
+            -
+            <a href="/products/edit/<%= products.id %>">Editar</a>
+            -
+            <a href="/products/delete/<%= products.id %>">Eliminar</a>
+        </li>
+    <% }) %>
+</ul>
+
+
+<%- include('../partials/footer.ejs') %>
