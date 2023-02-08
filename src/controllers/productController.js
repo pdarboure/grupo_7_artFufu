@@ -1,35 +1,35 @@
 const fs = require('fs');
 const path = require('path');
-const autosPath = path.join(__dirname, '../data/autos.json');
+const productsPath = path.join(__dirname, '../data/products.json');
 
 //Date.now()
 const productController = {
-    getCars: () => {
-        return JSON.parse(fs.readFileSync(autosPath, 'utf-8'));
+    productList: () => {
+        return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
     index: (req, res) => {
         res.render('products/index', {
             title: 'Listado de productos',
-            carsList: productController.getCars()
+            productsList: productController.productlist()
         });
     },
     show: (req, res) => {
-        let autoId = req.params.id;
-        let auto = productController.getCars().find(auto => auto.id == autoId);
+        let productId = req.params.id;
+        let product = productController.productList().find(product => product.id == productId);
         
         res.render('products/show', {
-            title: 'Mi auto',
-            car: auto
+            title: 'Mi producto',
+            product: producto
         });
     },
     create: (req, res) => {
         res.render('products/create', {
-            title: 'Nuevo auto'
+            title: 'Nuevo producto'
         });
     },
     store: (req, res) => {
-        let autos = productController.getCars();
-        let newAuto = {
+        let products = productController.productList();
+        let newproduct = {
             "id": Date.now(),
             "name": req.body.name || "Sin nombre",
             "km": req.body.km || 0,
@@ -38,56 +38,56 @@ const productController = {
             "available": false
         }
         
-        autos.push(newAuto);
+        products.push(newproduct);
         
-        fs.writeFileSync(autosPath, JSON.stringify(autos, null, ' '));
+        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
         
         res.redirect('/products');
     },
     edit: (req, res) => {
-        let autoId = req.params.id;
-        let auto = productController.getCars().find(auto => auto.id == autoId);
+        let productId = req.params.id;
+        let product = productController.productList().find(product => product.id == productId);
         
         res.render('products/edit', {
-            title: 'Mi auto',
-            car: auto
+            title: 'Mi product',
+            car: product
         });
     },
     update: (req, res) => {
-        let autoId = req.params.id;
-        let autos = productController.getCars();
+        let productId = req.params.id;
+        let products = productController.productList();
 
-        autos.forEach((auto, index) => {
+        products.forEach((product, index) => {
             if (auto.id == autoId) {        
                 // auto.name = Talon
-                auto.name = req.body.name; // auto.name = Talon de aquiles
-                auto.year = req.body.year;
+                product.name = req.body.name; // product.name = Talon de aquiles
+                product.year = req.body.year;
 
-                autos[index] = auto;
+                products[index] = product;
             }
         });
         
-        fs.writeFileSync(autosPath, JSON.stringify(autos, null, ' '));
+        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
         
         res.redirect('/products');
     },
     delete: (req, res) => {
-        let autoId = req.params.id;
-        let auto = productController.getCars().find(auto => auto.id == autoId);
+        let productId = req.params.id;
+        let product = productController.productList().find(product => product.id == productId);
         
         res.render('products/delete', {
-            title: 'Eliminar auto',
-            car: auto
+            title: 'Eliminar producto',
+            products: product
         });
     },
     destroy: (req, res) => {
-        let autoId = req.params.id;
-        let autos = productController.getCars();// array
+        let productId = req.params.id;
+        let products = productController.productList();// array
         
-        let newAutos = autos.filter(auto => auto.id != autoId); // nuevo
+        let newProducts = products.filter(product => product.id != productId); // nuevo
 
         // Modifica el archivo
-        fs.writeFileSync(autosPath, JSON.stringify(newAutos, null, ' '));
+        fs.writeFileSync(productsPath, JSON.stringify(newproducts, null, ' '));
         
         res.redirect('/products');
     }
