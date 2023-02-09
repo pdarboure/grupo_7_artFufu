@@ -15,11 +15,11 @@ const productController = {
     },
     show: (req, res) => {
         let productId = req.params.id;
-        let product = productController.productList().find(product => product.id == productId);
+        let product = productController.getProducts().find(product => product.id == productId);
         
         res.render('products/show', {
             title: 'Mi producto',
-            product: producto
+            producto: product
         });
     },
     create: (req, res) => {
