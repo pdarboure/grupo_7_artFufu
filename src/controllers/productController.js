@@ -49,10 +49,11 @@ const productController = {
         let product = productController.getProducts().find(product => product.id == productId);
         
         res.render('products/editarProducto', {
-            title: 'Mi product',
+            title: 'Mi producto',
             producto: product
         });
     },
+
     update: (req, res) => {
         let productId = req.params.id;
         let products = productController.productList();
