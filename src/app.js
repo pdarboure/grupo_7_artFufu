@@ -17,6 +17,8 @@ const productRoutes = require('./routes/productsRoutes');
 //     res.status(404).render('error');
 // });
 
+app.use(methodOverride('_method'))
+
 app.use(mainRouters);
 
 app.use('/products', productRoutes);
@@ -25,11 +27,10 @@ app.set("view engine", "ejs");
 
 app.set('views', path.resolve(__dirname, 'views'));
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-app.use(methodOverride('_method'))
 
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
