@@ -1,0 +1,16 @@
+
+<%- include('../partials/header.ejs') %>
+
+<h1>Eliminar producto</h1>
+
+<h2>¿Estas seguro que queres eliminar el producto?</h2>
+
+<form method="post" action="/products/delete/<%= producto.id %> ?_method=DELETE">
+    <label for="name">Nombre</label>
+    <input type="text" name="name" value="<%= producto.name %> " disabled>
+
+    <button type="submit">Eliminar</button>
+</form>
+
+
+<%- include('../partials/footer.ejs') %>
