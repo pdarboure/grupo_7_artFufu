@@ -24,14 +24,6 @@
   "price": 6730
  },
  {
-  "id": 4,
-  "name": "Puce",
-  "description": "Puce",
-  "image": "Fuscia",
-  "category": "Puce",
-  "price": 5830
- },
- {
   "id": 5,
   "name": "Crimson",
   "description": "Purple",
@@ -161,8 +153,5 @@
  },
  {
   "id": 1675979217629
- },
- {
-  "id": 1675979328174
  }
 ]

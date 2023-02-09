@@ -56,12 +56,12 @@ const productController = {
 
     update: (req, res) => {
         let productId = req.params.id;
-        let products = productController.productList();
+        let products = productController.getProducts();
 
         products.forEach((product, index) => {
             if (product.id == productId) {        
-                // auto.name = Talon
-                product.name = req.body.name; // product.name = Talon de aquiles
+                
+                product.name = req.body.name;
                 product.year = req.body.year;
 
                 products[index] = product;
