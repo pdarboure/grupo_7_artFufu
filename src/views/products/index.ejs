@@ -1,8 +1,12 @@
 <%- include('../partials/header.ejs') %>
 
 <h1>Listado de productos</h1>
-<!-- <a href="/products/create">Crear products</a> -->
+
+<a href="/products/create">Crear products</a>
+
+<!-- listado de productos, se agrega todo lo que viene por JSON -->
 <ul>
+
     <% productsList.forEach(products => { %>
         <li>
             <a href="/products/<%= products.id %>"><%= products.name %></a>
