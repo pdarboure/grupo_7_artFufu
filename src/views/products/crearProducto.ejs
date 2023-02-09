@@ -3,13 +3,22 @@
     <body>
         <%- include('../partials/header.ejs') %>
 
-        <main>
+        <!-- <main>
             <form class= "register-form" action="/register" method="post">
                 <h2 class="text">Creá un producto nuevo</h2><br><br>
 
                 <label class="form-label" for="name">Código del producto</label>
-                <input type="search"/><br><br>
+                <input type="search"/><br><br> -->
 
+                <form method="post" action="/products/crearProducto">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name">
+                    <label for="year">Precio</label>
+                    <input type="number" name="price">
+                
+                    <button type="submit">Crear</button>
+                </form>
+<!-- 
                 <label class="form-label" for="name">Nombre del producto:</label>
                 <input class="form-input" type="text" id="name" name="name"><br><br>
 
@@ -35,7 +44,7 @@
 
             <form>
 
-        </main>
+        </main> -->
     
         <%- include('../partials/footer.ejs') %> 
     </body>

@@ -22,20 +22,21 @@ const productController = {
             producto: product
         });
     },
-    create: (req, res) => {
+    crearProducto: (req, res) => {
         res.render('products/crearProducto', {
             title: 'Nuevo producto'
         });
     },
     store: (req, res) => {
-        let products = productController.productList();
+        let products = productController.getProducts();
         let newproduct = {
             "id": Date.now(),
             "name": req.body.name || "Sin nombre",
-            "km": req.body.km || 0,
-            "year": req.body.year || 0,
             "price": req.body.price || 0,
-            "available": false
+            // "description": req.body.description || "Sin nombre",
+            // "image": req.body.image || 0,
+            // "available": false
+            // category
         }
         
         products.push(newproduct);
@@ -83,12 +84,12 @@ const productController = {
     },
     destroy: (req, res) => {
         let productId = req.params.id;
-        let products = productController.productList();// array
+        let products = productController.getProducts();// array
         
         let newProducts = products.filter(product => product.id != productId); // nuevo
 
         // Modifica el archivo
-        fs.writeFileSync(productsPath, JSON.stringify(newproducts, null, ' '));
+        fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, ' '));
         
         res.redirect('/products');
     }

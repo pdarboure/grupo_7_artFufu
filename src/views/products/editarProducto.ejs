@@ -2,9 +2,9 @@
 <html lang="en">
 
 <body>
-    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %> 
 
-        <main>
+        <!-- <main>
             <form class="register-form" action="/register" method="post">
                 <h2 class="text">Editá un producto</h2><br><br>
 
@@ -13,19 +13,19 @@
                 <input class="boton-register" type="submit" value="Buscar"><br><br>
 
                 <label class="form-label" for="name">Editar código del producto</label>
-                <input type="search" /><br><br>
-                <h1>Editando producto</h1>
-                <!-- metodo aplicado para editar ID -->
-                <form method="post" action="/products/edit/<%= producto.id %>?_method=PUT">
+                <input type="search" /><br><br> -->
+        <h1>Editando producto</h1>
+        <!-- metodo aplicado para editar ID -->
+        <form method="post" action="/products/edit/<%= producto.id %>?_method=PUT">
 
-                    <label for="name">Nombre</label>
+            <label for="name">Nombre</label>
 
-                    <!-- metodo aplicado para editar NAME -->
-                    <input type="text" name="name" value="<%= producto.name %>">
+            <!-- metodo aplicado para editar NAME -->
+            <input type="text" name="name" value="<%= producto.name %>">
 
-                    <button type="submit">Editar</button>
-                </form>
-                <label class="form-label" for="name">Nombre del producto</label>
+            <button type="submit">Editar</button>
+        </form>
+        <!-- <label class="form-label" for="name">Nombre del producto</label>
                 <input class="form-input" type="text" id="name" name="name"><br><br>
 
                 <label class="form-label" for="name">Descripción</label>
@@ -46,7 +46,7 @@
 
                     <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a>
 
-                    <form>
+                    <form> -->
 
         </main>
 
