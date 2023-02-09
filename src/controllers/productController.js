@@ -23,7 +23,7 @@ const productController = {
         });
     },
     create: (req, res) => {
-        res.render('products/create', {
+        res.render('products/crearProducto', {
             title: 'Nuevo producto'
         });
     },
@@ -46,11 +46,11 @@ const productController = {
     },
     edit: (req, res) => {
         let productId = req.params.id;
-        let product = productController.productList().find(product => product.id == productId);
+        let product = productController.getProducts().find(product => product.id == productId);
         
-        res.render('products/edit', {
+        res.render('products/editarProducto', {
             title: 'Mi product',
-            car: product
+            producto: product
         });
     },
     update: (req, res) => {
@@ -58,7 +58,7 @@ const productController = {
         let products = productController.productList();
 
         products.forEach((product, index) => {
-            if (auto.id == autoId) {        
+            if (product.id == productId) {        
                 // auto.name = Talon
                 product.name = req.body.name; // product.name = Talon de aquiles
                 product.year = req.body.year;
@@ -73,11 +73,11 @@ const productController = {
     },
     delete: (req, res) => {
         let productId = req.params.id;
-        let product = productController.productList().find(product => product.id == productId);
+        let product = productController.getProducts().find(product => product.id == productId);
         
         res.render('products/delete', {
             title: 'Eliminar producto',
-            products: product
+            producto: product
         });
     },
     destroy: (req, res) => {

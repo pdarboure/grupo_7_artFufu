@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head.ejs')%> 
-    <body>
-        <%- include('../partials/header.ejs') %>
+
+<body>
+    <%- include('../partials/header.ejs') %>
 
         <main>
-            <form class= "register-form" action="/register" method="post">
+            <form class="register-form" action="/register" method="post">
                 <h2 class="text">Editá un producto</h2><br><br>
-                
+
                 <label class="form-label" for="name">Código del producto</label>
                 <input type="search" placeholder="Ingrese código de producto" />
                 <input class="boton-register" type="submit" value="Buscar"><br><br>
 
                 <label class="form-label" for="name">Editar código del producto</label>
                 <input type="search" /><br><br>
+                <h1>Editando producto</h1>
+                <!-- metodo aplicado para editar ID -->
+                <form method="post" action="/products/edit/<%= producto.id %>?_method=PUT">
 
+                    <label for="name">Nombre</label>
+
+                    <!-- metodo aplicado para editar NAME -->
+                    <input type="text" name="name" value="<%= producto.name %>">
+
+                    <button type="submit">Editar</button>
+                </form>
                 <label class="form-label" for="name">Nombre del producto</label>
                 <input class="form-input" type="text" id="name" name="name"><br><br>
 
@@ -33,13 +43,14 @@
                     <option value="2">Fibrofacil</option>
                     <option value="3">Pintura</option>
                     <option value="4">Otro</option>
-                        
-                <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a>
 
-            <form>
+                    <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a>
+
+                    <form>
 
         </main>
-    
-        <%- include('../partials/footer.ejs') %> 
-    </body>
+
+        <%- include('../partials/footer.ejs') %>
+</body>
+
 </html>
