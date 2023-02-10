@@ -21,8 +21,8 @@ const productController = {
             producto: product
         });
     },
-    crearProducto: (req, res) => {
-        res.render('products/crearProducto', {
+    create: (req, res) => {
+        res.render('products/create', {
             title: 'Nuevo producto'
         });
     },
@@ -39,6 +39,8 @@ const productController = {
         }
         
         products.push(newproduct);
+
+        console.log(req.body);
         
         fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
         
@@ -50,7 +52,7 @@ const productController = {
         
         res.render('products/editarProducto', {
             title: 'Mi producto',
-            producto: product
+            product: product
         });
     },
 

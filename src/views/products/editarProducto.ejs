@@ -16,12 +16,12 @@
                 <input type="search" /><br><br> -->
         <h1>Editando producto</h1>
         <!-- metodo aplicado para editar ID -->
-        <form method="post" action="/products/edit/<%= producto.id %>?_method=PUT">
+        <form method="post" action="/products/edit/<%= product.id %>?_method=PUT">
 
             <label for="name">Nombre</label>
 
             <!-- metodo aplicado para editar NAME -->
-            <input type="text" name="name" value="<%= producto.name %>">
+            <input type="text" name="name" value="<%= product.name %>">
 
             <button type="submit">Editar</button>
         </form>
