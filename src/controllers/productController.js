@@ -28,10 +28,21 @@ const productController = {
     },
     store: (req, res) => {
         let products = productController.getProducts();
+        let images = [];
+        if (req.files) {
+            req.files.forEach(file => {
+                images.push({
+                    "id": Date.now(),
+                    "name": file.filename,
+                });
+            });
+        }
+            
         let newproduct = {
             "id": Date.now(),
             "name": req.body.name || "Sin nombre",
             "price": req.body.price || 0,
+            "image": images
             // "description": req.body.description || "Sin nombre",
             // "image": req.body.image || 0,
             // "available": false

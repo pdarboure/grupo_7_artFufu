@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const upload = require('../middlewares/multer');
 
 const productController = require('../controllers/productController');
 
@@ -7,7 +8,7 @@ const productController = require('../controllers/productController');
 router.get('/', productController.index);
 // creacion de producto
 router.get('/create', productController.create);
-router.post('/create', productController.store);
+router.post('/create', upload.any('images'), productController.store);
 // actualizar producto
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', productController.update);

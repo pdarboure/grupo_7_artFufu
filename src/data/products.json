@@ -1,7 +1,7 @@
 [
  {
   "id": 1,
-  "name": "Indigo",
+  "name": "Indigoasd",
   "description": "Indigo",
   "image": "Mauv",
   "category": "Maroon",
@@ -173,5 +173,73 @@
   "id": 1675990987193,
   "name": "asdas1",
   "price": "2323"
+ },
+ {
+  "id": 1676124705879,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124758061,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124794419,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124885252,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124919958,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124935202,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676124974372,
+  "name": "loco",
+  "price": "100"
+ },
+ {
+  "id": 1676125162689,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676125281910,
+  "name": "Sin nombre",
+  "price": 0
+ },
+ {
+  "id": 1676125541859,
+  "name": "Sin nombre",
+  "price": 0,
+  "image": []
+ },
+ {
+  "id": 1676125659732,
+  "name": "jeje",
+  "price": "1999",
+  "image": []
+ },
+ {
+  "id": 1676125820029,
+  "name": "loco",
+  "price": "1999999",
+  "image": [
+   {
+    "id": 1676125820029,
+    "name": "product-1676125820020.pdf"
+   }
+  ]
  }
 ]

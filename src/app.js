@@ -15,13 +15,13 @@ const productRoutes = require('./routes/productsRoutes');
 //     res.status(404).render('error');
 // });
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '../public')));
+
+app.use(express.urlencoded({ extended: false }));
 
 app.set('views', path.resolve(__dirname, 'views'));
 
 app.set("view engine", "ejs");
-
-app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
