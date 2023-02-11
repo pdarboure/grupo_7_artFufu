@@ -1,13 +1,24 @@
 <%- include('../partials/header.ejs') %>
 
 <!-- Estos son los nombres que vienen del JSON -->
-<h1>nombre-producto <%= producto.name %></h1>
+<h1><%= producto.name %></h1>
 
 <!-- Este ID viene del  JSON -->
 <strong>
     id: <%= producto.id %>
 </strong>
-
+<% if (producto.images) { %>
+    <% if (Array.isArray(producto.images)) { %>
+        <% producto.images.forEach(image => { %>
+            <img width="40" src="/images/products/<%= image %>" alt="<%= image %>">
+        <% }) %>
+		<% } else { %>
+			<img width="50" src="/img/products/<%= car.images %>" alt="">
+		<% } %>
+	<% } else { %>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
+	<% } %>
+	
 	<main class="container-detalles" id="detalles">
 		<article class="detalle-grid">
 			<img src="/images/helado-1321.jpg" class="img-fluid">
@@ -15,7 +26,7 @@
 				<h3 class="nombre-producto">Producto</h3>
 				<div class="rating">
 				</div>
-				<p class="price"><b>Precio: </b> $55.00</p>
+				<p class="price"><b>Precio: </b> <%= producto.price %></p>
 				<p class="description">
 					<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad
 						ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores.
