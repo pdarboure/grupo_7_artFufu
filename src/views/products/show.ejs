@@ -7,17 +7,18 @@
 <strong>
     id: <%= producto.id %>
 </strong>
-<% if (producto.images) { %>
+<% if (producto.image) { %>
     <% if (Array.isArray(producto.images)) { %>
         <% producto.images.forEach(image => { %>
-            <img width="40" src="/images/products/<%= image %>" alt="<%= image %>">
-        <% }) %>
+			<img width="40" src="/images/products/<%= producto.images %>" alt="<%= image %>">
+			<% }) %>
 		<% } else { %>
-			<img width="50" src="/img/products/<%= car.images %>" alt="">
+			<img width="50" src="/images/products/<%= producto.images %>" alt="">
 		<% } %>
 	<% } else { %>
 		<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
 	<% } %>
+
 	
 	<main class="container-detalles" id="detalles">
 		<article class="detalle-grid">

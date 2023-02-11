@@ -241,5 +241,27 @@
     "name": "product-1676125820020.pdf"
    }
   ]
+ },
+ {
+  "id": 1676127982450,
+  "name": "primer producto",
+  "price": "150",
+  "image": [
+   {
+    "id": 1676127982450,
+    "name": "product-1676127982445.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676130465602,
+  "name": "perchero",
+  "price": "24",
+  "image": [
+   {
+    "id": 1676130465602,
+    "name": "product-1676130465596.jpg"
+   }
+  ]
  }
 ]

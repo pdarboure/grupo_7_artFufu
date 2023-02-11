@@ -6,12 +6,22 @@ const mainController = {
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
+    // home: (req, res) => {
+    //     res.render('home',{
+    //         css: './css/homestyles.css',
+    //         title: 'Artistica Fufu'
+    //     });
+    // },
+
     home: (req, res) => {
-        res.render('home',{
-            css: './css/homestyles.css',
-            title: 'Artistica Fufu'
+        res.render('home', {
+            css: '../css/homestyles.css',
+            title: 'Listado de productos',
+            productsList: mainController.getProducts()
         });
     },
+
+    
 
     login: (req, res) => {
         res.render('./user/login',{

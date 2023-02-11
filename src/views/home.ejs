@@ -14,6 +14,25 @@
                             <p class="precio">$9.499</p>
                     </div>
                 </article></a> 
+<!-- aca esta la magia abajo de que se repita la lista, falta el CSS -->
+                <ul>
+                    <div class="all-articles">
+                    <% productsList.forEach(products => { %>
+                        <li>
+                            <a href="/products/<%= products.id %>"><h4><%= products.name %></h4></a><article> 
+                            -
+                            <div class="descripciones">
+                                <p class="precio"><%= products.price %></p>
+                            </div>
+                        </article></a> 
+                            <a href="/products/edit/<%= products.id %>">Editar</a>
+                            -
+                            <a href="/products/delete/<%= products.id %>">Eliminar</a>
+                        </li>
+                    <% }) %>
+                </ul>
+
+                
     
                 <a href="/products/"><article>
                     <img src='/images/arco-iris-1982.jpg' alt=''>
