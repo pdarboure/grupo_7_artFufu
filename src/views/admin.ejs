@@ -1,1 +1,20 @@
-<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs')%>
+<body>
+  <%- include('./partials/header.ejs') %> 
+    <br><br>
+
+    <main>
+        <div class="div-botones-admin">
+            <a href="./products/create"><button class="botones-admin">Crear producto</button></a>
+        </div>
+        <div class="div-botones-admin">
+            <a href="./products"><button class="botones-admin">Editar producto</button></a>
+        </div>
+      
+    </main>
+
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html> 

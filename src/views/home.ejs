@@ -6,35 +6,39 @@
     <main>
         <section>
             <h3>Nuevos Lanzamientos</h3>
-            <div class="all-articles">
+            <!-- <div class="all-articles">
                 <a href="./products/"><article>
                     <img src='/images/cajon-grande.jpg' alt=''>
                     <div class="descripciones">
                             <h4>Cajon Grande</h4>
                             <p class="precio">$9.499</p>
                     </div>
-                </article></a> 
+                </article></a>  -->
+
+
 <!-- aca esta la magia abajo de que se repita la lista, falta el CSS -->
                 <ul>
                     <div class="all-articles">
                     <% productsList.forEach(products => { %>
-                        <li>
-                            <a href="/products/<%= products.id %>"><h4><%= products.name %></h4></a><article> 
-                            -
-                            <div class="descripciones">
+                        
+                            
+                            <article> 
+                                
+                                <div class="descripciones">
+                                <a href="/products/<%= products.id %>"><h4><%= products.name %></h4> </a>
                                 <p class="precio"><%= products.price %></p>
                             </div>
                         </article></a> 
                             <a href="/products/edit/<%= products.id %>">Editar</a>
-                            -
+                            
                             <a href="/products/delete/<%= products.id %>">Eliminar</a>
-                        </li>
+                        
                     <% }) %>
                 </ul>
 
                 
     
-                <a href="/products/"><article>
+                <!-- <a href="/products/"><article>
                     <img src='/images/arco-iris-1982.jpg' alt=''>
                     <div class="descripciones">
                             <h4>Arcoiris</h4>
@@ -59,7 +63,7 @@
                 </article></a>
               </div>
         </section>
-        <section>
+        <section> -->
             <h3>Ofertas</h3>
             <div class="all-articles">
                 <article>
