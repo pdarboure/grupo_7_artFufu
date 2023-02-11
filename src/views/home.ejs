@@ -23,6 +23,7 @@
                             <% productsList.forEach(products=> { %>
 
                                 <article>
+                                    <a href="/products/<%= products.id %>">
 
                                     <% if (products.image) { %>
                                         <% if (Array.isArray(products.image)) { %>
