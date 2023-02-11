@@ -17,6 +17,10 @@ const productRoutes = require('./routes/productsRoutes');
 
 app.use(express.static('public'));
 
+app.set('views', path.resolve(__dirname, 'views'));
+
+app.set("view engine", "ejs");
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
@@ -26,10 +30,6 @@ app.use(methodOverride('_method'))
 app.use(mainRouters);
 
 app.use('/products', productRoutes);
-
-app.set("view engine", "ejs");
-
-app.set('views', path.resolve(__dirname, 'views'));
 
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
