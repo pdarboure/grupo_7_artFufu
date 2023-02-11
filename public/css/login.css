@@ -6,16 +6,27 @@
 #c4ab5f 
 */
 
-/* ********************************** */
-/*               LOGIN               */
-/* ********************************** */
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
+body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+  background-color: #ebebeb;
+  opacity: 0.9;
 }
+
+.titulo-fufu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0px auto 0px auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .login{
   display: grid;
   width: 100%;
@@ -32,19 +43,7 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
-  /* margin-top: 12px; */
-}
-
-.titulo-fufu {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
-  /* border-bottom: 2px solid #5fc4ae; */
-  margin: 0px auto 0px auto;
-  /* padding-top: 25px; */
-  padding-bottom: 25px;
-  background-color: #ebebeb;
+  margin-top: 50px; 
 }
   
 .titulo-fufu i {
