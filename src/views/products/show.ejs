@@ -7,22 +7,22 @@
 <strong>
     id: <%= producto.id %>
 </strong>
-<% if (producto.image) { %>
-    <% if (Array.isArray(producto.images)) { %>
-        <% producto.images.forEach(image => { %>
-			<img width="40" src="/images/products/<%= producto.images %>" alt="<%= image %>">
-			<% }) %>
-		<% } else { %>
-			<img width="50" src="/images/products/<%= producto.images %>" alt="">
-		<% } %>
-	<% } else { %>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
-	<% } %>
 
-	
-	<main class="container-detalles" id="detalles">
-		<article class="detalle-grid">
-			<img src="/images/helado-1321.jpg" class="img-fluid">
+
+<main class="container-detalles" id="detalles">
+	<article class="detalle-grid">
+		 
+		<% if (producto.image) { %>
+			<% if (Array.isArray(producto.image)) { %>
+				<% producto.image.forEach(image => { %>
+					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="<%= image %>">
+					<% }) %>
+				<% } else { %>
+					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="">
+				<% } %>
+			<% } else { %>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
+			<% } %>
 			<div class="detalles-content">
 				<h3 class="nombre-producto">Producto</h3>
 				<div class="rating">

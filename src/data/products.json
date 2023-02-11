@@ -263,5 +263,27 @@
     "name": "product-1676130465596.jpg"
    }
   ]
+ },
+ {
+  "id": 1676136786181,
+  "name": "cajon grande",
+  "price": "544",
+  "image": [
+   {
+    "id": 1676136786181,
+    "name": "product-1676136786178.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676137664680,
+  "name": "Macetero",
+  "price": "677",
+  "image": [
+   {
+    "id": 1676137664680,
+    "name": "product-1676137664678.jpg"
+   }
+  ]
  }
 ]
