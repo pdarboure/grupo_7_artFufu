@@ -1,8 +1,7 @@
 [
-
  {
   "id": 1676130465602,
-  "name": "perchero",
+  "name": "Perchero",
   "price": "24",
   "image": [
    {
@@ -13,7 +12,7 @@
  },
  {
   "id": 1676136786181,
-  "name": "cajon grande",
+  "name": "Cajon Grande",
   "price": "544",
   "image": [
    {
@@ -30,6 +29,78 @@
    {
     "id": 1676137664680,
     "name": "product-1676137664678.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139096497,
+  "name": "Mesa de luz",
+  "price": "7888",
+  "image": [
+   {
+    "id": 1676139096497,
+    "name": "product-1676139096491.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139204460,
+  "name": "Servilletero Corona",
+  "price": "34124",
+  "image": [
+   {
+    "id": 1676139204460,
+    "name": "product-1676139204457.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139241814,
+  "name": "Bar",
+  "price": "4545",
+  "image": [
+   {
+    "id": 1676139241814,
+    "name": "product-1676139241809.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139263253,
+  "name": "Arco iris",
+  "price": "123",
+  "image": [
+   {
+    "id": 1676139263253,
+    "name": "product-1676139263247.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139287167,
+  "name": "Caja de  Bombom",
+  "price": "1212",
+  "image": [
+   {
+    "id": 1676139287167,
+    "name": "product-1676139287163.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139291077,
+  "name": "Sin nombre",
+  "price": 0,
+  "image": []
+ },
+ {
+  "id": 1676139309285,
+  "name": "Cartel señalador",
+  "price": "121",
+  "image": [
+   {
+    "id": 1676139309285,
+    "name": "product-1676139309282.jpg"
    }
   ]
  }

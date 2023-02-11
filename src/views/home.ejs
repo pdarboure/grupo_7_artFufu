@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs')%>
-<body>
-<%- include('./partials/header.ejs') %> 
-    <main>
-        <section>
-            <h3>Nuevos Lanzamientos</h3>
-            <!-- <div class="all-articles">
+<%- include('./partials/head.ejs')%>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+            <main>
+                <section>
+                    <h3>Nuevos Lanzamientos</h3>
+                    <!-- <div class="all-articles">
                 <a href="./products/"><article>
                     <img src='/images/cajon-grande.jpg' alt=''>
                     <div class="descripciones">
@@ -16,29 +17,45 @@
                 </article></a>  -->
 
 
-<!-- aca esta la magia abajo de que se repita la lista, falta el CSS -->
-                <ul>
-                    <div class="all-articles">
-                    <% productsList.forEach(products => { %>
-                        
-                            
-                            <article> 
-                                
-                                <div class="descripciones">
-                                <a href="/products/<%= products.id %>"><h4><%= products.name %></h4> </a>
-                                <p class="precio"><%= products.price %></p>
-                            </div>
-                        </article></a> 
-                            <a href="/products/edit/<%= products.id %>">Editar</a>
-                            
-                            <a href="/products/delete/<%= products.id %>">Eliminar</a>
-                        
-                    <% }) %>
-                </ul>
+                    <!-- aca esta la magia abajo de que se repita la lista, falta el CSS -->
+                    <ul>
+                        <div class="all-articles">
+                            <% productsList.forEach(products=> { %>
 
-                
-    
-                <!-- <a href="/products/"><article>
+                                <article>
+
+                                    <% if (products.image) { %>
+                                        <% if (Array.isArray(products.image)) { %>
+                                            <% products.image.forEach(image => { %>
+                                                <img class="img-fluid" src="/images/products/<%= image.name %>" alt="<%= image %>">
+                                                <% }) %>
+                                            <% } else { %>
+                                                <img class="img-fluid" src="/images/products/<%= image.name %>" alt="">
+                                            <% } %>
+                                        <% } else { %>
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
+                                        <% } %>
+
+                                    <div class="descripciones">
+
+                                        <a href="/products/<%= products.id %>">
+                                            <h4>
+                                                <%= products.name %>
+                                            </h4>
+                                        </a>
+
+
+                                        <p class="precio">
+                                            $<%= products.price %>
+                                        </p>
+                                    </div>
+                                </article></a><% }) %>
+                        
+                    </ul>
+
+
+
+                    <!-- <a href="/products/"><article>
                     <img src='/images/arco-iris-1982.jpg' alt=''>
                     <div class="descripciones">
                             <h4>Arcoiris</h4>
@@ -64,81 +81,82 @@
               </div>
         </section>
         <section> -->
-            <h3>Ofertas</h3>
-            <div class="all-articles">
-                <article>
-                    <img src='/images/inf-gato.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Gato</h4>
-                            <p class="precio">$6.770</p>
+                    <h3>Ofertas</h3>
+                    <div class="all-articles">
+                        <article>
+                            <img src='/images/inf-gato.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Gato</h4>
+                                <p class="precio">$6.770</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/pinches-12.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Cactus</h4>
+                                <p class="precio">$2.70</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/te-amo-3.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>"TE AMO"</h4>
+                                <p class="precio">$770</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/bar-3.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Bar</h4>
+                                <p class="precio">$3.450</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-    
-                <article>
-                    <img src='/images/pinches-12.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Cactus</h4>
-                            <p class="precio">$2.70</p>
+                </section>
+                <section>
+                    <h3>Lo más vendido</h3>
+                    <div class="all-articles">
+                        <article>
+                            <img src='/images/macetero-p6.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Macetero</h4>
+                                <p class="precio">$6.770</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/mesa-luz-nordica.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Mesa de Luz Nordica</h4>
+                                <p class="precio">$2.70</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/perchero-1.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Perchero</h4>
+                                <p class="precio">$770</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src='/images/servilletero-corona-1.jpg' alt=''>
+                            <div class="descripciones">
+                                <h4>Servilletero Corona</h4>
+                                <p class="precio">$3.450</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
-    
-                <article>
-                    <img src='/images/te-amo-3.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>"TE AMO"</h4>
-                            <p class="precio">$770</p>
-                    </div>
-                </article>
-    
-                <article>
-                    <img src='/images/bar-3.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Bar</h4>
-                            <p class="precio">$3.450</p>
-                    </div>
-                </article>
-              </div>
-        </section>
-        <section>
-            <h3>Lo más vendido</h3>
-            <div class="all-articles">
-                <article>
-                    <img src='/images/macetero-p6.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Macetero</h4>
-                            <p class="precio">$6.770</p>
-                    </div>
-                </article>
-    
-                <article>
-                    <img src='/images/mesa-luz-nordica.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Mesa de Luz Nordica</h4>
-                            <p class="precio">$2.70</p>
-                    </div>
-                </article>
-    
-                <article>
-                    <img src='/images/perchero-1.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Perchero</h4>
-                            <p class="precio">$770</p>
-                    </div>
-                </article>
-    
-                <article>
-                    <img src='/images/servilletero-corona-1.jpg' alt=''>
-                    <div class="descripciones">
-                            <h4>Servilletero Corona</h4>
-                            <p class="precio">$3.450</p>
-                    </div>
-                </article>
-              </div>
-        </section> 
+                </section>
 
 
-        
-    </main>
-  <%- include('./partials/footer.ejs') %> 
-</body>
-</html> 
+
+            </main>
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>
