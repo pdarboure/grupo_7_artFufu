@@ -8,6 +8,7 @@ const productController = {
     },
     index: (req, res) => {
         res.render('products/index', {
+            css: '../css/homestyles.css',
             title: 'Listado de productos',
             productsList: productController.getProducts()
         });
@@ -17,8 +18,8 @@ const productController = {
         let product = productController.getProducts().find(product => product.id == productId);
         
         res.render('products/show', {
-           
-            title: 'Mi producto',
+            css: './css/detalleproducto.css',
+            title: 'Detalle Producto',
             producto: product
         });
     },
