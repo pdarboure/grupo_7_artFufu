@@ -1,15 +1,18 @@
-let express = require("express");
-let app = express()
-
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const productsPath = path.join(__dirname, '../data/products.json');
 
 const mainController = {
+    getProducts: () => {
+        return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+    },
     home: (req, res) => {
         res.render('home',{
             css: './css/homestyles.css',
             title: 'Artistica Fufu'
         });
     },
+
     login: (req, res) => {
         res.render('./user/login',{
             css: './css/login.css',
