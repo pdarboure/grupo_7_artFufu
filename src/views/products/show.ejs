@@ -1,10 +1,14 @@
-<%- include('../partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="/css/detalleproducto.css">
-
-<!-- Estos son los nombres que vienen del JSON -->
-
-<h1><%= producto.name %></h1>
+	<%- include('../partials/head.ejs') %> 
+	<%- include('../partials/header.ejs') %>
+	
+	<!-- <link rel="stylesheet" href="/css/detalleproducto.css"> -->
+	
+	<!-- Estos son los nombres que vienen del JSON -->
+	
+	<h1><%= producto.name %></h1>
 
 <!-- Este ID viene del  JSON -->
 <strong>
@@ -14,7 +18,7 @@
 
 <main class="container-detalles" id="detalles">
 	<article class="detalle-grid">
-		 
+		
 		<% if (producto.image) { %>
 			<% if (Array.isArray(producto.image)) { %>
 				<% producto.image.forEach(image => { %>
@@ -22,8 +26,8 @@
 					<% }) %>
 				<% } else { %>
 					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="">
-				<% } %>
-			<% } else { %>
+					<% } %>
+					<% } else { %>
 				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
 			<% } %>
 			<div class="detalles-content">
@@ -35,7 +39,7 @@
 					<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad
 						ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores.
 						Repudiandae delectus iste exercitationem vel?</span>
-				</p>
+					</p>
 				<p class="description">
 					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates consequuntur in
 						assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam iusto magnam vero maxime
@@ -51,4 +55,4 @@
 
 	<%- include('../partials/footer.ejs') %>
 </body>
-</html>  -->
+</html> 

@@ -2,7 +2,6 @@
 <html lang="en">
     
     <body>
-<<<<<<< HEAD
         <%- include('../partials/head.ejs') %>  
              
 <%- include('../partials/header.ejs') %>
@@ -12,24 +11,6 @@
                     <input type="text" name="name">
                     <label for="year">Precio</label>
                     <input type="number" name="price">
-=======
-    <%- include('../partials/header.ejs') %> 
-    <br><br>
-
-    <form method="post" action="/products/create" enctype="multipart/form-data">
-
-        <h2 class="text">Creá un producto nuevo</h2>
-        
-        <h3>
-        <label for="name">Nombre</label>
-        <input type="text" name="name">
-        </h3>
-
-        <h3>
-        <label for="year">Precio</label>
-        <input type="number" name="price">
-        </h3>
->>>>>>> 58a8a0b24490763af8f280cdde38875c835359d3
 
         <h3>
         <label class="form-label" for="name">Seleccioná una imagen </label>
@@ -55,4 +36,5 @@
 
         </form>
     </body>
+    <%- include('../partials/footer.ejs') %> 
 </html>

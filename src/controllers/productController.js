@@ -66,6 +66,7 @@ const productController = {
         
         res.render('products/editarProducto', {
             title: 'Mi producto',
+            css:'/css/admin.css',
             product: product
         });
     },
@@ -94,6 +95,7 @@ const productController = {
         
         res.render('products/delete', {
             title: 'Eliminar producto',
+            css:'/css/admin.css',
             producto: product
         });
     },

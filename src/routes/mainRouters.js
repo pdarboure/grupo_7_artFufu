@@ -15,7 +15,7 @@ router.get("/detalleproducto", mainController.detalleproducto);
 router.get("/carritoDeCompras", mainController.carritoDeCompras);
 router.get("/fibrofacil", mainController.fibrofacil);
 // router.get("/create", mainController.create);
-router.get("/editarProducto", mainController.editarProducto);
+// router.get("/editarProducto", mainController.editarProducto);
 
 // router.get("/error", mainController.error)
 
