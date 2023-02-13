@@ -59,8 +59,8 @@ const mainController = {
             title: 'administrador'
         });
     },
-    crearProducto: (req, res) => {
-        res.render('./products/crearProducto',{
+    create: (req, res) => {
+        res.render('./products/create',{
             css:'./css/admin.css',
             title: 'Crear Producto'
         });

@@ -44,6 +44,7 @@ main section h4{
     padding-left: 2%;
     padding-right: 2%;
 	padding: 20px;
+    flex-wrap: wrap;
     
 }
 

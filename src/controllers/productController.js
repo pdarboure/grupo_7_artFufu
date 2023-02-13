@@ -24,7 +24,8 @@ const productController = {
     },
     create: (req, res) => {
         res.render('products/create', {
-            title: 'Nuevo producto'
+            title: 'Nuevo producto',
+            css: '/css/admin.css'
         });
     },
     store: (req, res) => {
