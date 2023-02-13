@@ -4,23 +4,30 @@
     
 <%- include('../partials/header.ejs') %> 
 
-<h1>Listado de productos</h1>
+<link rel="stylesheet" href="/css/homestyles.css">
+<br><br>
 
-<a href="/products/create">Crear producto</a>
+<h1>Listado de productos</h1>
+<br><br><br>
+
+<h2><a href="/products/create">Crear producto</a></h2>
+<br><br>
 
 <!-- listado de productos, se agrega todo lo que viene por JSON -->
 <ul>
 
     <% productsList.forEach(products => { %>
         <li>
-            <a href="/products/<%= products.id %>"><%= products.name %></a>
-            -
-            <a href="/products/edit/<%= products.id %>">Editar</a>
-            -
-            <a href="/products/delete/<%= products.id %>">Eliminar</a>
+            <h3>
+                <a href="/products/<%= products.id %>"><%= products.name %></a>
+                -
+                <a href="/products/edit/<%= products.id %>">Editar</a>
+                -
+                <a href="/products/delete/<%= products.id %>">Eliminar</a>
+            </h3>
+            <br><br>
         </li>
     <% }) %>
 </ul>
 
-
-<%- include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %> 

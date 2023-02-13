@@ -1,6 +1,9 @@
 <%- include('../partials/header.ejs') %>
 
+<link rel="stylesheet" href="/css/detalleproducto.css">
+
 <!-- Estos son los nombres que vienen del JSON -->
+
 <h1><%= producto.name %></h1>
 
 <!-- Este ID viene del  JSON -->
@@ -27,7 +30,7 @@
 				<h3 class="nombre-producto">Producto</h3>
 				<div class="rating">
 				</div>
-				<p class="price"><b>Precio: </b> <%= producto.price %></p>
+				<p class="price"><b>Precio: </b> $<%= producto.price %></p>
 				<p class="description">
 					<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad
 						ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores.
