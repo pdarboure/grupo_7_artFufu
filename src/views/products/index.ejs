@@ -5,13 +5,13 @@
 <%- include('../partials/header.ejs') %> 
 
 <link rel="stylesheet" href="/css/homestyles.css">
-<br><br>
+
 
 <h1>Listado de productos</h1>
-<br><br><br>
+
 
 <h2><a href="/products/create">Crear producto</a></h2>
-<br><br>
+
 
 <!-- listado de productos, se agrega todo lo que viene por JSON -->
 <ul>
@@ -25,7 +25,7 @@
                 -
                 <a href="/products/delete/<%= products.id %>">Eliminar</a>
             </h3>
-            <br><br>
+            
         </li>
     <% }) %>
 </ul>
