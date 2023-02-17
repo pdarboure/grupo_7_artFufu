@@ -1,15 +1,28 @@
-let express = require("express");
-let app = express()
-
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const productsPath = path.join(__dirname, '../data/products.json');
 
 const mainController = {
+    getProducts: () => {
+        return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+    },
+    // home: (req, res) => {
+    //     res.render('home',{
+    //         css: './css/homestyles.css',
+    //         title: 'Artistica Fufu'
+    //     });
+    // },
+
     home: (req, res) => {
-        res.render('home',{
-            css: './css/homestyles.css',
-            title: 'Artistica Fufu'
+        res.render('home', {
+            css: '../css/homestyles.css',
+            title: 'Listado de productos',
+            productsList: mainController.getProducts()
         });
     },
+
+    
+
     login: (req, res) => {
         res.render('./user/login',{
             css: './css/login.css',
@@ -46,8 +59,8 @@ const mainController = {
             title: 'administrador'
         });
     },
-    crearProducto: (req, res) => {
-        res.render('./products/crearProducto',{
+    create: (req, res) => {
+        res.render('./products/create',{
             css:'./css/admin.css',
             title: 'Crear Producto'
         });

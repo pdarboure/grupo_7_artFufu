@@ -1,20 +1,90 @@
-[{"id":1,"name":"Indigo","description":"Indigo","image":"Mauv","category":"Maroon","price":7866},
-{"id":2,"name":"Blue","description":"Red","image":"Indigo","category":"Pink","price":5847},
-{"id":3,"name":"Red","description":"Red","image":"Fuscia","category":"Orange","price":6730},
-{"id":4,"name":"Puce","description":"Puce","image":"Fuscia","category":"Puce","price":5830},
-{"id":5,"name":"Crimson","description":"Purple","image":"Indigo","category":"Violet","price":3654},
-{"id":6,"name":"Turquoise","description":"Crimson","image":"Fuscia","category":"Khaki","price":2805},
-{"id":7,"name":"Red","description":"Purple","image":"Pink","category":"Khaki","price":7537},
-{"id":8,"name":"Blue","description":"Orange","image":"Red","category":"Mauv","price":6055},
-{"id":9,"name":"Maroon","description":"Aquamarine","image":"Indigo","category":"Khaki","price":6090},
-{"id":10,"name":"Crimson","description":"Khaki","image":"Khaki","category":"Green","price":4313},
-{"id":11,"name":"Yellow","description":"Mauv","image":"Goldenrod","category":"Aquamarine","price":8477},
-{"id":12,"name":"Puce","description":"Violet","image":"Pink","category":"Violet","price":8767},
-{"id":13,"name":"Orange","description":"Pink","image":"Green","category":"Red","price":9329},
-{"id":14,"name":"Maroon","description":"Goldenrod","image":"Crimson","category":"Teal","price":1129},
-{"id":15,"name":"Goldenrod","description":"Violet","image":"Crimson","category":"Pink","price":9738},
-{"id":16,"name":"Fuscia","description":"Pink","image":"Red","category":"Aquamarine","price":2343},
-{"id":17,"name":"Teal","description":"Crimson","image":"Fuscia","category":"Fuscia","price":6030},
-{"id":18,"name":"Maroon","description":"Blue","image":"Pink","category":"Fuscia","price":3927},
-{"id":19,"name":"Turquoise","description":"Pink","image":"Indigo","category":"Puce","price":5071},
-{"id":20,"name":"Purple","description":"Puce","image":"Violet","category":"Blue","price":1425}]
+[
+ {
+  "id": 1676130465602,
+  "name": "Perchero",
+  "price": "24",
+  "image": [
+   {
+    "id": 1676130465602,
+    "name": "product-1676130465596.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676136786181,
+  "name": "Cajon Grande",
+  "price": "544",
+  "image": [
+   {
+    "id": 1676136786181,
+    "name": "product-1676136786178.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676137664680,
+  "name": "Macetero",
+  "price": "677",
+  "image": [
+   {
+    "id": 1676137664680,
+    "name": "product-1676137664678.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139096497,
+  "name": "Mesa de luz",
+  "price": "7888",
+  "image": [
+   {
+    "id": 1676139096497,
+    "name": "product-1676139096491.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139204460,
+  "name": "Servilletero Corona",
+  "price": "34124",
+  "image": [
+   {
+    "id": 1676139204460,
+    "name": "product-1676139204457.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139263253,
+  "name": "Arco iris",
+  "price": "123",
+  "image": [
+   {
+    "id": 1676139263253,
+    "name": "product-1676139263247.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676139287167,
+  "name": "Caja de  Bombom",
+  "price": "1212",
+  "image": [
+   {
+    "id": 1676139287167,
+    "name": "product-1676139287163.jpg"
+   }
+  ]
+ },
+ {
+  "id": 1676305686243,
+  "name": "Jhony",
+  "price": "123123123",
+  "image": [
+   {
+    "id": 1676305686243,
+    "name": "product-1676305686230.jpg"
+   }
+  ]
+ }
+]

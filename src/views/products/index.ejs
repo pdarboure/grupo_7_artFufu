@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <%- include('../partials/head.ejs') %> 
+<%- include('../partials/header.ejs') %> 
+
+<link rel="stylesheet" href="/css/homestyles.css">
+
+
+<h1>Listado de productos</h1>
+
+
+<h2><a href="/products/create">Crear producto</a></h2>
+
+
+<!-- listado de productos, se agrega todo lo que viene por JSON -->
+<ul>
+
+    <% productsList.forEach(products => { %>
+        <li>
+            <h3>
+                <a href="/products/<%= products.id %>"><%= products.name %></a>
+                -
+                <a href="/products/edit/<%= products.id %>">Editar</a>
+                -
+                <a href="/products/delete/<%= products.id %>">Eliminar</a>
+            </h3>
+            
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('../partials/footer.ejs') %> 

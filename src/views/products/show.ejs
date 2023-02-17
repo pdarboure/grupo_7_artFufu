@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<%- include('../partials/head.ejs') %> 
+	<%- include('../partials/header.ejs') %>
+	
+	<!-- <link rel="stylesheet" href="/css/detalleproducto.css"> -->
+	
+	<!-- Estos son los nombres que vienen del JSON -->
+	
+	<h1><%= producto.name %></h1>
+
+<!-- Este ID viene del  JSON -->
+<strong>
+    id: <%= producto.id %>
+</strong>
+
+
+<main class="container-detalles" id="detalles">
+	<article class="detalle-grid">
+		
+		<% if (producto.image) { %>
+			<% if (Array.isArray(producto.image)) { %>
+				<% producto.image.forEach(image => { %>
+					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="<%= image %>">
+					<% }) %>
+				<% } else { %>
+					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="">
+					<% } %>
+					<% } else { %>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
+			<% } %>
+			<div class="detalles-content">
+				<h3 class="nombre-producto">Producto</h3>
+				<div class="rating">
+				</div>
+				<p class="price"><b>Precio: </b> $<%= producto.price %></p>
+				<p class="description">
+					<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quae ad
+						ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam dolorum sunt omnis maiores.
+						Repudiandae delectus iste exercitationem vel?</span>
+					</p>
+				<p class="description">
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptates consequuntur in
+						assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam iusto magnam vero maxime
+						quisquam voluptatibus minima aliquam molestias, iure ratione commodi, reiciendis quasi.</span>
+				</p>
+				<div class="bottom">
+					<div class="btn__group">
+						<a>Añadir al carrito</a>
+					</div>
+				</div>
+			</div>
+	</main>
+
+	<%- include('../partials/footer.ejs') %>
+</body>
+</html> 
