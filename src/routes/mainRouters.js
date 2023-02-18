@@ -11,7 +11,6 @@ router.get("/admin", mainController.admin);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 // producto
-router.get("/detalleproducto", mainController.detalleproducto);
 router.get("/carritoDeCompras", mainController.carritoDeCompras);
 router.get("/fibrofacil", mainController.fibrofacil);
 // router.get("/create", mainController.create);

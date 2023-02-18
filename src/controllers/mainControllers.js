@@ -6,12 +6,6 @@ const mainController = {
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
-    // home: (req, res) => {
-    //     res.render('home',{
-    //         css: './css/homestyles.css',
-    //         title: 'Artistica Fufu'
-    //     });
-    // },
 
     home: (req, res) => {
         res.render('home', {
@@ -33,12 +27,6 @@ const mainController = {
         res.render('./user/register',{
            css: './css/register.css',
            title: 'Registro' 
-        });
-    },
-    detalleproducto: (req, res) => {
-        res.render('./products/detalleproducto',{
-            css: './css/detalleproducto.css',
-            title: 'Detalle Producto'
         });
     },
     fibrofacil: (req, res) => {

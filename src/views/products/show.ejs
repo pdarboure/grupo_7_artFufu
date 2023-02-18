@@ -8,13 +8,8 @@
 	
 	<!-- Estos son los nombres que vienen del JSON -->
 	
-	<h1><%= producto.name %></h1>
 
 <!-- Este ID viene del  JSON -->
-<strong>
-    id: <%= producto.id %>
-</strong>
-
 
 <main class="container-detalles" id="detalles">
 	<article class="detalle-grid">
@@ -25,13 +20,11 @@
 					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="<%= image %>">
 					<% }) %>
 				<% } else { %>
-					<img class="img-fluid" src="/images/products/<%= image.name %>" alt="">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
 					<% } %>
-					<% } else { %>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
-			<% } %>
+					<% } %>
 			<div class="detalles-content">
-				<h3 class="nombre-producto">Producto</h3>
+				<h3 class="nombre-producto"><%= producto.name %></h3>
 				<div class="rating">
 				</div>
 				<p class="price"><b>Precio: </b> $<%= producto.price %></p>
@@ -49,8 +42,15 @@
 					<div class="btn__group">
 						<a>Añadir al carrito</a>
 					</div>
+					<div class="btn__group">
+						<a href="/products/edit/<%= producto.id %>">Editar</a>
+					</div>
+					<div class="btn__group">
+						<a href="/products/delete/<%= producto.id %>">Eliminar</a>
+					</div>
 				</div>
 			</div>
+	</article>
 	</main>
 
 	<%- include('../partials/footer.ejs') %>

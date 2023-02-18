@@ -5,35 +5,37 @@
         <%- include('../partials/head.ejs') %>  
              
 <%- include('../partials/header.ejs') %>
-        
-                <form method="post" action="/products/create" enctype="multipart/form-data">
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name">
-                    <label for="year">Precio</label>
-                    <input type="number" name="price">
 
-        <h3>
-        <label class="form-label" for="name">Seleccioná una imagen </label>
-        <input type="file" name="image" id="image" multiple>
-        </h3>
-
-        <!-- <h3>
-        <label class="form-label" for="name">Descripción:</label>
-        <input class="form-input" type="text" id="name2" name="name2"><br><br>
-        </h3> -->
-
-        <!-- <h3>
-        <label class="form-label" for="categoria">Categoría:</label>
-                <select name="Categoría">
-                    <option value="1"></option>
-                    <option value="2">Fibrofacil</option>
-                    <option value="3">Pintura</option>
-                    <option value="4">Otro</option>
-        </h3> -->
-      
-        <button type="submit">Crear producto</button>
-        <br>
-
+    <div class="products-create">
+        <form action="/products/create" method="post" enctype="multipart/form-data">
+            <div class="product-detail">
+                <div class="">
+                    <label for="name" class="form-label">Nombre del producto:</label>
+                    <input type="text" id="name" name="name" placeholder="" class="form-input">
+                </div>
+                <div class="">
+                    <label for="price" class="form-label">Precio del producto:</label>
+                    <input type="text" id="price" name="price" placeholder="" class="form-input">
+                </div>
+                <div class="">
+                    <label for="discount" class="form-label">Subi tu imagen:</label>
+                    <input type="file" id="image" name="image" placeholder="" class="form-input">
+                </div>
+                <div class="">
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select name="category" id="category" class="form-input"> 
+                    </select>
+                </div>
+                <div class="">
+                    <label for="description" class="form-label">Descipción:</label>
+                    <textarea name="description" id="description" class="form-input"></textarea>
+                </div>
+                <div class="">
+                    <button type="submit" class="buy-now-button">Crear producto</button>
+                </div>
+            </div>
+        </form>
+    </div>
         </form>
     </body>
     <!-- <%- include('../partials/footer.ejs') %>  -->

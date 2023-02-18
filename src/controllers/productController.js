@@ -18,7 +18,7 @@ const productController = {
         let product = productController.getProducts().find(product => product.id == productId);
         
         res.render('products/show', {
-            css: './css/detalleproducto.css',
+            css: '/css/detalleproducto.css',
             title: 'Detalle Producto',
             producto: product
         });

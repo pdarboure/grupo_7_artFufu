@@ -1,7 +1,7 @@
 
 /* Detalles */
 .container-detalles{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     padding-top: 48px;
@@ -10,12 +10,12 @@
 }
 .detalle-grid{
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 .container-detalles .img-fluid{
     max-width: 380px;
-    width: 100%;
+    width: 94%;
     margin: 1rem auto;
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .2);
 } 
@@ -59,6 +59,7 @@
 
 .btn__group a{
 	color: white;
+    text-decoration: none;
 }
 
 .btn__group:hover{
@@ -68,4 +69,17 @@
 .price{
     font-weight: 700;
     font-size: 20px;
+}
+@media screen and (min-width:767px){
+  .detalle-grid{
+    grid-template-columns: 40% 50%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+    .bottom{
+        justify-content: flex-start;
+        gap:20px
+    }
 }
