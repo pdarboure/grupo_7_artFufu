@@ -1,13 +1,9 @@
-
-
 /* ********************************** */
 /*            MAIN CONTENT            */
 /* ********************************** */
 .main-content {
 	background-color: var(--background-color);
 }
-
-
 
 /* ------------------------------------------ MAIN  ------------------------------------------*/
 main{
@@ -33,6 +29,11 @@ main section article{
     margin-top: 10px;
     border: solid 1px #ebebeb;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.tittle-home{
+    font-size: 30px;
+    /* text-align: center; */
 }
 
 .all-articles{

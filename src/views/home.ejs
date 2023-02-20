@@ -6,7 +6,7 @@
         <%- include('./partials/header.ejs') %>
             <main>
                 <section>
-                    <h3>Nuevos Lanzamientos</h3>
+                    <h3 class="tittle-home">Nuevos Lanzamientos</h3>
                     <ul>
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
@@ -36,7 +36,7 @@
         </a>
         <% }) %>
 </ul>
-<h3>Ofertas</h3>
+<h3 class="tittle-home">Ofertas</h3>
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
         <a href="/products/<%= products.id %>" class="caja-article">
@@ -65,7 +65,7 @@
         </a>
         <% }) %>
 </div>
-<h3>Lo más vendido</h3>
+<h3 class="tittle-home">Lo más vendido</h3>
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
         <a href="/products/<%= products.id %>" class="caja-article">

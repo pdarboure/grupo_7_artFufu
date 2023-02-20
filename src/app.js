@@ -34,3 +34,4 @@ app.use('/products', productRoutes);
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
