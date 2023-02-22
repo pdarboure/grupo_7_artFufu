@@ -36,4 +36,30 @@
 
   DEJAR DE HACER: Estresarse menos por la apariencia momentánea del proyecto. Estamos aprendiendo.
   
+ 
+----- Retrospectiva del SPRINT 4️⃣ -----
+
+  COMENZAR A HACER: Hacer más dailys para mejorar la eficacia y la dinámica del grupo. 
+
+  HACER MÁS/MEJOR: Tener más practicado o fresco el contenido de las clases.
+  
+  CONTINUAR HACIENDO: Tener el mismo compromiso para cumplir con las tareas asignadas.
+  
+  HACER MENOS: Centrarnos menos en los detalles del proyecto y enfocarnos en las tareas importantes. 
+  
+  DEJAR DE HACER: Dejar de frustarse por lo que falta en vez de ver lo logrado. 
+
+ 
+----- Retrospectiva del SPRINT 5️⃣ -----
+
+  COMENZAR A HACER: 
+
+  HACER MÁS/MEJOR: 
+  
+  CONTINUAR HACIENDO: 
+  
+  HACER MENOS: 
+  
+  DEJAR DE HACER: 
+  
   
