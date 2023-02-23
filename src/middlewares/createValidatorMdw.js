@@ -7,7 +7,7 @@ const createMiddleware = [
         .isLength({min: 2}).withMessage('Minimo 2 caracteres')
         .isLength({max: 20}).withMessage('Maximo 20 caracteres'),
     body('price')
-        .notEmpty().withMessage('Por favor ingrese su nombre').bail()
+        .notEmpty().withMessage('Por favor ingrese un precio').bail()
         .isNumeric().withMessage('Por favor ingrese un valor numerico'),
     body('image')
         .custom((val,{req})=>{
