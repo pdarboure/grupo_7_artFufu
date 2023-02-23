@@ -4,11 +4,13 @@ const upload = require('../middlewares/multer');
 
 const productController = require('../controllers/productController');
 
+const createMiddleware = require('../middlewares/createValidatorMdw');
+
 // Listado de productso
 router.get('/', productController.index);
 // creacion de producto
 router.get('/create', productController.create);
-router.post('/create', upload.any('images'), productController.store);
+router.post('/create', upload.any('images'),createMiddleware, productController.store);
 // actualizar producto
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', productController.update);

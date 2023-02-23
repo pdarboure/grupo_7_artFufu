@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/products.json');
+const {validationResult} = require('express-validator');
+
 
 const productController = {
     getProducts: () => {
@@ -31,7 +33,18 @@ const productController = {
     },
     store: (req, res) => {
         let products = productController.getProducts();
+        let error = validationResult(req);
         let images = [];
+
+        if(!error.isEmpty()){
+
+            return res.render('products/create', {
+                oldBody: req.body,
+                error: error.mapped(),
+                title: 'Nuevo producto',
+                css: '/css/admin.css'
+            })
+        };
         if (req.files) {
             req.files.forEach(file => {
                 images.push({
