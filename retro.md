@@ -52,14 +52,14 @@
  
 ----- Retrospectiva del SPRINT 5️⃣ -----
 
-  COMENZAR A HACER: 
+  COMENZAR A HACER: Revisar punto por punto los sprints para que no nos vuelva a pasar que haya algo imcompleto. 
 
-  HACER MÁS/MEJOR: 
+  HACER MÁS/MEJOR: Mejorar la coordinación de los encuentros y la comunicación.
   
-  CONTINUAR HACIENDO: 
+  CONTINUAR HACIENDO: Seguir con la solidez con la que venimos trabajando a pesar de todas las dificultades. 
   
-  HACER MENOS: 
+  HACER MENOS: No avisar cuando estamos conectados o trabajando en el proyecto. 
   
-  DEJAR DE HACER: 
+  DEJAR DE HACER: No bajar los brazos. 
   
   
