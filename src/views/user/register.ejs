@@ -1,59 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs')%>
-<body>
-  <div class="titulo-fufu">
-    <i class="fa-solid fa-paintbrush"></i>
-                <h1 class="logo"><a href="/">Artistica Fufu</a></h1>
-            </div>
-  <div class="container-register">
-    <div class="title">Creá tu cuenta</div><br>
-    <div class="content">
-      <form action="#">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Nombre Completo</span>
-            <input  type="text" placeholder="Ingrese nombre" name="nombreCompleto">
-          </div>
-          <div class="input-box">
-            <span class="details">Nombre de Usuario</span>
-            <input type="text" placeholder="Ingrese usuario" name="nombreUsuario">
-          </div>
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="email" placeholder="Ingrese email" name="emailRegistro">
-          </div>
-          <div class="input-box">
-            <span class="details">Numero de Telefono</span>
-            <input type="text" placeholder="Ingrese numero" name="numeroTelefono">
-          </div>
-          <div class="input-box">
-            <span class="details">Contraseña</span>
-            <input type="password" placeholder="Ingrese contraseña" name="passwordRegistro">
-          </div>
-          <div class="input-box">
-            <span class="details">Confirme Contraseña</span>
-            <input type="password" placeholder="Confirme contraseña">
-          </div>
-        </div>
-        <div class="gender-details">
-          <span class="gender-title">Aceptar Términos y Condiciones</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Acepto</span>
-          </label>
-          </div>
-          <div class="yatienecuenta">
-            <h6>¿Ya tenés una cuenta?</h6>
-            <a href="/login">Ingresá con tu cuenta</a>
-          </div>
-        </div>
-        <div class="button">
-          <input type="submit" value="Registrarse">
-        </div>
-      </form>
+<%- include('../partials/head.ejs')%>
+
+  <body>
+    <div class="titulo-fufu">
+      <i class="fa-solid fa-paintbrush"></i>
+      <h1 class="logo"><a href="/">Artistica Fufu</a></h1>
     </div>
-  </div>
-</body>
-</html> 
+    <div class="container-register">
+      <div class="title">Creá tu cuenta</div><br>
+      <div class="content">
+        <form action="/register" method="post">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Nombre</span>
+              <input type="text" placeholder="Ingrese nombre" name="nombre"
+                value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
+              <% if (locals.error && error.nombre) { %>
+                <p>
+                  <%= error.nombre.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="input-box">
+              <span class="details">Apellido</span>
+              <input type="text" placeholder="Ingrese nombre" name="apellido"
+                value="<%= locals.oldBody && oldBody.apellido? oldBody.apellido: '' %>">
+              <% if (locals.error && error.apellido) { %>
+                <p>
+                  <%= error.apellido.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="input-box">
+              <span class="details">Nombre de Usuario</span>
+              <input type="text" placeholder="Ingrese usuario" name="nombreUsuario"
+                value="<%= locals.oldBody && oldBody.nombreUsuario? oldBody.nombreUsuario: '' %>">
+              <% if (locals.error && error.nombreUsuario) { %>
+                <p>
+                  <%= error.nombreUsuario.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="email" placeholder="Ingrese email" name="emailRegistro"
+                value="<%= locals.oldBody && oldBody.emailRegistro? oldBody.emailRegistro: '' %>">
+              <% if (locals.error && error.emailRegistro) { %>
+                <p>
+                  <%= error.emailRegistro.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="input-box">
+              <span class="details">Numero de Telefono</span>
+              <input type="text" placeholder="Ingrese numero" name="numeroTelefono">
+            </div>
+            <div class="input-box">
+              <span class="details">Contraseña</span>
+              <input type="password" placeholder="Ingrese contraseña" name="passwordRegistro">
+              <% if (locals.error && error.passwordRegistro) { %>
+                <p>
+                  <%= error.passwordRegistro.msg %>
+                </p>
+                <% } %>
+            </div>
+            <div class="input-box">
+              <span class="details">Confirme Contraseña</span>
+              <input type="password" placeholder="Confirme contraseña" name="checkPassword">
+            </div>
+            <div class="input-box">
+              <span class="details">Ingrese una imagen</span>
+              <input type="file" placeholder="Ingrese nombre" name="image">
+              <% if (locals.error && error.image) { %>
+                <p>
+                  <%= error.image.msg %>
+                </p>
+                <% } %>
+            </div>
+          </div>
+          <div class="gender-details">
+            <span class="gender-title">Aceptar Términos y Condiciones</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Acepto</span>
+              </label>
+            </div>
+            <div class="yatienecuenta">
+              <h6>¿Ya tenés una cuenta?</h6>
+              <a href="/login">Ingresá con tu cuenta</a>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Registrarse">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>
