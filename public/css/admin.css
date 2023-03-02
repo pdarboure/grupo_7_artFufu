@@ -24,3 +24,109 @@
   background-color: white;
   color:#c4ab5f ;
   }
+
+.create{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  /* background-color: #ebebeb ; */
+  opacity: 0.9;
+}  
+
+.container-create{
+  background: #fff;
+  max-width: 350px;
+  width: 380px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
+  margin-top: 50px; 
+}
+
+.container-create form .title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.container-create form .title:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+}
+.container-create form .input-box{
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.container-create form .input-box input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+.container-create form .underline::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.container-create form .underline::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #5fc4ae;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+.container-create form .input-box input:focus ~ .underline::after,
+.container-create form .input-box input:valid ~ .underline::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.container-create form .button{
+  margin: 40px 0 20px 0;
+  box-shadow: #000;
+  border-radius: 8px;
+  
+}
+.container-create .input-box input[type="submit"]{
+  background-color: #5fc4ae;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000;
+}
+.container-create .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background-color: #fff;
+  color: #5fc4ae;
+  border: 1px solid #5fc4ae;
+}
+
+.container-create .option{
+  font-size: 18px;
+  text-align: center;
+}
+.container-create .option a{
+  font-size: 18px;
+  text-align: center;
+  color: #3b5998;
+}
