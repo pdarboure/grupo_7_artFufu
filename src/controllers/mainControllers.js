@@ -3,11 +3,12 @@ const path = require('path');
 const productsPath = path.join(__dirname, '../data/products.json');
 const usersPath = path.join(__dirname, '../data/users.json');
 
+
 const mainController = {
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
-
+    
     home: (req, res) => {
         res.render('home', {
             css: '../css/homestyles.css',
@@ -25,15 +26,18 @@ const mainController = {
         let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
         let user = users.find(user => user.email == req.body.email);
         
+        console.log(user);
+
+        console.log(req.session.userLogged)
         if (user) {
             req.session.userLogged = user;
-            if (req.body.rememberme) {
-                res.cookie(
-                    'userLogged',
-                    user,
-                    { maxAge: 1000 * 60 * 60 * 24 } // 1 dia
-                );
-            }
+             if (req.body.rememberme) {
+                     res.cookie(
+                             'userLogged',
+                 user,
+                 { maxAge: 1000 * 60 * 60 * 24 } 
+             );
+         }
             res.redirect('/profile');
         }
     },
@@ -45,6 +49,7 @@ const mainController = {
     profile: (req, res) => {
         res.render('user/profile', {
             title: 'Profile',
+            css: './css/login.css',
             user: req.session.userLogged
         });
     },

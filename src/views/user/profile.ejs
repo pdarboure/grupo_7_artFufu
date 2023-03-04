@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    <h1>Profile</h1>
-    <span><%= locals.userLogged.name %></span>
-    <span><%= locals.userLogged.email %></span>
-</body>
+<%- include('../partials/head.ejs')%>
+
+    <body>
+
+        <div class="titulo-fufu">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h1><a href="/">Artistica Fufu</a></h1>
+        </div>
+        <main class="login">
+            <div class="container-login">
+                <h1>Profile</h1>
+                <span>
+                    <%= locals.userLogged.name %>
+                </span>
+                <span>
+                    <%= locals.userLogged.email %>
+                </span>
+    </body>
+
 </html>
