@@ -26,9 +26,6 @@ const mainController = {
         let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
         let user = users.find(user => user.email == req.body.email);
         
-        console.log(user);
-
-        console.log(req.session.userLogged)
         if (user) {
             req.session.userLogged = user;
              if (req.body.rememberme) {
@@ -59,6 +56,18 @@ const mainController = {
            title: 'Registro' 
         });
     },
+    processregister:(req, res) =>{
+        const resultValidation = validationResult(req);
+    
+    if (resultValidation.errors.length > 0) {
+        return res.render('register', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+    }
+
+    return res.send("home");
+},
     fibrofacil: (req, res) => {
         res.render('fibrofacil',{
             css: './css/fibrofacil.css',

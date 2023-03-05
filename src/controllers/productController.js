@@ -66,8 +66,6 @@ const productController = {
         }
         
         products.push(newproduct);
-
-        console.log(req.body);
         
         fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
         
