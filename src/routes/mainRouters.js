@@ -34,7 +34,17 @@ const validations = [
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-	
+	body('checkpassword')
+	.isLength({min : 5}).withMessage('Minimo 5 caracteres')
+	.custom((val, {req}) => {
+		let checkPass = req.body.cheackPassword;
+
+		if(val != checkPass){
+			throw new Error ('Las constraseñas tiene que ser iguales')
+		}
+
+		return true
+	})
 ]
 
 
