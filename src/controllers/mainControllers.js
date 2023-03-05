@@ -60,7 +60,7 @@ const mainController = {
         const resultValidation = validationResult(req);
         
     if (resultValidation.errors.length > 0) {
-        return res.render('register', {
+        return res.render('./user/register', {
             errors: resultValidation.mapped(),
             oldData: req.body
         });

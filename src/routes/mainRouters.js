@@ -3,6 +3,9 @@ const { body } = require('express-validator');
 const mainController = require("../controllers/mainControllers");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const upload = require('../middlewares/multer');
+
+
 
 const router = express.Router();
 
@@ -44,6 +47,21 @@ const validations = [
 		}
 
 		return true
+	}),
+	body('avatar').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		
+		if (!file) {
+			throw new Error('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
 	})
 ]
 
@@ -75,7 +93,7 @@ router.post('/login',  mainController.processLogin);
 router.get("/register", mainController.register);
 
 //procesar el register
-router.post("/register", uploadFile.single('avatar'), validations,mainController.processregister);
+router.post("/register", validations,mainController.processregister);
 
 router.get('/logout', authMiddleware, mainController.logout);
 router.get('/profile', guestMiddleware, mainController.profile);
