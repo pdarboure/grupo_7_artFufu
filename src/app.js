@@ -3,6 +3,7 @@ const app = express();
 const session = require('express-session')
 const loggedMiddleware = require('./middlewares/loggedMiddleware');
 const PORT = process.env.PORT || 3007;
+const cookie = require('cookie-parser'); 
 
 const path = require("path");
 
@@ -34,7 +35,9 @@ app.use(session({
     saveUninitialized : false
 }));
 
-// app.use(loggedMiddleware);
+app.use(cookie('SHHHHHH'));
+
+app.use(loggedMiddleware);
 
 app.use(mainRouters);
 

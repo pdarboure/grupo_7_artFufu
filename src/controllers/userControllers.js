@@ -23,7 +23,9 @@ const userController = {
             delete userFound.passwordRegistro
 
             req.session.userLogged = userFound
-
+            if (userFound.rememberme) {
+                res.cookie('userCookie', userFound, { maxAge: 1000*60*5})
+            }
             res.redirect('/profile')
         }
     },
