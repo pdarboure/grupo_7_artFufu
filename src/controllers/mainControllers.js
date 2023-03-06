@@ -56,18 +56,39 @@ const mainController = {
            title: 'Registro' 
         });
     },
-    processregister:(req, res) =>{
-        const resultValidation = validationResult(req);
-        
-    if (resultValidation.errors.length > 0) {
-        return res.render('./user/register', {
-            errors: resultValidation.mapped(),
-            oldData: req.body
-        });
-    }
+    processRegister: (req, res) => {
+		const resultValidation = validationResult(req);
 
-    return res.send("home");
-},
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
+		let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render('register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
+		let userToCreate = {
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			avatar: req.file.filename
+		}
+
+		let userCreated = User.create(userToCreate);
+
+		return res.redirect('/user/login');
+	},
     fibrofacil: (req, res) => {
         res.render('fibrofacil',{
             css: './css/fibrofacil.css',

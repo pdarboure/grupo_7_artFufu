@@ -3,7 +3,10 @@ const { body } = require('express-validator');
 const mainController = require("../controllers/mainControllers");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
-const upload = require('../middlewares/multer');
+// const upload = require('../middlewares/multer');
+
+const uploadFile = require('../middlewares/multerMiddleware');
+const validations = require('../middlewares/validateRegisterMiddleware');
 
 
 
@@ -11,59 +14,59 @@ const router = express.Router();
 
 
 // requiero multer
-const multer = require('multer');
+// const multer = require('multer');
 
 // data del metodo express validator
 
 
 // utilizo el metodo diskstorage de multer
-const storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, './public/images/avatars');
-	},
-	filename: (req, file, cb) => {
-		let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
-		cb(null, fileName);
-	}
-})
+// const storage = multer.diskStorage({
+// 	destination: (req, file, cb) => {
+// 		cb(null, './public/images/avatars');
+// 	},
+// 	filename: (req, file, cb) => {
+// 		let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+// 		cb(null, fileName);
+// 	}
+// })
 
 // ejecuto metodo storage de multer
-const uploadFile = multer({ storage });
+// const uploadFile = multer({ storage });
 
 // validaciones 
-const validations = [
-	body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
-	body('email')
-		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
-		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-	body('checkpassword')
-	.isLength({min : 5}).withMessage('Minimo 5 caracteres')
-	.custom((val, {req}) => {
-		let checkPass = req.body.cheackPassword;
+// const validations = [
+// 	body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
+// 	body('email')
+// 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+// 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
+// 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+// 	body('checkpassword')
+// 	.isLength({min : 5}).withMessage('Minimo 5 caracteres')
+// 	.custom((val, {req}) => {
+// 		let checkPass = req.body.cheackPassword;
 
-		if(val != checkPass){
-			throw new Error ('Las constraseñas tiene que ser iguales')
-		}
+// 		if(val != checkPass){
+// 			throw new Error ('Las constraseñas tiene que ser iguales')
+// 		}
 
-		return true
-	}),
-	body('avatar').custom((value, { req }) => {
-		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+// 		return true
+// 	}),
+// 	body('avatar').custom((value, { req }) => {
+// 		let file = req.file;
+// 		let acceptedExtensions = ['.jpg', '.png', '.gif'];
 		
-		if (!file) {
-			throw new Error('Tienes que subir una imagen');
-		} else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-			}
-		}
+// 		if (!file) {
+// 			throw new Error('Tienes que subir una imagen');
+// 		} else {
+// 			let fileExtension = path.extname(file.originalname);
+// 			if (!acceptedExtensions.includes(fileExtension)) {
+// 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+// 			}
+// 		}
 
-		return true;
-	})
-]
+// 		return true;
+// 	})
+// ]
 
 
 
@@ -93,7 +96,7 @@ router.post('/login',  mainController.processLogin);
 router.get("/register", mainController.register);
 
 //procesar el register
-router.post("/register", validations,mainController.processregister);
+router.post("/register", uploadFile.single('avatar'), validations,mainController.processregister);
 
 router.get('/logout', authMiddleware, mainController.logout);
 router.get('/profile', guestMiddleware, mainController.profile);
