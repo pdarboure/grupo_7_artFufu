@@ -2,7 +2,6 @@ const multer = require("multer");
 const path = require('path');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        console.log(file);
         let imagepath = req.originalUrl.includes('products') ? 'products': 'users'
         cb(null, path.join(__dirname, `../../public/images/${imagepath}`));
     },

@@ -11,6 +11,22 @@ const userController = {
             title: 'Login'
         });
     },
+    loginProcess:(req,res) =>{
+        let userFound = User.findByField('emailRegistro',req.body.emailRegistro)
+    let validPassword = bcrypt.compareSync(req.body.passwordRegistro, userFound.passwordRegistro);
+        
+        // if (userFound.admin == admin) {
+        //     req.session.admin = userFound
+        // } FUTURO ADMIN 
+    
+    if (userFound && validPassword) {
+            delete userFound.passwordRegistro
+
+            req.session.userLogged = userFound
+
+            res.redirect('/profile')
+        }
+    },
     register: (req, res) => {
         res.render('./user/register',{
            css: './css/register.css',
@@ -18,7 +34,6 @@ const userController = {
         });
     },
     registerProcess: (req,res) => {
-        console.log(req.file);
         let error = validationResult (req)
         let body = {
             ...req.body,
@@ -36,12 +51,19 @@ const userController = {
             });
         }
         User.createUser(body)
-        res.redirect('/')
+        res.redirect('/login')
     },
     admin: (req, res) => {
         res.render('admin',{
             css: './css/admin.css',
             title: 'administrador'
+        });
+    },
+    profile: (req, res) => {
+        res.render('user/profile', {
+            title: 'Profile',
+            css: './css/login.css',
+            user: req.session.userLogged
         });
     },
 }

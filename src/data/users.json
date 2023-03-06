@@ -1,3 +1,32 @@
 [
-  
+ {
+  "id": 1678138443652,
+  "nombre": "Matias",
+  "apellido": "Axel",
+  "nombreUsuario": "El gato",
+  "emailRegistro": "matiaselgato@gmail.com",
+  "numeroTelefono": "01138338771",
+  "passwordRegistro": "$2b$10$4sTrx4ariQYMBNjKbhIFR.9N/mR5xwpq8CnKeU5J.66NTKawKPuR6",
+  "image": "user-1678138443417.jpg"
+ },
+ {
+  "id": 1678138513039,
+  "nombre": "Matias",
+  "apellido": "Axel",
+  "nombreUsuario": "El gato",
+  "emailRegistro": "matiaselgato@gmail.com",
+  "numeroTelefono": "01138338771",
+  "passwordRegistro": "$2b$10$80/8fo7MYFBAwSd6TQqhLOi/hPUAA48JR.hiwJR9.eaR13ip616LC",
+  "image": "user-1678138512814.jpg"
+ },
+ {
+  "id": 1678141203952,
+  "nombre": "Hola",
+  "apellido": "ComoEstas",
+  "nombreUsuario": "lpm",
+  "emailRegistro": "lola@gmail.com",
+  "numeroTelefono": "1125252626",
+  "passwordRegistro": "$2b$10$1E0gxaOw2k2SIOXML6tswOmAMW.5u8i5OsgToTz1UKhpGHLxnegqK",
+  "image": "user-1678141203733.jpg"
+ }
 ]

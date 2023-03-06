@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-
+const session = require('express-session')
+const loggedMiddleware = require('./middlewares/loggedMiddleware');
 const PORT = process.env.PORT || 3007;
 
 const path = require("path");
@@ -27,11 +28,20 @@ app.use(express.json());
 
 app.use(methodOverride('_method'))
 
+app.use(session({
+    secret: 'Esto es un secreto',
+    resave: false,
+    saveUninitialized : false
+}));
+
+// app.use(loggedMiddleware);
+
 app.use(mainRouters);
+
+app.use(userRoutes);
 
 app.use('/products', productRoutes);
 
-app.use(userRoutes);
 
 app.listen(PORT, function () {
     console.log(`Server running on http://localhost:${PORT}`);
