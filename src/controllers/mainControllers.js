@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/products.json');
+const usersPath = path.join(__dirname, '../data/users.json');
+
 
 const mainController = {
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
-
+    
     home: (req, res) => {
         res.render('home', {
             css: '../css/homestyles.css',
@@ -14,13 +16,38 @@ const mainController = {
             productsList: mainController.getProducts()
         });
     },
-
-    
-
     login: (req, res) => {
         res.render('./user/login',{
             css: './css/login.css',
             title: 'Login'
+        });
+    },
+    processLogin: (req, res) => {
+        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+        let user = users.find(user => user.email == req.body.email);
+        
+        if (user) {
+            req.session.userLogged = user;
+             if (req.body.rememberme) {
+                     res.cookie(
+                             'userLogged',
+                 user,
+                 { maxAge: 1000 * 60 * 60 * 24 } 
+             );
+         }
+            res.redirect('/profile');
+        }
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie('userLogged')
+        return res.redirect('/');
+    },
+    profile: (req, res) => {
+        res.render('user/profile', {
+            title: 'Profile',
+            css: './css/login.css',
+            user: req.session.userLogged
         });
     },
     register: (req, res) => {
@@ -29,6 +56,39 @@ const mainController = {
            title: 'Registro' 
         });
     },
+    processRegister: (req, res) => {
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
+		let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render('register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
+		let userToCreate = {
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			avatar: req.file.filename
+		}
+
+		let userCreated = User.create(userToCreate);
+
+		return res.redirect('/user/login');
+	},
     fibrofacil: (req, res) => {
         res.render('fibrofacil',{
             css: './css/fibrofacil.css',

@@ -5,7 +5,11 @@ const PORT = process.env.PORT || 3007;
 
 const path = require("path");
 
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const methodOverride = require('method-override');
+
+const userSessionMiddleware = require('./middlewares/userSessionMiddleware');
 
 const mainRouters = require("./routes/mainRouters");
 const productRoutes = require('./routes/productsRoutes');
@@ -25,9 +29,21 @@ app.set("view engine", "ejs");
 
 app.use(express.json());
 
+app.use(cookieParser());
+
+app.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: true,
+
+}))
+
+app.use(userSessionMiddleware);
+
 app.use(methodOverride('_method'))
 
 app.use(mainRouters);
+
 
 app.use('/products', productRoutes);
 

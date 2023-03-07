@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer');
 
+const createMiddleware = require('../middlewares/createValidatorMdw');
 const productController = require('../controllers/productController');
 
-const createMiddleware = require('../middlewares/createValidatorMdw');
 
 // Listado de productso
 router.get('/', productController.index);
