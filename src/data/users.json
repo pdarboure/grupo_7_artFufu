@@ -1,20 +1,32 @@
-[{"id":1,"first_name":"Jolee","last_name":"Herrema","email":"jherrema0@adobe.com","password":"UGgLALL4oKe","status":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1","image":"Pink"},
-{"id":2,"first_name":"Osborne","last_name":"Leddie","email":"oleddie1@elpais.com","password":"JpoT4y","status":"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.220 Safari/535.1","image":"Pink"},
-{"id":3,"first_name":"Susannah","last_name":"Challicombe","email":"schallicombe2@japanpost.jp","password":"CZKoC4915","status":"Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.36 Safari/535.7","image":"Mauv"},
-{"id":4,"first_name":"Arielle","last_name":"Fairlie","email":"afairlie3@youku.com","password":"bruW4GWCp","status":"Mozilla/5.0 (X11; CrOS i686 12.433.109) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.93 Safari/534.30","image":"Red"},
-{"id":5,"first_name":"Glynis","last_name":"Bardwall","email":"gbardwall4@admin.ch","password":"I9BzPt64z","status":"Mozilla/5.0 (Windows; U; Windows NT 6.1; zh-HK) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5","image":"Orange"},
-{"id":6,"first_name":"Susannah","last_name":"MacCole","email":"smaccole5@oaic.gov.au","password":"cIkHxOBph0","status":"Mozilla/5.0 (Windows; U; Windows NT 6.1; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16","image":"Mauv"},
-{"id":7,"first_name":"Luise","last_name":"Petrus","email":"lpetrus6@blogspot.com","password":"VO6YpR7DK1c","status":"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)","image":"Violet"},
-{"id":8,"first_name":"Sam","last_name":"Saynor","email":"ssaynor7@cnbc.com","password":"EgTvnXrF","status":"Mozilla/5.0 (X11; CrOS i686 4319.74.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36","image":"Orange"},
-{"id":9,"first_name":"Nero","last_name":"Franzetti","email":"nfranzetti8@uiuc.edu","password":"Am8GEptz","status":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.811.0 Safari/535.1","image":"Indigo"},
-{"id":10,"first_name":"Ruy","last_name":"Efford","email":"refford9@microsoft.com","password":"IPFJNrM4orAh","status":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.814.0 Safari/535.1","image":"Pink"},
-{"id":11,"first_name":"Wernher","last_name":"Lifsey","email":"wlifseya@state.gov","password":"nTQ8NWwQsrok","status":"Mozilla/5.0 (X11; CrOS i686 12.433.109) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.93 Safari/534.30","image":"Blue"},
-{"id":12,"first_name":"Cleavland","last_name":"McEwan","email":"cmcewanb@bbc.co.uk","password":"l8Kh3hKD","status":"Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Ubuntu/10.04 Chromium/14.0.813.0 Chrome/14.0.813.0 Safari/535.1","image":"Turquoise"},
-{"id":13,"first_name":"Torr","last_name":"Goldine","email":"tgoldinec@noaa.gov","password":"y53UiRniw","status":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.803.0 Safari/535.1","image":"Turquoise"},
-{"id":14,"first_name":"Tymon","last_name":"Hallsworth","email":"thallsworthd@pcworld.com","password":"AjvZu0","status":"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.809.0 Safari/535.1","image":"Aquamarine"},
-{"id":15,"first_name":"Shara","last_name":"Thomlinson","email":"sthomlinsone@cmu.edu","password":"knA48f2t0z","status":"Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.702.0 Chrome/12.0.702.0 Safari/534.24","image":"Blue"},
-{"id":16,"first_name":"Reine","last_name":"De Cleyne","email":"rdecleynef@weibo.com","password":"3bcSvtts3Qv","status":"Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20130328 Firefox/21.0","image":"Turquoise"},
-{"id":17,"first_name":"Gianna","last_name":"Ifill","email":"gifillg@twitter.com","password":"yQOXM1Y8p","status":"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; it-it) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16","image":"Maroon"},
-{"id":18,"first_name":"Dareen","last_name":"Master","email":"dmasterh@auda.org.au","password":"YZSoB4RC8","status":"Mozilla/5.0 (Windows; U; Windows NT 6.0; hu-HU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4","image":"Crimson"},
-{"id":19,"first_name":"Dorey","last_name":"Tiernan","email":"dtiernani@apple.com","password":"4TkW0rO","status":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/10.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30","image":"Purple"},
-{"id":20,"first_name":"Sheela","last_name":"Dunlap","email":"sdunlapj@ft.com","password":"WTrEhmgEgk","status":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1","image":"Mauv"}]
+[
+ {
+  "id": 1678138443652,
+  "nombre": "Matias",
+  "apellido": "Axel",
+  "nombreUsuario": "El gato",
+  "emailRegistro": "matiaselgato@gmail.com",
+  "numeroTelefono": "01138338771",
+  "passwordRegistro": "$2b$10$4sTrx4ariQYMBNjKbhIFR.9N/mR5xwpq8CnKeU5J.66NTKawKPuR6",
+  "image": "user-1678138443417.jpg"
+ },
+ {
+  "id": 1678138513039,
+  "nombre": "Matias",
+  "apellido": "Axel",
+  "nombreUsuario": "El gato",
+  "emailRegistro": "matiaselgato@gmail.com",
+  "numeroTelefono": "01138338771",
+  "passwordRegistro": "$2b$10$80/8fo7MYFBAwSd6TQqhLOi/hPUAA48JR.hiwJR9.eaR13ip616LC",
+  "image": "user-1678138512814.jpg"
+ },
+ {
+  "id": 1678141203952,
+  "nombre": "Hola",
+  "apellido": "ComoEstas",
+  "nombreUsuario": "lpm",
+  "emailRegistro": "lola@gmail.com",
+  "numeroTelefono": "1125252626",
+  "passwordRegistro": "$2b$10$1E0gxaOw2k2SIOXML6tswOmAMW.5u8i5OsgToTz1UKhpGHLxnegqK",
+  "image": "user-1678141203733.jpg"
+ }
+]

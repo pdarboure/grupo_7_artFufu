@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
     <%- include('../partials/head.ejs') %>
+<body>
 
         <%- include('../partials/header.ejs') %>
-
+    <main class="create">  
+        <div class="container-create">
             <form method="post" action="/products/create" enctype="multipart/form-data">
+                <div class="input-box underline"> 
                 <label for="name">Nombre</label>
                 <input type="text" name="name" value="<%= locals.oldBody && oldBody.name ? oldBody.name:'' %>">
                     <% if (locals.error && error.name) { %>
                      <p><%= error.name.msg %></p>
                     <% } %>
+                </div>
+                <div class="input-box">
                 <label for="year">Precio</label>
                 <input type="number" name="price" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
                 <% if (locals.error && error.price) { %>
                     <p><%= error.price.msg %></p>
                    <% } %>
+                </div>
                 <h3>
-                    <label class="form-label" for="name">Seleccioná una imagen </label>
+                    <div class="input-box underline"> 
+                    <label for="name">Seleccioná una imagen </label>
                     <input type="file" name="image" id="image" multiple>
                     <% if (locals.error && error.image) { %>
                         <p><%= error.image.msg %></p>
-                       <% } %>
-    
+                        <% } %>
+                    </div>
+                    <div class="input-box button">
+                            <button type="submit">Crear producto</button>
+                    </div>
+                    </div>
                 </h3>
-
                 <!-- <h3>
         <label class="form-label" for="name">Descripción:</label>
         <input class="form-input" type="text" id="name2" name="name2"><br><br>
-        </h3> -->
+        </h3>
 
                 <!-- <h3>
         <label class="form-label" for="categoria">Categoría:</label>
@@ -40,10 +49,8 @@
                     <option value="4">Otro</option>
         </h3> -->
 
-                <button type="submit">Crear producto</button>
-                <br>
-
             </form>
+        </main>
 </body>
 <!-- <%- include('../partials/footer.ejs') %>  -->
 

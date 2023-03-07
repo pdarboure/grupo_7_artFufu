@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/products.json');
+const {validationResult} = require ('express-validator')
 
 const mainController = {
     getProducts: () => {
@@ -15,20 +16,7 @@ const mainController = {
         });
     },
 
-    
-
-    login: (req, res) => {
-        res.render('./user/login',{
-            css: './css/login.css',
-            title: 'Login'
-        });
-    },
-    register: (req, res) => {
-        res.render('./user/register',{
-           css: './css/register.css',
-           title: 'Registro' 
-        });
-    },
+  
     fibrofacil: (req, res) => {
         res.render('fibrofacil',{
             css: './css/fibrofacil.css',
@@ -39,12 +27,6 @@ const mainController = {
         res.render('./products/carritoDeCompras',{
             css: './css/carrito-styles.css',
             title: 'Carrito de Compras'
-        });
-    },
-    admin: (req, res) => {
-        res.render('admin',{
-            css: './css/admin.css',
-            title: 'administrador'
         });
     },
     create: (req, res) => {
