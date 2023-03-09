@@ -10,6 +10,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 router.get("/admin", userController.admin); // PA ALGUN MOMENTO
 router.get("/login",authMiddleware,userController.login);
 router.post("/login", userController.loginProcess);
+router.post('/logout', userController.logout);
 router.get('/profile',guestMiddleware,userController.profile);
 router.get("/register",authMiddleware, userController.register);
 router.post("/register",upload.single('image'),userValidator, userController.registerProcess)
