@@ -8,7 +8,6 @@ const router = express.Router();
 
 router.get("/", mainController.home);
 // usuario
-// router.get("/admin", mainController.admin);
 // router.get("/login", mainController.login);
 // router.get("/register", mainController.register);
 // router.post("/register",userValidator, mainController.registerProcess)
@@ -16,5 +15,6 @@ router.get("/", mainController.home);
 // producto
 router.get("/carritoDeCompras", mainController.carritoDeCompras);
 router.get("/fibrofacil", mainController.fibrofacil);
+router.get("/prueba", mainController.prueba);
 
 module.exports = router

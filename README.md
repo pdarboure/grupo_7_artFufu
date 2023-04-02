@@ -5,12 +5,11 @@ RENDER
 https://fufu.onrender.com
 
 COLABORADORES
-Agustín Darboure, 
 Matias Chaves,
+Agustín Darboure, 
 Nacho Lanusse,
 Jorge Revette,
 Oliver Steward,
-Agustin Santiago Bauman.
 
 WIREFRAMES
 - Home: https://wireframe.cc/Ti9kMC

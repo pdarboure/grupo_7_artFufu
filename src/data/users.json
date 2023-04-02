@@ -28,5 +28,15 @@
   "numeroTelefono": "1125252626",
   "passwordRegistro": "$2b$10$1E0gxaOw2k2SIOXML6tswOmAMW.5u8i5OsgToTz1UKhpGHLxnegqK",
   "image": "user-1678141203733.jpg"
+ },
+ {
+  "id": 1679582550399,
+  "nombre": "Johann",
+  "apellido": "elpijudo",
+  "nombreUsuario": "El uno",
+  "emailRegistro": "eljohaann@gmail.com",
+  "numeroTelefono": "01138338771",
+  "passwordRegistro": "$2b$10$kAV92Hm2uSmo9qIslSmGJOFAE7ddyn/UjLUay58ZP1EqwP7tefACy",
+  "image": "user-1679582550206.jpg"
  }
 ]
