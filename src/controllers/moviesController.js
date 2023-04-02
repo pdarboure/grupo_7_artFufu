@@ -37,9 +37,9 @@ const moviesController = {
             ],
             limit: 5
         })
-            .then(movies => {
-                res.render('newestMovies', {movies});
-            });
+            // .then(movies => {
+            //     res.render('moviesList', {movies});
+            // });
     },
     'recomended': (req, res) => {
         db.Movie.findAll({
