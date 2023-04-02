@@ -12,6 +12,7 @@ const methodOverride = require('method-override');
 const mainRouters = require("./routes/mainRouters");
 const productRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/userRoutes');
+const moviesRoutes = require('./routes/moviesRoutes');
 // Error 404
 // app.use((req, res, next) => {
 //     res.status(404).render('error');
@@ -42,6 +43,8 @@ app.use(loggedMiddleware);
 app.use(mainRouters);
 
 app.use(userRoutes);
+
+app.use(moviesRoutes);
 
 app.use('/products', productRoutes);
 
