@@ -13,6 +13,7 @@ const mainRouters = require("./routes/mainRouters");
 const productRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/userRoutes');
 const moviesRoutes = require('./routes/moviesRoutes');
+const apiProductsRoutes = require('./routes/api/products');
 // Error 404
 // app.use((req, res, next) => {
 //     res.status(404).render('error');
@@ -47,6 +48,8 @@ app.use(userRoutes);
 app.use(moviesRoutes);
 
 app.use('/products', productRoutes);
+
+app.use('/api/products', apiProductsRoutes);
 
 
 app.listen(PORT, function () {
