@@ -17,6 +17,7 @@ const productsAPIController = {
                 ]
             });
             
+            
             res.json({
                 success: true,
                 data: products
