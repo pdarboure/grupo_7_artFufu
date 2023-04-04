@@ -2,34 +2,66 @@ const fs = require('fs');
 const path = require('path');
 const productsPath = path.join(__dirname, '../data/products.json');
 const {validationResult} = require('express-validator');
-
+const db = require('../database/models');
+const Product = require('../database/models/Product');
 
 const productController = {
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
-    index: (req, res) => {
-        res.render('products/index', {
-            css: '../css/homestyles.css',
-            title: 'Listado de productos',
-            productsList: productController.getProducts()
-        });
+    index: async(req, res) => {
+        try {
+            
+            const product = await db.Product.findAll({
+                include:[{association: 'colors'},
+                {association: 'ProductCategories'},
+                {association: 'ProductSubCategory'}]
+            });
+            
+            res.render('products/index', {
+                css: '../css/homestyles.css',
+                title: 'Listado de productos',
+                productsList: product
+            });
+        } catch (error) {
+            res.send(error)
+        }
     },
-    show: (req, res) => {
-        let productId = req.params.id;
-        let product = productController.getProducts().find(product => product.id == productId);
+    show: async (req, res) => {
+       try {
+
+        const product = await db.Product.findByPk(req.params.id,{
+            include:[{association: 'colors'},
+                {association: 'ProductCategories'},
+                {association: 'ProductSubCategory'}]
+        } )
+           
+
+            res.render('products/show', {
+                css: '/css/detalleproducto.css',
+                title: 'Detalle Producto',
+                producto: product
+            });
+            
+        } catch (error) {
+            res.send(error)
+        }
+    },
+    create: async(req, res) => {
         
-        res.render('products/show', {
-            css: '/css/detalleproducto.css',
-            title: 'Detalle Producto',
-            producto: product
-        });
-    },
-    create: (req, res) => {
-        res.render('products/create', {
-            title: 'Nuevo producto',
-            css: '/css/admin.css'
-        });
+        try {
+
+            const categorie = await db.ProductCategories.findAll()  
+            
+            res.render('products/create', {
+                title: 'Nuevo producto',
+                css: '/css/admin.css',
+                categorie
+            });
+        } catch (error) {
+            res.send(error)
+        }
+        
     },
     store: (req, res) => {
         let products = productController.getProducts();

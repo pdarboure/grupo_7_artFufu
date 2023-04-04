@@ -44,22 +44,24 @@ const mainController = {
     },
     prueba: async (req, res) => {
         try {   
-        const product = await db.Product.findAll({
-            include:'productColor'
+        // const product = await db.Product.findAll({
+        //     include:'colors'
+        // })
+        // const categorie = await db.ProductCategories.findAll()
+        // const color = await db.ProductColor.findAll()
+        const user = await db.User.findAll({
+            include:'category'
         })
-        const categorie = await db.ProductCategories.findAll()
-        const color = await db.ProductColor.findAll()
-        const user = await db.User.findAll()
-        const userCategory = await db.UserCategory.findAll()
-        const ProductSubCategory= await db.ProductSubCategory.findAll()
+        // const userCategory = await db.UserCategory.findAll()
+        // const ProductSubCategory= await db.ProductSubCategory.findAll()
 
         res.json({
             user,
-            userCategory,
-            ProductSubCategory,
-            product,
-            categorie,
-            color
+            // userCategory,
+            // ProductSubCategory,
+            // product,
+            // categorie,
+            // color
         })
         } catch (error) {
           res.json({

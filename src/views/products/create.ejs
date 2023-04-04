@@ -23,18 +23,49 @@
                    <% } %>
                 </div>
                 <h3>
-                    <div class="input-box underline"> 
-                    <label for="name">Seleccioná una imagen </label>
-                    <input type="file" name="image" id="image" multiple>
-                    <% if (locals.error && error.image) { %>
-                        <p><%= error.image.msg %></p>
-                        <% } %>
-                    </div>
-                    <div class="input-box button">
-                            <button type="submit">Crear producto</button>
-                    </div>
+                <div class="input-box">
+                        <label for="year">Descripcion</label>
+                        <input type="text" name="description" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                        <% if (locals.error && error.price) { %>
+                            <p><%= error.price.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="input-box">
+                            <label for="year">Capacidad</label>
+                            <input type="text" name="capacity" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                            <% if (locals.error && error.price) { %>
+                                <p><%= error.price.msg %></p>
+                               <% } %>
+                            </div>
+                        <div class="input-box">
+                            <label for="year">Precio</label>
+                            <input type="number" name="price" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                            <% if (locals.error && error.price) { %>
+                                <p><%= error.price.msg %></p>
+                                <% } %>
+                        </div>
+                        <div class="input-box">
+                            <label for="year">Categoría</label>
+                            <select name="product_categories_id" id="">
+                                <option value="" disabled selected >Selecionar:</option>
+                                <% categorie.forEach(categorie => { %>
+                                 <option value="<%= categorie.id %>"><%= categorie.category %></option>
+                                <% }) %>
+                            </select>
+                            </div>
+
+                            <div class="input-box underline"> 
+                            <label for="name">Seleccioná una imagen </label>
+                            <input type="file" name="image" id="image" multiple>
+                            <% if (locals.error && error.image) { %>
+                                <p><%= error.image.msg %></p>
+                                <% } %>
+                            <div class="input-box button">
+                                <button type="submit">Crear producto</button>
+                            </div>
                     </div>
                 </h3>
+            </div>
                 <!-- <h3>
         <label class="form-label" for="name">Descripción:</label>
         <input class="form-input" type="text" id="name2" name="name2"><br><br>

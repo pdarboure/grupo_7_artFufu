@@ -7,51 +7,49 @@
 		<!-- Este ID viene del  JSON -->
 		<main class="container-detalles" id="detalles">
 			<article class="detalle-grid">
-				<% if (producto.image) { %>
-					<% if (Array.isArray(producto.image)) { %>
-						<% producto.image.forEach(image=> { %>
-							<img class="img-fluid" src="/images/products/<%= image.name %>" alt="<%= image %>">
-							<% }) %>
-								<% } else { %>
-									<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
-										alt="">
-									<% } %>
-										<% } %>
-											<div class="detalles-content">
-												<h3 class="nombre-producto">
-													<%= producto.name %>
-												</h3>
-												<!-- <div class="rating">
-												</div> -->
-												<p class="price"><b>Precio: </b> $<%= producto.price %>
-												</p>
-												<p class="description">
-													<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur
-														adipisicing elit. Soluta quae ad
-														ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam
-														dolorum sunt omnis maiores.
-														Repudiandae delectus iste exercitationem vel?</span>
-												</p>
-												<p class="description">
-													<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-														voluptates consequuntur in
-														assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam
-														iusto magnam vero maxime
-														quisquam voluptatibus minima aliquam molestias, iure ratione
-														commodi, reiciendis quasi.</span>
-												</p>
-												<div class="bottom">
-													<div class="btn__group">
-														<a>Añadir al carrito</a>
-													</div>
-													<div class="btn__group">
-														<a href="/products/edit/<%= producto.id %>">Editar</a>
-													</div>
-													<div class="btn__group">
-														<a href="/products/delete/<%= producto.id %>">Eliminar</a>
-													</div>
-												</div>
-											</div>
+			<% if (producto.image) { %>
+				<img class="img-fluid" src="/images/products/<%= producto.image %>" alt="<%= producto.image %>">
+			<% } %>
+			<% if (!producto.image) { %>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
+				alt="">
+			<% } %>
+
+				<div class="detalles-content">
+					<h3 class="nombre-producto">
+						<%= producto.name %>
+					</h3>
+					<!-- <div class="rating">
+					</div> -->
+					<p class="price"><b>Precio: </b> $<%= producto.price %>
+					</p>
+					<p class="description">
+						<b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Soluta quae ad
+							ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam
+							dolorum sunt omnis maiores.
+							Repudiandae delectus iste exercitationem vel?</span>
+					</p>
+					<p class="description">
+						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+							voluptates consequuntur in
+							assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam
+							iusto magnam vero maxime
+							quisquam voluptatibus minima aliquam molestias, iure ratione
+							commodi, reiciendis quasi.</span>
+					</p>
+					<div class="bottom">
+						<div class="btn__group">
+							<a>Añadir al carrito</a>
+						</div>
+						<div class="btn__group">
+							<a href="/products/edit/<%= producto.id %>">Editar</a>
+						</div>
+						<div class="btn__group">
+							<a href="/products/delete/<%= producto.id %>">Eliminar</a>
+						</div>
+					</div>
+				</div>
 			</article>
 		</main>
 

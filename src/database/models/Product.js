@@ -20,6 +20,18 @@ module.exports = (sequelize, DataType) => {
             description:{
                 type:DataType.STRING(255),
                 allowNull: false
+            },
+            image:{
+                type: DataType.STRING(255)
+            },
+            product_color_id:{
+                type:DataType.INTEGER
+            },
+            product_categories_id:{
+                type:DataType.INTEGER
+            },
+            product_sub_category_id:{
+                type:DataType.INTEGER
             }
         },
         {
@@ -34,15 +46,15 @@ module.exports = (sequelize, DataType) => {
     Product.associate = (models) => {
         Product.belongsTo(models.ProductSubCategory, {
             as: 'ProductSubCategory',
-            foreingKey: 'product_subcategory_id'
+            foreignKey: 'product_sub_category_id'
         })
         Product.belongsTo(models.ProductCategories, {
             as: 'ProductCategories',
-            foreingKey: 'product_categories_id'
+            foreignKey: 'product_categories_id'
         })
         Product.belongsTo(models.ProductColor, {
-            as: 'productColor',
-            foreingKey: 'product_color_id'
+            as: 'colors',
+            foreignKey: 'product_color_id'
         })
     };
 
