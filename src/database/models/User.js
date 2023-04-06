@@ -20,6 +20,12 @@ module.exports = (sequelize, DataType) => {
             password:{
                 type:DataType.STRING(255),
                 allowNull: false
+            },
+            image:{
+                type: DataType.STRING(255)
+            },
+            user_category_id:{
+                type: DataType.INTEGER
             }
         },
         {

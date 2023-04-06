@@ -48,9 +48,7 @@ const productController = {
         }
     },
     create: async(req, res) => {
-        
         try {
-
             const categorie = await db.ProductCategories.findAll()  
             
             res.render('products/create', {
@@ -61,7 +59,6 @@ const productController = {
         } catch (error) {
             res.send(error)
         }
-        
     },
     store: (req, res) => {
         let products = productController.getProducts();

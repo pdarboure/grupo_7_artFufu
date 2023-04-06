@@ -1,12 +1,15 @@
-const User = require('../services/User');
-
 function loggedMiddleware(req,res, next){
    res.locals.userIsLogged = false
+   res.locals.userIsAdmin = false
+
    const cookieUser = req.cookies.userCookie 
-   const user = User.findByField ( 'email', cookieUser)
+    if (req.session.admin) {
+        res.locals.userIsAdmin = true
+        res.locals.admin = req.session.admin
+    }
 
    if(cookieUser){
-       req.session.userLogged = user
+       req.session.userLogged = req.cookies.userCookie
    }
   
    if (req.session.userLogged) {

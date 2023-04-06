@@ -8,9 +8,9 @@ const userValidator = [
     body('apellido')
         .isLength({min: 2}).withMessage('Minimo 2 caracteres')
         .isLength({max: 20}).withMessage('Maximo 20 caracteres'),
-    body('nombreUsuario')
-        .isLength({min: 2}).withMessage('Minimo 2 caracteres')
-        .isLength({max: 20}).withMessage('Maximo 20 caracteres'),
+    // body('nombreUsuario')
+    //     .isLength({min: 2}).withMessage('Minimo 2 caracteres')
+    //     .isLength({max: 20}).withMessage('Maximo 20 caracteres'),
     body('emailRegistro')
         .isEmail().withMessage('Tiene que ser un email valido'),
     body('passwordRegistro')

@@ -52,12 +52,12 @@ const mainController = {
         const user = await db.User.findAll({
             include:'category'
         })
-        // const userCategory = await db.UserCategory.findAll()
+        const userCategory = await db.UserCategory.findAll()
         // const ProductSubCategory= await db.ProductSubCategory.findAll()
 
         res.json({
             user,
-            // userCategory,
+            userCategory
             // ProductSubCategory,
             // product,
             // categorie,
