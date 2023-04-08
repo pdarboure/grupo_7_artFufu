@@ -139,7 +139,7 @@ const userController = {
     profile: (req, res) => {
         res.render('user/profile', {
             title: 'Profile',
-            css: './css/login.css',
+            css: '/css/profile.css',
             user: req.session.userLogged
         });
     },
