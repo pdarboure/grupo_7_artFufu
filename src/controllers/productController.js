@@ -60,95 +60,104 @@ const productController = {
             res.send(error)
         }
     },
-    store: (req, res) => {
-        let products = productController.getProducts();
+    store:async (req, res) => {
+        
         let error = validationResult(req);
-        let images = [];
-
         if(!error.isEmpty()){
-
+            const categorie = await db.ProductCategories.findAll()
             return res.render('products/create', {
                 oldBody: req.body,
                 error: error.mapped(),
                 title: 'Nuevo producto',
-                css: '/css/admin.css'
+                css: '/css/admin.css',
+                categorie
             })
         };
-        if (req.files) {
-            req.files.forEach(file => {
-                images.push({
-                    "id": Date.now(),
-                    "name": file.filename,
-                });
+        try {
+             await db.Product.create({
+             name: req.body.name,
+             price: req.body.price,
+             description: req.body.description,
+             image: req.file.filename,
+             product_categories_id: req.body.product_categories_id
+            })
+                res.redirect('/')
+
+        } catch (error) {
+        res.json({error})    
+        }
+    },
+    edit: async (req, res) => {
+
+        try {
+            const product = await db.Product.findByPk(req.params.id)
+            const categorie = await db.ProductCategories.findAll()
+            res.render('products/editarProducto', {
+                title: 'Mi producto',
+                css:'/css/admin.css',
+                product: product,
+                categorie
             });
-        }
             
-        let newproduct = {
-            "id": Date.now(),
-            "name": req.body.name || "Sin nombre",
-            "price": req.body.price || 0,
-            "image": images
-            // "description": req.body.description || "Sin nombre",
-            // "image": req.body.image || 0,
-            // "available": false
-            // category
+
+        } catch (error) {
+            res.json(error)    
+        }
+    },
+
+    update: async (req, res) => {
+        
+        try {
+            const producto = await db.Product.findByPk(req.params.id) 
+            
+            const product = await db.Product.update(
+                {
+                    name: req.body.name,
+                    price: parseInt(req.body.price),
+                    description: req.body.description,
+                    image: req.file ? req.file.filename : producto.image,
+                    product_categories_id: req.body.product_categories_id ? req.body.product_categories_id : producto.product_categories_id
+                },
+                {
+                    where:{
+                        id: req.params.id
+                    }
+                }
+            )
+            res.redirect('/products/' + producto.id)
+        } catch (error) {
+            console.log(error);
+            res.json(error)
+        }
+    },
+    delete: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id)
+            res.render('products/delete', {
+                title: 'Eliminar producto',
+                css:'/css/admin.css',
+                producto: product
+            });
+            
+        } catch (error) {
+            console.log(error);
+            res.json(error) 
         }
         
-        products.push(newproduct);
-
-        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
-        
-        res.redirect('/products');
     },
-    edit: (req, res) => {
-        let productId = req.params.id;
-        let product = productController.getProducts().find(product => product.id == productId);
+    destroy: async(req, res) => {
         
-        res.render('products/editarProducto', {
-            title: 'Mi producto',
-            css:'/css/admin.css',
-            product: product
-        });
-    },
-
-    update: (req, res) => {
-        let productId = req.params.id;
-        let products = productController.getProducts();
-
-        products.forEach((product, index) => {
-            if (product.id == productId) {        
-                
-                product.name = req.body.name;
-                product.year = req.body.year;
-
-                products[index] = product;
+        try {
+        await db.Product.destroy({
+            where:{
+                id: req.params.id
             }
-        });
-        
-        fs.writeFileSync(productsPath, JSON.stringify(products, null, ' '));
-        
-        res.redirect('/products');
-    },
-    delete: (req, res) => {
-        let productId = req.params.id;
-        let product = productController.getProducts().find(product => product.id == productId);
-        
-        res.render('products/delete', {
-            title: 'Eliminar producto',
-            css:'/css/admin.css',
-            producto: product
-        });
-    },
-    destroy: (req, res) => {
-        let productId = req.params.id;
-        let products = productController.getProducts();// array
-        
-        let newProducts = products.filter(product => product.id != productId); // nuevo
-
-        // Modifica el archivo
-        fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, ' '));
-        
-        res.redirect('/products');
+        })
+        res.redirect('/')
+        } catch (error) {
+            console.log(error);
+            res.json(error) 
+        }
     }
 };
 

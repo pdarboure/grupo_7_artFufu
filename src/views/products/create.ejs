@@ -5,6 +5,7 @@
 <body>
 
         <%- include('../partials/header.ejs') %>
+        <h3>
     <main class="create">  
         <div class="container-create">
             <form method="post" action="/products/create" enctype="multipart/form-data">
@@ -15,14 +16,6 @@
                      <p><%= error.name.msg %></p>
                     <% } %>
                 </div>
-                <div class="input-box">
-                <label for="year">Precio</label>
-                <input type="number" name="price" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
-                <% if (locals.error && error.price) { %>
-                    <p><%= error.price.msg %></p>
-                   <% } %>
-                </div>
-                <h3>
                 <div class="input-box">
                         <label for="year">Descripcion</label>
                         <input type="text" name="description" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
@@ -56,7 +49,7 @@
 
                             <div class="input-box underline"> 
                             <label for="name">Seleccioná una imagen </label>
-                            <input type="file" name="image" id="image" multiple>
+                            <input type="file" name="image" id="image">
                             <% if (locals.error && error.image) { %>
                                 <p><%= error.image.msg %></p>
                                 <% } %>

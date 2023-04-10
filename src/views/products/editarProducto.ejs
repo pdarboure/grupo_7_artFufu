@@ -11,24 +11,26 @@
         <!-- metodo aplicado para editar ID -->
         <form method="post" action="/products/edit/<%= product.id %>?_method=PUT">
         <label class="form-label" for="name" >Nombre del producto</label>
-                <input class="form-input" type="text" id="name" name="name" <%= product.name %>>
+                <input class="form-input" value="<%= product.name %>" type="text" id="name" name="name" <%= product.name %>>
 
                 <label class="form-label" for="name">Descripción</label>
-                <input class="form-input" type="text" id="name2" name="name2">
+                <input class="form-input" value="<%= product.description %>" type="text" id="name2" name="description">
 
                 <label class="form-label" for="name">Seleccionar una imagen para el producto</label>
-                <input class="form-input" type="file" id="file" name="file" accept=".jpg" multiple>
+                <input class="form-input" type="file" id="file" name="image" accept=".jpg">
 
-                <label class="form-label" for="name">Precio</label>
-                <input class="form-input" type="number" id="name2" name="name2">
+                <label class="form-label" for="number">Precio</label>
+                <input class="form-input" value="<%= product.price %>" type="number" id="price" name="price">
 
-                <label class="form-label" for="categoria">Categoría</label>
-                <select name="Categoria">
-                    <option value="1"></option>
-                    <option value="2">Fibrofacil</option>
-                    <option value="3">Pintura</option>
-                    <option value="4">Otro</option>
-
+                <div class="input-box">
+                    <label  class="form-label" for="year">Categoría</label>
+                    <select name="product_categories_id" id="">
+                        <option value="" disabled selected >Selecionar:</option>
+                        <% categorie.forEach(categorie => { %>
+                         <option value="<%= categorie.id %>"><%= categorie.category %></option>
+                        <% }) %>
+                    </select>
+                    </div>
                     <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a>
 
                     <form>
