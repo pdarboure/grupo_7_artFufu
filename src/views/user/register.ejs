@@ -32,7 +32,7 @@
                 </p>
                 <% } %>
             </div>
-            <div class="input-box">
+            <!-- <div class="input-box">
               <span class="details">Nombre de Usuario</span>
               <input type="text" placeholder="Ingrese usuario" name="nombreUsuario"
                 value="<%= locals.oldBody && oldBody.nombreUsuario? oldBody.nombreUsuario: '' %>">
@@ -41,7 +41,7 @@
                   <%= error.nombreUsuario.msg %>
                 </p>
                 <% } %>
-            </div>
+            </div> -->
             <div class="input-box">
               <span class="details">Email</span>
               <input type="email" placeholder="Ingrese email" name="emailRegistro"
@@ -78,15 +78,26 @@
                 </p>
                 <% } %>
             </div>
+            <% if (locals.userIsAdmin) { %>
+              <div class="input-box">
+                <span class="details">Ingrese una imagen</span>
+                <select name="user_category_id">
+                  <option disabled selected>Seleccionar Categoria:</option>
+                  <% category.forEach(category => { %>
+                   <option value="<%= category.id %>"><%= category.category %></option>
+                  <% }) %>
+                </select>
+              </div>
+            <% } %>
           </div>
-          <div class="gender-details">
+          <!-- <div class="gender-details">
             <span class="gender-title">Aceptar Términos y Condiciones</span>
             <div class="category">
               <label for="dot-1">
                 <span class="dot one"></span>
                 <span class="gender">Acepto</span>
               </label>
-            </div>
+            </div> -->
             <div class="yatienecuenta">
               <h6>¿Ya tenés una cuenta?</h6>
               <a href="/login">Ingresá con tu cuenta</a>

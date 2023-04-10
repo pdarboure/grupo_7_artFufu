@@ -3,6 +3,7 @@ const path = require('path');
 const {validationResult} = require ('express-validator');
 const User = require('../services/user');
 const bcrypt = require('bcrypt')
+const db = require('../database/models')
 
 const userController = { 
     login: (req, res) => {
@@ -11,39 +12,77 @@ const userController = {
             title: 'Login'
         });
     },
-    loginProcess:(req,res) =>{
-        let userFound = User.findByField('emailRegistro',req.body.emailRegistro)
-    let validPassword = bcrypt.compareSync(req.body.passwordRegistro, userFound.passwordRegistro);
-        
-        // if (userFound.admin == admin) {
-        //     req.session.admin = userFound
-        // } FUTURO ADMIN 
-    
-    if (userFound && validPassword) {
-            delete userFound.passwordRegistro
+    loginProcess:async(req,res) =>{
+        console.log(req.body.passwordRegistro, req.body.emailRegistro);
+        try {
+         const userFound = await db.User.findOne({
+             where: {
+                 email:req.body.emailRegistro
+                }
+            });
 
-            req.session.userLogged = userFound
-            if (userFound.rememberme) {
-                res.cookie('userCookie', userFound, { maxAge: 1000*60*5})
+            if(!userFound){
+                return res.render('user/login',{
+                    css: './css/login.css',
+                    title: 'Registro',
+                    error: {
+                        emailRegistro: {
+                            msg: 'El email no esta registrado!'
+                        }
+                    },
+                    oldBody: req.body
+                })
             }
-            res.redirect('/profile')
-        }
+
+            let validPassword = bcrypt.compareSync(req.body.passwordRegistro, userFound.password);  
+            
+            if(!validPassword){
+                return res.render('user/login',{
+                    css: './css/login.css',
+                    title: 'Registro',
+                    error: {
+                        passwordRegistro: {
+                            msg: 'password invalida'
+                        }
+                    },
+                    oldBody: req.body
+                })
+            }
+
+            if (userFound.user_category_id == 2) {
+                req.session.admin = userFound
+                return res.redirect('/profile')
+            }
+            
+            if (userFound && validPassword) {
+                    delete userFound.password
+            
+                    req.session.userLogged = userFound
+                    if (req.body.rememberme) {
+                        res.cookie('userCookie', userFound, { maxAge: 1000*60*5})
+                    }
+
+                   return res.redirect('/profile')
+                }
+     } catch (error) {
+        console.log(error);
+        res.json(error)
+     }
     },
-    register: (req, res) => {
+    register: async(req, res) => {
+        
+        let category = await db.UserCategory.findAll() 
+        
         res.render('./user/register',{
            css: './css/register.css',
-           title: 'Registro' 
+           title: 'Registro',
+           category
         });
     },
-    registerProcess: (req,res) => {
+    registerProcess:async (req,res) => {
+       
         let error = validationResult (req)
-        let body = {
-            ...req.body,
-            passwordRegistro: bcrypt.hashSync(req.body.passwordRegistro, 10),
-            image: req.file? req.file.filename:'No carga la imagen'
-        }
-        delete body.checkPassword
-
+        
         if (!error.isEmpty()) {
             return res.render('./user/register',{
                 css: './css/register.css',
@@ -52,8 +91,44 @@ const userController = {
                 oldBody: req.body
             });
         }
-        User.createUser(body)
-        res.redirect('/login')
+        try {
+            let  body = {
+                name: req.body.nombre,
+                lastname: req.body.apellido,
+                email: req.body.emailRegistro,
+                user_category_id: req.body.user_category_id ? user_category_id: 1,
+               password: bcrypt.hashSync(req.body.passwordRegistro, 10),
+               image: req.file? req.file.filename:'usuarioDefault.png'
+           }
+           delete body.checkPassword
+
+           const invalidemail = await db.User.findOne({
+            where: {
+                email:req.body.emailRegistro
+            }
+           });
+           if(invalidemail){
+            return res.render('user/register',{
+                css: './css/register.css',
+                title: 'Registro',
+                error: {
+                    emailRegistro: {
+                        msg: 'El email ya existente'
+                    }
+                },
+                oldBody: req.body
+            })
+        }
+        await db.User.create(body)
+        res.redirect('/')
+
+       } catch (error) {
+        res.send(error)
+       }
+       
+       
+        // User.createUser(body)
+        // res.redirect('/login')
     },
     admin: (req, res) => {
         res.render('admin',{
@@ -64,9 +139,15 @@ const userController = {
     profile: (req, res) => {
         res.render('user/profile', {
             title: 'Profile',
-            css: './css/login.css',
+            css: '/css/profile.css',
             user: req.session.userLogged
         });
+    },
+    logout : (req, res) => {
+        req.session.destroy()
+        res.clearCookie('userCookie')
+        res.redirect('/')
+
     },
 }
 

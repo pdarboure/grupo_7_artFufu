@@ -14,10 +14,16 @@
             <input type="text" placeholder="Ingrese su Email" name="emailRegistro"/>
             <div class="underline"></div>
           </div>
+          <% if (locals.error && error.emailRegistro) { %>
+            <p><%= error.emailRegistro.msg %></p>
+           <% } %>
           <div class="input-box">
             <input type="password" placeholder="Ingrese su Contraseña" name="passwordRegistro"/>
             <div class="underline"></div>
           </div>
+          <% if (locals.error && error.passwordRegistro) { %>
+            <p><%= error.passwordRegistro.msg %></p>
+           <% } %>
           <div class="input-box button">
             <input type="submit" value="Ingresar"/>
           </div>

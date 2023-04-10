@@ -10,7 +10,7 @@ const createMiddleware = require('../middlewares/createValidatorMdw');
 router.get('/', productController.index);
 // creacion de producto
 router.get('/create', productController.create);
-router.post('/create', upload.any('images'),createMiddleware, productController.store);
+router.post('/create', upload.single('image'),createMiddleware, productController.store);
 // actualizar producto
 router.get('/edit/:id', productController.edit);
 router.put('/edit/:id', productController.update);
