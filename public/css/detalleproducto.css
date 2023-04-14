@@ -21,7 +21,7 @@
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .2);
 } 
 .detalles-content{
-    padding: 2rem;
+    padding: 4rem;
     margin-bottom: 80px;
 }
 .detalles-content h3{
@@ -45,12 +45,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 2px;
+    margin: 50px;
 }
 .btn__group{
     display: inline-block;
     background-color: #252525;
-    padding: 1rem 1.8rem;
+    padding: 1rem 1.2rem;
     font-weight: 500;
     font-size: 17px;
     cursor: pointer;
