@@ -5,11 +5,7 @@ module.exports={
     "database": "art_fufu3",
     "host": "127.0.0.1",
     "dialect": "mysql",
-<<<<<<< Updated upstream
-    "port":"3006"
-=======
     "port":"3007"
->>>>>>> Stashed changes
   },
   "test": {
     "username": "root",
