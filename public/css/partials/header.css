@@ -295,31 +295,18 @@ html {
 	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 
-.formulario__mensaje-exito {
-	font-size: 14px;
-	color: #119200;
-	display: none;
-}
 
 .formulario__mensaje-exito-activo {
 	display: block;
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
 }
 
-.formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
-}
-
-.formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #bb2929;
-	opacity: 1;
-}
-
-.formulario__grupo-incorrecto .formulario__input {
-	border: 3px solid #bb2929;
+.formulario__mensaje-error {
+	font-size: 14px;
+	color: red;
 }
