@@ -5,7 +5,7 @@ module.exports={
     "database": "art_fufu3",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port":"3007"
+    "port":"3006"
   },
   "test": {
     "username": "root",
