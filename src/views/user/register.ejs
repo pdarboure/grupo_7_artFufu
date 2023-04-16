@@ -2,7 +2,6 @@
 <html lang="en">
   <%- include('../partials/head.ejs')%>
   
-  <script src="validaciones.js"></script>
   <body>
     <div class="titulo-fufu">
       <i class="fa-solid fa-paintbrush"></i>
@@ -11,11 +10,11 @@
     <div class="container-register">
       <div class="title">Creá tu cuenta</div><br>
       <div class="content">
-        <form action="/register" method="post" enctype="multipart/form-data">
+        <form id="formulario" action="/register" method="post" enctype="multipart/form-data">
           <div class="user-details">
             <div class="input-box">
               <span class="details">Nombre</span>
-              <input type="text" placeholder="Ingrese nombre" name="nombre"
+              <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre"
                 value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
               <% if (locals.error && error.nombre) { %>
                 <p>
@@ -100,5 +99,8 @@
       </div>
     </div>
   </body>
+
+  <script src="validaciones.js"></script>
+
 
 </html>
