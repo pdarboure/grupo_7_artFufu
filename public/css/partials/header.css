@@ -252,6 +252,38 @@ html {
   .burgermenu-list li {
     margin-bottom: 10px;
   }
+  /*ESTILOS MENNU HAMBURGUESA*/
+  .burgermenu-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 20px 10px; /* add more padding to create space at the top and bottom */
+	background-color: #fff;
+	border: 1px solid #000;
+	z-index: 1;
+	display: none;
+  }
+  
+  .burgermenu-list li {
+	margin-bottom: 20px; /* increase margin to create space between list items */
+	margin-left: 20px;
+  }
+  
+  .burgermenu-list li:last-child {
+	margin-bottom: 0;
+  }
+  
+  .burgermenu-list a {
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
+  .burgermenu-list a:hover {
+	text-decoration: underline;
+  }
+  
 
   /* Show the burger menu on small screens */
   @media (min-width: 769px) {
