@@ -27,62 +27,44 @@
 
     <div class="container-navbar">
         <nav class="navbar container">
-            <button class="burger-menu" onclick="toggleMenu()">Burger Menu</button>
-<ul class="menu-list" id="menu">
-  <li><a href="#">Item 1</a></li>
-  <li><a href="#">Item 2</a></li>
-  <li><a href="#">Item 3</a></li>
-</ul>
-
-<style>
-  .burger-menu {
-    position: relative;
-    display: inline-block;
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .burger-menu span {
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    transition: transform 0.3s ease-out;
-  }
-  
-  .burger-menu span:first-child {
-    top: 0;
-  }
-  
-  .burger-menu span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .burger-menu span:last-child {
-    bottom: 0;
-  }
-  
-  .menu-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #000;
-    z-index: 1;
-  }
-  
-  .menu-list.show {
-    display: block;
-  }
-  
-  .menu-list li {
-    margin-bottom: 10px;
-  }
+            <button class="burger-menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            <ul class="menu-list" id="menu">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+            </ul>
+            
+            <!-- Be sure to include the Font Awesome CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+            
+            <style>
+              .burger-menu {
+                position: relative;
+                display: inline-block;
+                padding: 10px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+              }
+              
+              .menu-list {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                padding: 10px;
+                background-color: #fff;
+                border: 1px solid #000;
+                z-index: 1;
+              }
+              
+              .menu-list.show {
+                display: block;
+              }
+              
+              .menu-list li {
+                margin-bottom: 10px;
+              }
   
   /* Show the burger menu on small screens */
   @media (min-width: 769px) {
