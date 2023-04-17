@@ -28,93 +28,89 @@
     <div class="container-navbar">
         <nav class="navbar container">
             <button class="burger-menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
-            <ul class="menu-list" id="menu">
-                <li><a href="#">Pinturas</a></li>
-                <li><a href="/fibrofacil">Fibrofacil</a></li>
-                <li><a href="#">Más</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="/admin">Admin</a></li>
-            </ul>
-            
-            <!-- Be sure to include the Font Awesome CSS -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-            
-            <style>
-              .burger-menu {
-                position: relative;
-                display: inline-block;
-                padding: 10px;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-              }
-              
-              .menu-list {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                display: none;
-                padding: 10px;
-                background-color: #fff;
-                border: 1px solid #000;
-                z-index: 1;
-              }
-              
-              .menu-list.show {
-                display: block;
-              }
-              
-              .menu-list li {
-                margin-bottom: 10px;
-              }
-  
+<ul class="burgermenu-list" id="b-menu">
+    <li><a href="#">Pinturas</a></li>
+    <li><a href="/fibrofacil">Fibrofacil</a></li>
+    <li><a href="#">Más</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="/admin">Admin</a></li>
+</ul>
+
+<!-- Be sure to include the Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<style>
+  .burger-menu {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burgermenu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 1;
+  }
+
+  .burgermenu-list.show {
+    display: block;
+  }
+
+  .burgermenu-list li {
+    margin-bottom: 10px;
+  }
+
   /* Show the burger menu on small screens */
   @media (min-width: 769px) {
     .burger-menu {
       display: block;
     }
-    
-    .menu-list {
+
+    .burgermenu-list {
       position: static;
       display: block;
       margin-top: 10px;
       border: none;
     }
-    
-    .menu-list li {
+
+    .burgermenu-list li {
       margin-bottom: 0;
     }
-    
-    .burger-menu span:first-child {
+
+    .burger-menu i {
       transform: translateY(-3px) rotate(-45deg);
     }
-    
-    .burger-menu span:nth-child(2) {
+
+    .burger-menu i:nth-child(2) {
       opacity: 0;
     }
-    
-    .burger-menu span:last-child {
+
+    .burger-menu i:last-child {
       transform: translateY(3px) rotate(45deg);
     }
-  }
-  @media (min-width: 769px) {
-    .burger-menu {
+}
+    @media (min-width: 768px) {
+    .burgermenu-list {
       display: none;
     }
-    .menu-list{
-        display: none;
-    }
-    .menu-list.show{
-        display: none;
-    }}
+  }
 </style>
 
 <script>
   function toggleMenu() {
-    var menu = document.getElementById("menu");
+    var menu = document.getElementById("b-menu");
     menu.classList.toggle("show");
   }
 </script>
+
             <ul class="menu">
                 <li><a href="#">Pinturas</a></li>
                 <li><a href="/fibrofacil">Fibrofacil</a></li>
