@@ -27,7 +27,107 @@
 
     <div class="container-navbar">
         <nav class="navbar container">
-            <i class="fa-solid fa-bars"></i>
+            <button class="burger-menu" onclick="toggleMenu()">Burger Menu</button>
+<ul class="menu-list" id="menu">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+  <li><a href="#">Item 3</a></li>
+</ul>
+
+<style>
+  .burger-menu {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger-menu span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .burger-menu span:first-child {
+    top: 0;
+  }
+  
+  .burger-menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .burger-menu span:last-child {
+    bottom: 0;
+  }
+  
+  .menu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 1;
+  }
+  
+  .menu-list.show {
+    display: block;
+  }
+  
+  .menu-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Show the burger menu on small screens */
+  @media (min-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+    
+    .menu-list {
+      position: static;
+      display: block;
+      margin-top: 10px;
+      border: none;
+    }
+    
+    .menu-list li {
+      margin-bottom: 0;
+    }
+    
+    .burger-menu span:first-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+    
+    .burger-menu span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .burger-menu span:last-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+  }
+  @media (min-width: 768px) {
+    .burger-menu {
+      display: none;
+    }
+    .menu-list{
+        display: none;
+    }}
+</style>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+  }
+</script>
             <ul class="menu">
                 <li><a href="#">Pinturas</a></li>
                 <li><a href="/fibrofacil">Fibrofacil</a></li>
