@@ -288,7 +288,7 @@ html {
   /* Show the burger menu on small screens */
   @media (min-width: 769px) {
     .burger-menu {
-      display: block;
+      display: none;
     }
 
     .burgermenu-list {
@@ -316,10 +316,7 @@ html {
 	.burgermenu-list.show{
 		display: none;
 	}
+	.burgermenu-list {
+		display: none;
+	  }
 }
-    @media (min-width: 768px) {
-    .burgermenu-list {
-      display: none;
-    }
-	
-  }
