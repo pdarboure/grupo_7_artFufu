@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head.ejs')%>
-
+  <%- include('../partials/head.ejs')%>
+  
   <body>
     <div class="titulo-fufu">
       <i class="fa-solid fa-paintbrush"></i>
@@ -10,85 +10,79 @@
     <div class="container-register">
       <div class="title">Creá tu cuenta</div><br>
       <div class="content">
-        <form action="/register" method="post" enctype="multipart/form-data">
+        <form id="formulario" action="/register" method="post" enctype="multipart/form-data">
           <div class="user-details">
             <div class="input-box">
               <span class="details">Nombre</span>
-              <input type="text" placeholder="Ingrese nombre" name="nombre"
-                value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
+              <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre"
+              value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
               <% if (locals.error && error.nombre) { %>
                 <p>
                   <%= error.nombre.msg %>
                 </p>
                 <% } %>
-            </div>
-            <div class="input-box">
+              </div>
+              <div class="input-box">
               <span class="details">Apellido</span>
-              <input type="text" placeholder="Ingrese nombre" name="apellido"
+              <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido"
                 value="<%= locals.oldBody && oldBody.apellido? oldBody.apellido: '' %>">
               <% if (locals.error && error.apellido) { %>
                 <p>
                   <%= error.apellido.msg %>
                 </p>
                 <% } %>
-            </div>
-            <!-- <div class="input-box">
+              </div>
+              <div class="input-box">
               <span class="details">Nombre de Usuario</span>
-              <input type="text" placeholder="Ingrese usuario" name="nombreUsuario"
+              <input type="text" placeholder="Ingrese usuario" name="nombreUsuario" id="nombreUsuario"
                 value="<%= locals.oldBody && oldBody.nombreUsuario? oldBody.nombreUsuario: '' %>">
               <% if (locals.error && error.nombreUsuario) { %>
                 <p>
                   <%= error.nombreUsuario.msg %>
                 </p>
                 <% } %>
-            </div> -->
-            <div class="input-box">
+              </div>
+              <div class="input-box">
               <span class="details">Email</span>
-              <input type="email" placeholder="Ingrese email" name="emailRegistro"
+              <input type="email" placeholder="Ingrese email" name="emailRegistro" id="emailRegistro"
                 value="<%= locals.oldBody && oldBody.emailRegistro? oldBody.emailRegistro: '' %>">
               <% if (locals.error && error.emailRegistro) { %>
                 <p>
                   <%= error.emailRegistro.msg %>
                 </p>
                 <% } %>
+          
             </div>
             <div class="input-box">
               <span class="details">Numero de Telefono</span>
-              <input type="text" placeholder="Ingrese numero" name="numeroTelefono">
+              <input type="text" placeholder="Ingrese numero" name="numeroTelefono" id="numeroTelefono">
+        
             </div>
             <div class="input-box">
               <span class="details">Contraseña</span>
-              <input type="password" placeholder="Ingrese contraseña" name="passwordRegistro">
+              <input type="password" placeholder="Ingrese contraseña" name="passwordRegistro" id="passwordRegistro">
               <% if (locals.error && error.passwordRegistro) { %>
                 <p>
                   <%= error.passwordRegistro.msg %>
                 </p>
                 <% } %>
+          
             </div>
             <div class="input-box">
               <span class="details">Confirme Contraseña</span>
-              <input type="password" placeholder="Confirme contraseña" name="checkPassword">
+              <input type="password" placeholder="Confirme contraseña" name="checkPassword" id="checkPassword">
+        
             </div>
             <div class="input-box">
               <span class="details">Ingrese una imagen</span>
-              <input type="file" placeholder="Ingrese nombre" name="image">
+              <input type="file" placeholder="Ingrese nombre" name="image" id="image">
               <% if (locals.error && error.image) { %>
                 <p>
                   <%= error.image.msg %>
                 </p>
                 <% } %>
+          
             </div>
-            <% if (locals.userIsAdmin) { %>
-              <div class="input-box">
-                <span class="details">Ingrese una imagen</span>
-                <select name="user_category_id">
-                  <option disabled selected>Seleccionar Categoria:</option>
-                  <% category.forEach(category => { %>
-                   <option value="<%= category.id %>"><%= category.category %></option>
-                  <% }) %>
-                </select>
-              </div>
-            <% } %>
           </div>
           <!-- <div class="gender-details">
             <span class="gender-title">Aceptar Términos y Condiciones</span>
@@ -98,6 +92,9 @@
                 <span class="gender">Acepto</span>
               </label>
             </div> -->
+
+            <div id="error"></div>
+
             <div class="yatienecuenta">
               <h6>¿Ya tenés una cuenta?</h6>
               <a href="/login">Ingresá con tu cuenta</a>
@@ -110,4 +107,8 @@
       </div>
     </div>
   </body>
+  
+
+  <script src="validaciones.js"></script>
+
 </html>
