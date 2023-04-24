@@ -23,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.set('views', path.resolve(__dirname, 'views'));
 
+app.use(express.static(path.join(__dirname, "js")));
+
 app.set("view engine", "ejs");
 
 app.use(express.json());
