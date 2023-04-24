@@ -142,13 +142,13 @@ function validarFormulario(evt) {
 formulario.addEventListener("keyup", ()=>{
     let password = document.querySelector("#passwordRegistro")
     let checkPassword = document.querySelector("#checkPassword")
-    if (!password.value == checkPassword.value) {
-        password.style.backgroundColor="red"
-    }
-    else{
+    if (password.value == checkPassword.value) {
         password.style.backgroundColor="orange"
     }
-       
+    else{
+        password.style.backgroundColor="red"
+    }
+       console.log(password.value == checkPassword.value, password.value, checkPassword.value);
  
 })
 
