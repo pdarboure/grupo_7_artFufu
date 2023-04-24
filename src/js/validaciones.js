@@ -139,6 +139,8 @@ function validarFormulario(evt) {
     }
 }
 
+
+
 formulario.addEventListener("keyup", ()=>{
     let password = document.querySelector("#passwordRegistro")
     let checkPassword = document.querySelector("#checkPassword")
@@ -148,8 +150,7 @@ formulario.addEventListener("keyup", ()=>{
     else{
         password.style.backgroundColor="red"
     }
-       console.log(password.value == checkPassword.value, password.value, checkPassword.value);
- 
+        
 })
 
 
