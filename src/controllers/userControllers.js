@@ -20,7 +20,7 @@ const userController = {
                  email:req.body.emailRegistro
                 }
             });
-
+            console.log(userFound);
             if(!userFound){
                 console.log('No encontre el usuario!!!!!');
                 return res.render('user/login',{
