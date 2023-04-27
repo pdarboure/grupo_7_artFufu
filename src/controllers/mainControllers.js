@@ -9,12 +9,23 @@ const mainController = {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
 
-    home: (req, res) => {
-        res.render('home', {
-            css: '../css/homestyles.css',
-            title: 'Listado de productos',
-            productsList: mainController.getProducts()
-        });
+    home: async(req, res) => {
+       
+       try {
+
+        let productsList = await db.Product.findAll()
+            console.log(productsList);
+           res.render('home', {
+               css: '../css/homestyles.css',
+               title: 'Listado de productos',
+               productsList
+           });
+        
+       } catch (error) {
+        console.log(error);
+        res.json(error)
+       }
+       
     },
 
   

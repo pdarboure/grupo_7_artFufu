@@ -15,7 +15,13 @@
             </div>
 
             <div class="container-user">
-              <a href="/login"> <i class="fa-solid fa-user"></i></a> 
+              <% if (!locals.userIsLogged && !locals.userIsAdmin) { %>
+                <a href="/login"> <i class="fa-solid fa-user"></i></a> 
+              <% } %>
+
+              <% if (locals.userIsLogged || locals.userIsAdmin) { %>
+                <a href="/profile"> <i class="fa-solid fa-user"></i></a> 
+              <% } %>
               <a href="/carritoDeCompras"><i class="fa-solid fa-basket-shopping"></i></a>
                 <div class="content-shopping-cart">
                     <span class="text">Carrito</span>
@@ -33,7 +39,9 @@
                 <li><a href="/fibrofacil">Fibrofacil</a></li>
                 <li><a href="#">Más</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="/admin">Admin</a></li>
+                <% if (locals.userIsAdmin) { %>
+                    <li><a href="/admin">Admin</a></li>
+                <% } %>
             </ul>
 
             <form class="search-form">

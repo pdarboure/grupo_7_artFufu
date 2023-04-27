@@ -22,6 +22,7 @@ const userController = {
             });
 
             if(!userFound){
+                console.log('No encontre el usuario!!!!!');
                 return res.render('user/login',{
                     css: './css/login.css',
                     title: 'Registro',
@@ -37,6 +38,7 @@ const userController = {
             let validPassword = bcrypt.compareSync(req.body.passwordRegistro, userFound.password);  
             
             if(!validPassword){
+                console.log('No encontre el pasworddd!!!!!')
                 return res.render('user/login',{
                     css: './css/login.css',
                     title: 'Registro',
@@ -51,13 +53,14 @@ const userController = {
 
             if (userFound.user_category_id == 2) {
                 req.session.admin = userFound
+                console.log(req.session.admin, 'este es admin');
                 return res.redirect('/profile')
             }
             
             if (userFound && validPassword) {
                     delete userFound.password
-            
                     req.session.userLogged = userFound
+                    console.log(req.session.userLogged);
                     if (req.body.rememberme) {
                         res.cookie('userCookie', userFound, { maxAge: 1000*60*5})
                     }

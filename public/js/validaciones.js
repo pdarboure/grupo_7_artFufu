@@ -81,10 +81,14 @@ formulario.addEventListener("keyup", ()=>{
 })
 
 formulario.addEventListener("submit", (e)=>{
-    e.preventDefault();
+    
+    if ((formulario.nombre.value == "") || (formulario.apellido.value == "") ||(formulario.numeroTelefono.value == "") || (formulario.nombreUsuario.value == "") ||  (formulario.passwordRegistro.value == "") || (formulario.emailRegistro.value == "") || (formulario.checkPassword.value == "")){
 
-    if ((formulario.nombre.value == "") || (formulario.apellido.value == "") ||(formulario.numeroTelefono.value == "") || (formulario.nombreUsuario.value == "") ||  (formulario.passwordRegistro.value == "") || (formulario.emailRegistro.value == "") || (formulario.checkPassword.value == ""))
-        alert("Tenes que llenar el formulario!!!")
+        e.preventDefault();
+        // alert("Tenes que llenar el formulario!!!")
+    }else{
+        e.submit()
     }
-    )
+    
+})
 

@@ -11,88 +11,53 @@
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
         <a href="/products/<%= products.id %>" class="caja-article">
-            <% if (products.image) { %>
-                <% if (Array.isArray(products.image)) { %>
-                    <% products.image.forEach(image=> { %>
-                        <img class="img-fluid" src="/images/products/<%= image.name %>"
-                            alt="<%= image %>">
-                        <% }) %>
-                            <% } else { %>
-                                <img class="img-fluid" src="/images/products/<%= image.name %>"
-                                    alt="">
-                                <% } %>
-                                    <% } else { %>
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
-                                            alt="">
-                                        <% } %>
-                                            <div class="descripciones">
-                                                <p>
-                                                    <%= products.name %>
-                                                </p>
-                                                <p class="precio">
-                                                    $<%= products.price %>
-                                                </p>
-                                            </div>
+            <img class="img-fluid" src="/images/products/<%= products.image %>">
+
+            <div class="descripciones">
+                <p>
+                    <%= products.name %>
+                </p>
+                <p class="precio">
+                    $<%= products.price %>
+                </p>
+            </div>
         </a>
-        <% }) %>
+    <% }) %>
+    
 </ul>
 <h3 class="tittle-home">Ofertas</h3>
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
         <a href="/products/<%= products.id %>" class="caja-article">
-            <% if (products.image) { %>
-                <% if (Array.isArray(products.image)) { %>
-                    <% products.image.forEach(image=> { %>
-                        <img class="img-fluid" src="/images/products/<%= image.name %>"
-                            alt="<%= image %>">
-                        <% }) %>
-                            <% } else { %>
-                                <img class="img-fluid" src="/images/products/<%= image.name %>"
-                                    alt="">
-                                <% } %>
-                                    <% } else { %>
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
-                                            alt="">
-                                        <% } %>
-                                            <div class="descripciones">
-                                                <p>
-                                                    <%= products.name %>
-                                                </p>
-                                                <p class="precio">
-                                                    $<%= products.price %>
-                                                </p>
-                                            </div>
+            <img class="img-fluid" src="/images/products/<%= products.image %>">
+
+            <div class="descripciones">
+                <p>
+                    <%= products.name %>
+                </p>
+                <p class="precio">
+                    $<%= products.price %>
+                </p>
+            </div>
         </a>
-        <% }) %>
+    <% }) %> 
 </div>
 <h3 class="tittle-home">Lo más vendido</h3>
 <div class="all-articles">
     <% productsList.forEach(products=> { %>
         <a href="/products/<%= products.id %>" class="caja-article">
-            <% if (products.image) { %>
-                <% if (Array.isArray(products.image)) { %>
-                    <% products.image.forEach(image=> { %>
-                        <img class="img-fluid" src="/images/products/<%= image.name %>"
-                            alt="<%= image %>">
-                        <% }) %>
-                            <% } else { %>
-                                <img class="img-fluid" src="/images/products/<%= image.name %>"
-                                    alt="">
-                                <% } %>
-                                    <% } else { %>
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
-                                            alt="">
-                                        <% } %>
-                                            <div class="descripciones">
-                                                <p>
-                                                    <%= products.name %>
-                                                </p>
-                                                <p class="precio">
-                                                    $<%= products.price %>
-                                                </p>
-                                            </div>
+            <img class="img-fluid" src="/images/products/<%= products.image %>">
+
+            <div class="descripciones">
+                <p>
+                    <%= products.name %>
+                </p>
+                <p class="precio">
+                    $<%= products.price %>
+                </p>
+            </div>
         </a>
-        <% }) %>
+    <% }) %> 
 </div>
 </main>
 <%- include('./partials/footer.ejs') %>
