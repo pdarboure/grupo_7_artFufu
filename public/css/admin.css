@@ -1,5 +1,4 @@
-/* ------------------------------------------ MAIN ------------------------------------------*/
-
+/* ------------------------------------------ ADMIN ------------------------------------------*/
 .div-botones-admin{
   text-align: center;
   margin-top: 4%;
@@ -20,17 +19,16 @@
   padding: 5% 20%
   }
 
-  .botones-admin:hover {
+  /* .botones-admin:hover {
   background-color: white;
   color:#c4ab5f ;
-  }
-
+  } */
+/* ------------------------------------------ ADMIN ------------------------------------------*/
 .create{
   display: grid;
   width: 100%;
   height: 100%;
   place-items: center;
-  /* background-color: #ebebeb ; */
   opacity: 0.9;
 }  
 
@@ -38,10 +36,14 @@
   background: #fff;
   max-width: 350px;
   width: 380px;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 20px;
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
-  margin-top: 50px; 
+  margin-top: 25px; 
+  margin-bottom: 35px;
+}
+.input-box{
+  font-size: 15px;
 }
 
 .container-create form .title{
@@ -51,82 +53,101 @@
   position: relative;
 }
 
-.container-create form .title:before{
-  content: '';
-  position: absolute;
-  height: 4px;
-  width: 33px;
-  left: 0px;
-  bottom: 3px;
-  border-radius: 5px;
-}
 .container-create form .input-box{
   width: 100%;
   height: 45px;
-  margin-top: 25px;
+  margin-top: 40px;
   position: relative;
 }
 .container-create form .input-box input{
   width: 100%;
   height: 100%;
-  outline: none;
-  font-size: 16px;
-  border: none;
-}
-.container-create form .underline::before{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: #ccc;
-  left: 0;
-  bottom: 0;
-}
-.container-create form .underline::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: #5fc4ae;
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: all 0.3s ease;
-}
-.container-create form .input-box input:focus ~ .underline::after,
-.container-create form .input-box input:valid ~ .underline::after{
-  transform: scaleX(1);
-  transform-origin: left;
-}
-.container-create form .button{
-  margin: 40px 0 20px 0;
-  box-shadow: #000;
-  border-radius: 8px;
-  
-}
-.container-create .input-box input[type="submit"]{
-  background-color: #5fc4ae;
-  font-size: 17px;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #000;
-}
-.container-create .input-box input[type="submit"]:hover{
-  letter-spacing: 1px;
-  background-color: #fff;
-  color: #5fc4ae;
-  border: 1px solid #5fc4ae;
+  /* font-size: 16px; */
+  border: linear;
+  border-color: rgba(128, 128, 128, 0.855);
 }
 
-.container-create .option{
-  font-size: 18px;
-  text-align: center;
+/* ------------------------------------------ BUTTON ------------------------------------------*/
+
+.cssbuttons-io-button {
+  background: #5fc4ae;
+  color: black;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #5fc4ae;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
 }
-.container-create .option a{
-  font-size: 18px;
-  text-align: center;
-  color: #3b5998;
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #5fc4ae;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #5fc4ae;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+/* ------------------------------------------ Edit ------------------------------------------*/
+
+.create-edit{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  opacity: 0.9;
+} 
+
+.container-create-edit{
+  background: #fff;
+  max-width: 350px;
+  width: 380px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.775);
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+.input-box-edit{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 8px;
+  font-size: 16px;
+  margin-top: 25px;
 }

@@ -85,18 +85,10 @@ formulario.addEventListener("submit", (e)=>{
     
     if ((formulario.nombre.value == "") || (formulario.apellido.value == "") ||(formulario.numeroTelefono.value == "") || (formulario.nombreUsuario.value == "") ||  (formulario.passwordRegistro.value == "") || (formulario.emailRegistro.value == "") || (formulario.checkPassword.value == "")){
 
-<<<<<<< HEAD
         e.preventDefault();
         // alert("Tenes que llenar el formulario!!!")
     }else{
         e.submit()
-=======
-    if ((formulario.nombre.value == "") || (formulario.apellido.value == "") ||(formulario.numeroTelefono.value == "") || (formulario.nombreUsuario.value == "") ||  (formulario.passwordRegistro.value == "") || (formulario.emailRegistro.value == "") || (formulario.checkPassword.value == "")){
-        alert("Tenes que llenar el formulario!!!")}
-        else {
-            formulario.submit
-        }
->>>>>>> f244ae86a9c9769d4aadc7610d8a9a5af534e9b8
     }
     
 })

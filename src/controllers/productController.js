@@ -95,7 +95,7 @@ const productController = {
             res.render('products/editarProducto', {
                 title: 'Mi producto',
                 css:'/css/admin.css',
-                product: product,
+                product,
                 categorie
             });
             
