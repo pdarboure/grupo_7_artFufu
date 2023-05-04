@@ -82,30 +82,37 @@ formulario.addEventListener("keyup", ()=>{
 })
 
 formulario.addEventListener("submit", (e)=>{
-      e.preventDefault();
+      
     
      if (formulario.nombre.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu nombre")
     }
     
     if (formulario.apellido.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu apellido")
     }   
     if (formulario.numeroTelefono.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu numero de telefono")
     }
     if (formulario.nombreUsuario.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu nombre usuario")
     }
     if (formulario.passwordRegistro.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu contraseña")
     }
     
     if (formulario.emailRegistro.value == "") {
+        e.preventDefault();
         alert("Debes ingresar tu email")
     }
     
     if (formulario.checkPassword.value == "") {
+        e.preventDefault();
         alert("Debes ingresar una confirmacion de contraseña")
     }
     
