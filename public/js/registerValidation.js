@@ -2,16 +2,6 @@ const formulario = document.getElementById("formulario")
 
 const inputs = document.querySelectorAll('#formulario input');
 
-const validarFormulario2 = (e) => {
-    // const nombre = document.querySelector("#nombre")
-    // const apellido = document.querySelector("#apellido")
-    // const nombreUsuario = document.querySelector("#nombreUsuario")
-    // const emailRegistro = document.querySelector("#emailRegistro")
-    // const numeroTelefono = document.querySelector("#numeroTelefono")
-   
-    
-}
-
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
@@ -72,7 +62,7 @@ formulario.addEventListener("keyup", ()=>{
     let password = document.querySelector("#passwordRegistro")
     let checkPassword = document.querySelector("#checkPassword")
     if (password.value == checkPassword.value) {
-        password.style.backgroundColor="orange"
+    
     }
     else{
         password.style.backgroundColor="red"
@@ -82,39 +72,11 @@ formulario.addEventListener("keyup", ()=>{
 })
 
 formulario.addEventListener("submit", (e)=>{
-      
+     const inputArray = [formulario.nombre,formulario.apellido,formulario.numeroTelefono,formulario.nombreUsuario,formulario.passwordRegistro,formulario.emailRegistro]
     
-     if (formulario.nombre.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu nombre")
-    }
-    
-    if (formulario.apellido.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu apellido")
-    }   
-    if (formulario.numeroTelefono.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu numero de telefono")
-    }
-    if (formulario.nombreUsuario.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu nombre usuario")
-    }
-    if (formulario.passwordRegistro.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu contraseña")
-    }
-    
-    if (formulario.emailRegistro.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar tu email")
-    }
-    
-    if (formulario.checkPassword.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar una confirmacion de contraseña")
-    }
-    
-})
+    const inputEmpty = isEmpty(inputArray)
 
+    if (inputEmpty.includes(true)) {
+        e.preventDefault()
+    }
+})
