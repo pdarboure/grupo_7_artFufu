@@ -14,6 +14,7 @@ const userValidator = [
     body('emailRegistro')
         .isEmail().withMessage('Tiene que ser un email valido'),
     body('passwordRegistro')
+        .isLength({min: 8}).withMessage('Minimo 8 caracteres')
         .custom((val,{req})=>{
             let check = req.body.checkPassword
             if(val != check){
