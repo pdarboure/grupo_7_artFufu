@@ -1,68 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs') %>
-<body>
+<%- include('../partials/head.ejs') %>
+
+    <body>
 
         <%- include('../partials/header.ejs') %>
-        <h3>
-    <main class="create">  
-        <div class="container-create">
-            <form method="post" action="/products/create" enctype="multipart/form-data">
-                <div class="input-box underline"> 
-                <label for="name">Nombre</label>
-                <input type="text" name="name" value="<%= locals.oldBody && oldBody.name ? oldBody.name:'' %>">
-                    <% if (locals.error && error.name) { %>
-                     <p><%= error.name.msg %></p>
-                    <% } %>
-                </div>
-                <div class="input-box">
-                        <label for="year">Descripcion</label>
-                        <input type="text" name="description" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
-                        <% if (locals.error && error.price) { %>
-                            <p><%= error.price.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="input-box">
-                            <label for="year">Capacidad</label>
-                            <input type="text" name="capacity" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
-                            <% if (locals.error && error.price) { %>
-                                <p><%= error.price.msg %></p>
-                               <% } %>
+            <h3>
+                <main class="create">
+                    <div class="container-create">
+                        <form id= "formulario" method="post" action="/products/create" enctype="multipart/form-data">
+                            <div class="input-box underline">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name"
+                                    value="<%= locals.oldBody && oldBody.name ? oldBody.name:'' %>">
+                                <% if (locals.error && error.name) { %>
+                                    <p>
+                                        <%= error.name.msg %>
+                                    </p>
+                                    <% } %>
                             </div>
-                        <div class="input-box">
-                            <label for="year">Precio</label>
-                            <input type="number" name="price" value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
-                            <% if (locals.error && error.price) { %>
-                                <p><%= error.price.msg %></p>
-                                <% } %>
-                        </div>
-                        <div class="input-box"> 
-                        <label for="name">Seleccioná una imagen </label>
-                        <input type="file" name="image" id="image">
-                        <% if (locals.error && error.image) { %>
-                            <p><%= error.image.msg %></p>
-                            <% } %>
-                        </div>
-                        <div class="input-box">
-                            <label for="year">Categoría</label>
-                            <select name="product_categories_id" id="">
-                                <option value="" disabled selected >Selecionar:</option>
-                                <% categorie.forEach(categorie => { %>
-                                 <option value="<%= categorie.id %>"><%= categorie.category %></option>
-                                <% }) %>
-                            </select>
+                            <div class="input-box">
+                                <label for="year">Descripcion</label>
+                                <input type="text" name="description"
+                                    value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                                <% if (locals.error && error.price) { %>
+                                    <p>
+                                        <%= error.price.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="input-box">
+                                <label for="year">Capacidad</label>
+                                <input type="text" name="capacity"
+                                    value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                                <% if (locals.error && error.price) { %>
+                                    <p>
+                                        <%= error.price.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="input-box">
+                                <label for="year">Precio</label>
+                                <input type="number" name="price"
+                                    value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
+                                <% if (locals.error && error.price) { %>
+                                    <p>
+                                        <%= error.price.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="input-box">
+                                <label for="name">Seleccioná una imagen </label>
+                                <input type="file" name="image" id="image">
+                                <% if (locals.error && error.image) { %>
+                                    <p>
+                                        <%= error.image.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <div class="input-box">
+                                <label for="year">Categoría</label>
+                                <select name="product_categories_id" id="">
+                                    <option value="" disabled selected>Selecionar:</option>
+                                    <% categorie.forEach(categorie=> { %>
+                                        <option value="<%= categorie.id %>">
+                                            <%= categorie.category %>
+                                        </option>
+                                        <% }) %>
+                                </select>
                             </div>
                             <button class="cssbuttons-io-button"> Crear Producto
                                 <div class="icon">
-                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z">
+                                        </path>
+                                    </svg>
                                 </div>
-                              </button>
-                            </div>
-                </h3>
+                            </button>
+                    </div>
+            </h3>
             </form>
-        </main>
-</body>
-<!-- <%- include('../partials/footer.ejs') %>  -->
+            <div id="error"></div>
+            </main>
+    </body>
+    <!-- <%- include('../partials/footer.ejs') %>  -->
+    <script src="/js/createValidation.js"></script>
+
 
 </html>
