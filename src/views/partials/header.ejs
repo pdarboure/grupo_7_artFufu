@@ -15,13 +15,7 @@
             </div>
 
             <div class="container-user">
-              <% if (!locals.userIsLogged && !locals.userIsAdmin) { %>
-                <a href="/login"> <i class="fa-solid fa-user"></i></a> 
-              <% } %>
-
-              <% if (locals.userIsLogged || locals.userIsAdmin) { %>
-                <a href="/profile"> <i class="fa-solid fa-user"></i></a> 
-              <% } %>
+              <a href="/login"> <i class="fa-solid fa-user"></i></a> 
               <a href="/carritoDeCompras"><i class="fa-solid fa-basket-shopping"></i></a>
                 <div class="content-shopping-cart">
                     <span class="text">Carrito</span>
@@ -31,18 +25,33 @@
         </div>
     </div>
 
-    
     <div class="container-navbar">
         <nav class="navbar container">
-            <i class="fa-solid fa-bars"></i>
+            <button class="burger-menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+<ul class="burgermenu-list" id="b-menu">
+    <li><a href="#">Pinturas</a></li>
+    <li><a href="/fibrofacil">Fibrofacil</a></li>
+    <li><a href="#">Más</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="/admin">Admin</a></li>
+</ul>
+
+<!-- Be sure to include the Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("b-menu");
+    menu.classList.toggle("show");
+  }
+</script>
+
             <ul class="menu">
                 <li><a href="#">Pinturas</a></li>
                 <li><a href="/fibrofacil">Fibrofacil</a></li>
                 <li><a href="#">Más</a></li>
                 <li><a href="#">Blog</a></li>
-                <% if (locals.userIsAdmin) { %>
-                    <li><a href="/admin">Admin</a></li>
-                <% } %>
+                <li><a href="/admin">Admin</a></li>
             </ul>
 
             <form class="search-form">

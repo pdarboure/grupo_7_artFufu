@@ -224,3 +224,99 @@ html {
 	font-size: 2rem;
 	color: #fff;
 }
+
+  .burger-menu {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burgermenu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 1;
+  }
+
+  .burgermenu-list.show {
+    display: block;
+  }
+
+  .burgermenu-list li {
+    margin-bottom: 10px;
+  }
+  /*ESTILOS MENNU HAMBURGUESA*/
+  .burgermenu-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 20px 10px; /* add more padding to create space at the top and bottom */
+	background-color: #fff;
+	border: 1px solid #000;
+	z-index: 1;
+	display: none;
+  }
+  
+  .burgermenu-list li {
+	margin-bottom: 20px; /* increase margin to create space between list items */
+	margin-left: 20px;
+  }
+  
+  .burgermenu-list li:last-child {
+	margin-bottom: 0;
+  }
+  
+  .burgermenu-list a {
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
+  .burgermenu-list a:hover {
+	text-decoration: underline;
+  }
+  
+
+  /* Show the burger menu on small screens */
+  @media (min-width: 769px) {
+    .burger-menu {
+      display: none;
+    }
+
+    .burgermenu-list {
+      position: static;
+      display: block;
+      margin-top: 10px;
+      border: none;
+    }
+
+    .burgermenu-list li {
+      margin-bottom: 0;
+    }
+
+    .burger-menu i {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+
+    .burger-menu i:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger-menu i:last-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+	.burgermenu-list.show{
+		display: none;
+	}
+	.burgermenu-list {
+		display: none;
+	  }
+}
