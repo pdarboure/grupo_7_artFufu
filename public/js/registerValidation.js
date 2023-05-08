@@ -71,29 +71,62 @@ function validarFormulario(evt) {
     
 // })
 
-formulario.addEventListener("keyup", () => {
-    let password = document.querySelector("#passwordRegistro");
-    let checkPassword = document.querySelector("#checkPassword");
-    if (password.value === checkPassword.value && password.value.length >= 8) {
-
-    } else {
-      // passwords do not match or do not meet minimum length requirement
-      password.style.backgroundColor = "red";
-      alert("NOOOO")
+formulario.addEventListener("keyup", ()=>{
+    let password = document.querySelector("#passwordRegistro")
+    let checkPassword = document.querySelector("#checkPassword")
+    if (password.value == checkPassword.value) {
+        password.style.borderBottomColor="green"
     }
-    console.log(
-      password.value === checkPassword.value,
-      password.value,
-      checkPassword.value
-    );
-  });
-
-formulario.addEventListener("submit", (e)=>{
-     const inputArray = [formulario.nombre,formulario.apellido,formulario.numeroTelefono,formulario.nombreUsuario,formulario.passwordRegistro,formulario.emailRegistro]
+    else{
+        password.style.borderBottomColor="red"
+    }
+    console.log(password.value == checkPassword.value, password.value, checkPassword.value);
     
-    const inputEmpty = isEmpty(inputArray)
+ })
 
-    if (inputEmpty.includes(true)) {
-        e.preventDefault()
+
+
+  formulario.addEventListener("submit", (e)=>{
+    if (formulario.nombre.value.length < 3) {
+        e.preventDefault();
+        alert("Debes ingresar un nombre de mas de tres caracteres")
     }
+    if (formulario.apellido.value.length < 3) {
+        e.preventDefault();
+        alert("Debes ingresar un apellido de mas de tres caracteres")
+    }
+    if (formulario.emailRegistro.value == "") {
+        e.preventDefault();
+        alert("Debes ingresar un mail")
+    }
+    if (formulario.numeroTelefono.value == "") {
+        e.preventDefault();
+        alert("Debes ingresar una numero de telefono")
+    }
+    if (formulario.nombreUsuario.value == "") {
+        e.preventDefault();
+        alert("Debes ingresar un nombre de usuario")
+    }
+    if (formulario.checkPassword.value.length <= 7) {
+        e.preventDefault();
+        alert("Debes ingresar una contraseña mayor a 8 caracteres")
+    }
+    if (formulario.passwordRegistro.length <= 7) {
+        e.preventDefault();
+        alert("Debes ingresar una contraseña mayor a 8 caracteres")
+    }
+
+
+
 })
+
+
+// formulario.addEventListener("submit", (e)=>{
+//      const inputArray = [formulario.nombre,formulario.apellido,formulario.numeroTelefono,formulario.nombreUsuario,formulario.passwordRegistro,formulario.emailRegistro]
+    
+//     const inputEmpty = isEmpty(inputArray)
+
+//     if (inputEmpty.includes(true)) {
+//         e.preventDefault()
+//     }
+// })
