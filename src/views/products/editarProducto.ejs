@@ -10,7 +10,7 @@
     <div class="container-create-edit">
             <h1><%= product.name %></h1>
             <div class="input-box-edit">  
-        <form method="post" action="/products/edit/<%= product.id %>?_method=PUT">
+        <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
         <label for="name">Nombre del producto:</label>
                 <input value="<%= product.name %>" type="text" id="name" name="name" <%= product.name %>>
             </div>
@@ -28,7 +28,7 @@
             </div>
                 <div class="input-box-edit">
                     <label  class="form-label" for="year">Categoría</label>
-                    <select name="product_categories_id" id="">
+                    <select name="product_categories_id" id="product_categories_id">
                         <option value="" disabled selected >Selecionar:</option>
                         <% categorie.forEach(categorie => { %>
                          <option value="<%= categorie.id %>"><%= categorie.category %></option>
@@ -41,10 +41,14 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
                         </div>
                       </button>
+                      <div id="error"></div>
                     <form>
                         </div>
         </main>
 
 </body>
+
+<script src="/js/editProducto.js"></script>
+
 
 </html>

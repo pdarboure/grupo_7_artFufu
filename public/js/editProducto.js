@@ -1,49 +1,3 @@
-// const isEmpty = (inputArray) => {
-//     const errors = []
-//         inputArray.forEach((input,i) => {
-//             let errorText = document.getElementById("error-"+i)
-//             if(!input.value.trim() && !errorText){
-//                 let error = document.createElement("p")
-//                 error.innerHTML = "El campo no puede estar vacío"
-//                 error.setAttribute("id","error-"+i)
-//                 error.classList.add("input-error")
-//                 input.insertAdjacentElement("afterend",error)
-//                 //errors.push(true)
-//             }
-//             !input.value.trim()? errors.push(true) : null
-//             if(input.value.trim() && errorText){
-//                 errorText.remove()
-//             }
-//                 });
-//                 console.log(errors);
-//                 return errors
-//             }
-
-
-
-// window.addEventListener('DOMContentLoaded',(e) =>{
-
-//     const formulario = document.getElementById('form-create');
-//     const nameId = document.getElementById ('name');
-//     const descriptionId = document.getElementById('description');
-//     const priceId = document.getElementById('price');
-//     const botonCreate = document.getElementById('botonCreate')
-
-
-// formulario.addEventListener("submit", (e)=>{
-//     const inputArray = [formulario.name,formulario.description,formulario.price]
-//     const inputEmpty = isEmpty(inputArray)
-
-//     if (inputEmpty.includes(true)) {
-//        e.preventDefault()
-//     }
-//     })
-// });
-
-
-
-
-
 const formulario = document.getElementById("formulario")
 
 const inputs = document.querySelectorAll('#formulario input');
@@ -77,12 +31,13 @@ function validarFormulario(evt) {
             if (atributte == "name") {
                 campo = "nombre"
             }
+            if (atributte == "name2") {
+                campo = "descripcion"
+            }
             if (atributte == "description") {
                 campo = "description"
             }
-            if (atributte == "capacity") {
-                campo = "capacidad"
-            }
+
             if (atributte == "price") {
                 campo = "precio"
             }
@@ -106,13 +61,9 @@ formulario.addEventListener("submit", (e)=>{
         e.preventDefault();
         alert("Debes ingresar un nombre de mas de cinco caracteres")
     }
-    if (formulario.description.value.length <= 20) {
+    if (formulario.name2.value.length <= 20) {
         e.preventDefault();
         alert("Debes ingresar una descripcion de mas de veinte caracteres")
-    }
-    if (formulario.capacity.value == "") {
-        e.preventDefault();
-        alert("Debes ingresar una capacidad")
     }
     if (formulario.price.value == "") {
         e.preventDefault();
