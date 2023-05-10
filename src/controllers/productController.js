@@ -4,6 +4,32 @@ const productsPath = path.join(__dirname, '../data/products.json');
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
 const Product = require('../database/models/Product');
+const ProductList = require('../data/products.json')
+
+module.exports = {
+    list: (req, res) => {
+        db.ProductList
+            .findAll()
+            .then(product => {
+                return res.status(200).json({
+                    total: product.length,
+                    data: product, 
+                    status: 200,
+                })
+            })
+    },
+
+    show: (req, res) => {
+        db.Product
+            .findByPk(rq.params.id)
+            .then(product => {
+                return res.status(200).json({
+                    data: product, 
+                    status: 200,
+                })
+            })
+    }
+};
 
 const productController = {
     getProducts: () => {
@@ -162,6 +188,3 @@ const productController = {
 };
 
 module.exports = productController;
-
-
-// holaa

@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer');
-
 const productController = require('../controllers/productController');
-
 const createMiddleware = require('../middlewares/createValidatorMdw');
+const Product = require('../database/models/Product');
 
-// Listado de productso
+// Listado de productos
 router.get('/', productController.index);
+// router.get('/api/products', productController.list); // // API endpoint
 // creacion de producto
 router.get('/create', productController.create);
 router.post('/create', upload.single('image'),createMiddleware, productController.store);

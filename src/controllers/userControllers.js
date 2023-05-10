@@ -4,6 +4,7 @@ const {validationResult} = require ('express-validator');
 const User = require('../services/user');
 const bcrypt = require('bcrypt')
 const db = require('../database/models')
+const Op = db.Sequelize.Op;
 
 const userController = { 
     login: (req, res) => {
@@ -153,5 +154,15 @@ const userController = {
 
     },
 }
+
+module.exports = {
+    list: (req, res) => {
+        db.User
+            .findAll()
+            .then(users => {
+                return res.json(users)
+            })
+    }
+};
 
 module.exports = userController
