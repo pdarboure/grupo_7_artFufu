@@ -4,37 +4,56 @@ const productsPath = path.join(__dirname, '../data/products.json');
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
 const Product = require('../database/models/Product');
-const ProductList = require('../data/products.json')
-
-module.exports = {
-    list: (req, res) => {
-        db.ProductList
-            .findAll()
-            .then(product => {
-                return res.status(200).json({
-                    total: product.length,
-                    data: product, 
-                    status: 200,
-                })
-            })
-    },
-
-    show: (req, res) => {
-        db.Product
-            .findByPk(rq.params.id)
-            .then(product => {
-                return res.status(200).json({
-                    data: product, 
-                    status: 200,
-                })
-            })
-    }
-};
 
 const productController = {
+    list: (req, res) => {
+        db.Product
+          .findAll()
+          .then(products => {
+            return res.status(200).json({
+              total: products.length,
+              data: products,
+              status: 200,
+            });
+          })
+          .catch(error => {
+            console.log(error);
+            return res.status(500).json({
+              message: 'Internal server error',
+              status: 500,
+            });
+          });
+      },
+
+      show: (req, res) => {
+        db.Product
+          .findByPk(req.params.id)
+          .then(product => {
+            if (!product) {
+              return res.status(404).json({
+                message: 'Product not found',
+                status: 404,
+              });
+            }
+    
+            return res.status(200).json({
+              data: product,
+              status: 200,
+            });
+          })
+          .catch(error => {
+            console.log(error);
+            return res.status(500).json({
+              message: 'Internal server error',
+              status: 500,
+            });
+          });
+      },
+
     getProducts: () => {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
+
     index: async(req, res) => {
         try {
             
@@ -53,6 +72,7 @@ const productController = {
             res.send(error)
         }
     },
+
     show: async (req, res) => {
        try {
 
@@ -73,6 +93,7 @@ const productController = {
             res.send(error)
         }
     },
+
     create: async(req, res) => {
         try {
             const categorie = await db.ProductCategories.findAll()  
@@ -113,6 +134,7 @@ const productController = {
         res.json({error})    
         }
     },
+
     edit: async (req, res) => {
 
         try {
@@ -169,8 +191,8 @@ const productController = {
             console.log(error);
             res.json(error) 
         }
-        
     },
+
     destroy: async(req, res) => {
         
         try {

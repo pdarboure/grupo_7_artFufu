@@ -7,7 +7,6 @@ const Product = require('../database/models/Product');
 
 // Listado de productos
 router.get('/', productController.index);
-// router.get('/api/products', productController.list); // // API endpoint
 // creacion de producto
 router.get('/create', productController.create);
 router.post('/create', upload.single('image'),createMiddleware, productController.store);
@@ -20,5 +19,7 @@ router.delete('/delete/:id', productController.destroy);
 // ver producto
 router.get('/:id', productController.show);
 
+// API endpoint para products
+router.get('/api/products', productController.list);
 
 module.exports = router;
