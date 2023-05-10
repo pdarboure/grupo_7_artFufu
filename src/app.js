@@ -49,6 +49,7 @@ app.use(userRoutes);
 app.use('/products', productRoutes);
 
 app.use(productsRoutes); // Para el API endpoint "/api/products"
+app.use(userRoutes);// Para el API endpoint "/api/users"
 
 
 app.listen(PORT, function () {
