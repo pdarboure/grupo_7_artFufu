@@ -16,15 +16,15 @@
 
             <div class="container-user">
                 <form id="logout-form" method="post">
-                    <button type="submit"><i class="fa fa-sign-out"></i></button>
+                    <a id="logout-link" href="#"><i class="fa fa-sign-out"></i></a>
                   </form>
                   
                   <script>
-                    var form = document.getElementById('logout-form');
-                    form.addEventListener('submit', function(event) {
-                      event.preventDefault();
+                    var logoutLink = document.getElementById('logout-link');
+                    logoutLink.addEventListener('click', function(event) {
+                      event.preventDefault(); // Prevent the default link behavior
                       fetch('/logout', { method: 'post' }).then(function() {
-                     window.location.href = '/login';
+                        window.location.href = '/login'; // Redirect to the login page
                       });
                     });
                   </script>
