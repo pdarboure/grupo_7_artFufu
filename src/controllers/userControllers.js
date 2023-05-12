@@ -4,8 +4,54 @@ const {validationResult} = require ('express-validator');
 const User = require('../services/user');
 const bcrypt = require('bcrypt')
 const db = require('../database/models')
+const Op = db.Sequelize.Op;
 
 const userController = { 
+
+    list: (req, res) => {
+        db.User
+          .findAll()
+          .then(users => {
+            return res.status(200).json({
+              total: users.length,
+              data: users,
+              status: 200,
+            });
+          })
+          .catch(error => {
+            console.log(error);
+            return res.status(500).json({
+              message: 'Internal server error',
+              status: 500,
+            });
+          });
+      },
+
+      show: (req, res) => {
+        db.User
+          .findByPk(req.params.id)
+          .then(user => {
+            if (!user) {
+              return res.status(404).json({
+                message: 'User not found',
+                status: 404,
+              });
+            }
+    
+            return res.status(200).json({
+              data: user,
+              status: 200,
+            });
+          })
+          .catch(error => {
+            console.log(error);
+            return res.status(500).json({
+              message: 'Internal server error',
+              status: 500,
+            });
+          });
+      },
+
     login: (req, res) => {
         res.render('./user/login',{
             css: './css/login.css',
@@ -153,5 +199,15 @@ const userController = {
 
     },
 }
+
+module.exports = {
+    list: (req, res) => {
+        db.User
+            .findAll()
+            .then(users => {
+                return res.json(users)
+            })
+    }
+};
 
 module.exports = userController
