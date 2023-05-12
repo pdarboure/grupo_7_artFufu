@@ -16,7 +16,7 @@
 
                 <img src="/images/users/<%= user.image %>" class="profile-img">
                 <br>
-                
+
                 <form action="/uploadImage" method="post">
                     <i class="far fa-image"><input type="file"> </i>
                     <br>
@@ -40,7 +40,11 @@
                         <a href="/user/edit/<%= user.id %>"> 
                             <button class="customize-btn" type="submit">Editar datos</button>
                         </a>
+                        
                         <br>
+                        <br>
+                        <br>
+
                         <button class="logout-btn" type="submit">Cerrar sesión</button>
                     </form>
                 </div>

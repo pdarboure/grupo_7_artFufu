@@ -40,7 +40,6 @@ body {
 }
 
 .editImg-btn,
-.logout-btn,
 .customize-btn {
   background-color: #5fc4ae;
   color: white;
@@ -52,7 +51,21 @@ body {
 }
 
 .editImg-btn:hover,
-.logout-btn:hover,
 .customize-btn:hover {
   background-color: #4ca095;
+}
+
+.logout-btn {
+    background-color: #f9f9fa;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logout-btn:hover{
+    border: 1.5px solid black;
 }
