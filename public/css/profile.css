@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 .profile {
-  display: inline-block; /* Add this to align div in the middle */
+  display: inline-block; 
 }
 
 .profile-view {
@@ -16,8 +16,8 @@ body {
   color: black;
   text-align: center;
   border: 2px solid #5fc4ae;
-  display: inline-block; /* Add this to adjust width to content */
-  text-align: center; /* Center align content */
+  display: inline-block; 
+  text-align: center; 
 }
 
 .profile-view h1 {

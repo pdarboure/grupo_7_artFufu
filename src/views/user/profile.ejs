@@ -14,15 +14,30 @@
 
             <div class="profile-view">
                 <img src="/images/users/<%= user.image %>" class="profile-img">
+                <br>
+                <form action="" method="post">
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"><input type="file"> </i> Cambiar foto
+                    </button>
+                </form>
+                <br>
+                <br>
                 <p>Nombre: <%= user.name %></p>
                 <br>
                 <p>Apellido: <%= user.lastname %></p>
                 <br>
                 <p>Email: <%= user.email %></p>
                 <br>
-                <button class="customize-btn">Editar datos</button>
-                <br>
-                <button class="logout-btn">Cerrar sesión</button>
+
+                <div class="container-profile">
+                    <form action="/logout" method="post">
+                        <button class="logout-btn" type="submit">Cerrar sesión</button>
+                    </form>
+                    <a href="/user/edit/<%= user.id %>"> 
+                        <button class="customize-btn" type="submit">Editar datos</button>
+                    </a>
+                </div>
+
           </div>
 
         </div>
