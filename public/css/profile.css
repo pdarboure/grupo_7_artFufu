@@ -39,6 +39,7 @@ body {
   margin-bottom: 5px;
 }
 
+.editImg-btn,
 .logout-btn,
 .customize-btn {
   background-color: #5fc4ae;
@@ -50,6 +51,7 @@ body {
   cursor: pointer;
 }
 
+.editImg-btn:hover,
 .logout-btn:hover,
 .customize-btn:hover {
   background-color: #4ca095;
