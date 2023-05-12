@@ -15,6 +15,20 @@
             </div>
 
             <div class="container-user">
+                <form id="logout-form" method="post">
+                    <button type="submit"><i class="fa fa-sign-out"></i></button>
+                  </form>
+                  
+                  <script>
+                    var form = document.getElementById('logout-form');
+                    form.addEventListener('submit', function(event) {
+                      event.preventDefault();
+                      fetch('/logout', { method: 'post' }).then(function() {
+                     window.location.href = '/login';
+                      });
+                    });
+                  </script>
+                  
               <a href="/login"> <i class="fa-solid fa-user"></i></a> 
               <a href="/carritoDeCompras"><i class="fa-solid fa-basket-shopping"></i></a>
                 <div class="content-shopping-cart">
