@@ -90,7 +90,7 @@ const userController = {
                     title: 'Registro',
                     error: {
                         passwordRegistro: {
-                            msg: 'password invalida'
+                            msg: 'Contraseña invalida'
                         }
                     },
                     oldBody: req.body
@@ -99,8 +99,8 @@ const userController = {
 
             if (userFound.user_category_id == 2) {
                 req.session.admin = userFound
-                console.log(req.session.admin, 'este es admin');
-                return res.redirect('/profile')
+                console.log(req.session.admin, 'Este es admin');
+                return res.redirect('/')
             }
             
             if (userFound && validPassword) {
@@ -111,7 +111,7 @@ const userController = {
                         res.cookie('userCookie', userFound, { maxAge: 1000*60*5})
                     }
 
-                   return res.redirect('/profile')
+                   return res.redirect('/')
                 }
      } catch (error) {
         console.log(error);
