@@ -7,37 +7,26 @@
 		<!-- Este ID viene del  JSON -->
 		<main class="container-detalles" id="detalles">
 			<article class="detalle-grid">
-			<% if (product.image) { %>
+			<% if (producto && producto.image) { %>
 				<img class="img-fluid" src="/images/products/<%= producto.image %>" alt="<%= producto.image %>">
 			<% } %>
-			<% if (!producto.image) { %>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg"
-				alt="">
+			<% if (!producto || !producto.image) { %>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Peu404vitfr.jpg" alt="">
 			<% } %>
 
 				<div class="detalles-content">
-					<h3 class="nombre-producto">
-						<%= producto.name %>
-					</h3>
+					<% if (producto && producto.name) { %>
+						<h3 class="nombre-producto">
+						  <%= producto.name %>
+						</h3>
+					<% } %>
 					<!-- <div class="rating">
 					</div> -->
 					<p class="price"><b>Precio: </b> $<%= producto.price %>
 					</p>
-					<p class="description">
-						<!-- <b>Descripcion: </b> <span>Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Soluta quae ad
-							ex sint expedita perspiciatis odit eligendi! Et quia ex aperiam
-							dolorum sunt omnis maiores.
-							Repudiandae delectus iste exercitationem vel?</span> -->
 					</p>
 					<p class="description">
 						<b>Descripcion: </b> <span><%= producto.description %></span>
-						<!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-							voluptates consequuntur in
-							assumenda odit hic, aut cupiditate dolorem aspernatur! Quibusdam
-							iusto magnam vero maxime
-							quisquam voluptatibus minima aliquam molestias, iure ratione
-							commodi, reiciendis quasi.</span> -->
 					</p>
 					<div class="bottom">
 						<div class="btn__group">
