@@ -53,6 +53,14 @@ const mainController = {
             title: 'Editar Producto'
         });
     },
+
+    listaDeProductos: (req, res) => {
+        res.render('./products/index',{
+            css: './css/products.css',
+            title: 'Lista de productos'
+        });
+    },
+
     prueba: async (req, res) => {
         try {   
         const product = await db.Product.findAll({

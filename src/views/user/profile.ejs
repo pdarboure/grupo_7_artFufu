@@ -14,7 +14,7 @@
 
             <div class="profile-view">
 
-                <img src="/images/users/<%= user.image %>" class="profile-img">
+                <img src="/images/users/<%= user ? user.image : admin.image %>" class="profile-img">
                 <br>
 
                 <form action="/uploadImage" method="post">
@@ -27,17 +27,17 @@
                 <br>
 
                 <form action="">
-                    <p>Nombre: <%= user.name %></p>
+                    <p>Nombre: <%= user ? user.name : admin.name %></p>
                     <br>
-                    <p>Apellido: <%= user.lastname %></p>
+                    <p>Apellido: <%= user ? user.lastname : admin.lastname %></p>
                     <br>
-                    <p>Email: <%= user.email %></p>
+                    <p>Email: <%= user ? user.email : admin.email %></p>
                     <br>
                 </form>
 
                 <div class="container-profile">
                     <form action="/logout" method="post">
-                        <a href="/user/edit/<%= user.id %>"> 
+                        <a href="/user/edit/<%= user ? user.id : admin.id %>"> 
                             <button class="customize-btn" type="submit">Editar datos</button>
                         </a>
                         
@@ -62,4 +62,3 @@
   
 </body>
 </html>
-
