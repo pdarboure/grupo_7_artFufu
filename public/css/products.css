@@ -1,9 +1,16 @@
+h1,
+h2 { 
+  text-align: center;
+}
+
 .product-container {
   display: flex;
   align-items: center;
   padding: 20px;
   margin-bottom: 20px;
   background-color: #f8f8f8;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 .product-image {
@@ -26,4 +33,19 @@
 
 .product-action {
   margin-right: 10px;
+}
+
+.h2 a {
+  background-color: #f9f9fa;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.h2 a:hover{
+  border: 1.5px solid black;
 }
