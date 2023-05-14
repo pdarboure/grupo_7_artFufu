@@ -15,7 +15,7 @@ router.get("/register",authMiddleware, userController.register);
 router.post("/register",upload.single('image'),userValidator, userController.registerProcess)
 
 // API endpoint para users
-router.get('/api/users', userController.list);
-router.get('/api/users/:id', userController.show);
+// router.get('/api/users', userController.list);
+// router.get('/api/users/:id', userController.show);
 
 module.exports = router
