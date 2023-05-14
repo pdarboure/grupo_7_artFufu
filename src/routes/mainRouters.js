@@ -15,6 +15,6 @@ router.get("/", mainController.home);
 // producto
 router.get("/carritoDeCompras", mainController.carritoDeCompras);
 router.get("/fibrofacil", mainController.fibrofacil);
-router.get("/prueba", mainController.prueba);
+// router.get("/prueba", mainController.prueba);
 
 module.exports = router

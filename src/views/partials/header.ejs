@@ -15,7 +15,21 @@
             </div>
 
             <div class="container-user">
-              <a href="/login"> <i class="fa-solid fa-user"></i></a> 
+                <form id="logout-form" method="post">
+                    <a id="logout-link" href="#"><i class="fa fa-sign-out"></i></a>
+                  </form>
+                  
+                  <script>
+                    var logoutLink = document.getElementById('logout-link');
+                    logoutLink.addEventListener('click', function(event) {
+                      event.preventDefault(); // Prevent the default link behavior
+                      fetch('/logout', { method: 'post' }).then(function() {
+                        window.location.href = '/login'; // Redirect to the login page
+                      });
+                    });
+                  </script>
+                  
+              <a href="/profile"> <i class="fa-solid fa-user"></i></a> 
               <a href="/carritoDeCompras"><i class="fa-solid fa-basket-shopping"></i></a>
                 <div class="content-shopping-cart">
                     <span class="text">Carrito</span>

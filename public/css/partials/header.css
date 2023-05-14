@@ -108,7 +108,12 @@ html {
 	gap: 1rem;
 	cursor: pointer;
 }
-
+.container-user .fa-sign-out {
+	font-size: 3rem;
+	color:#5fc4ae;
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
 .container-user .fa-user {
 	font-size: 3rem;
 	color:#5fc4ae;

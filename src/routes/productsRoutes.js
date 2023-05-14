@@ -20,7 +20,7 @@ router.delete('/delete/:id', productController.destroy);
 router.get('/:id', productController.show);
 
 // API endpoint para products
-router.get('/api/products', productController.list);
-router.get('/api/products/:id', productController.show);
+// router.get('/api/products', productController.list);
+// router.get('/api/products/:id', productController.show);
 
 module.exports = router;
