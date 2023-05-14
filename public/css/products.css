@@ -3,18 +3,22 @@ h2 {
   text-align: center;
 }
 
-.h2 a {
-  background-color: #f9f9fa;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.create-btn {
+  text-align: center;
   margin-top: 10px;
   cursor: pointer;
 }
 
-.h2 a:hover{
-  border: 1.5px solid black;
+.create-btn a {
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.create-btn a:hover{
+  background-color: #5fc4ae;
 }
 
 .product-container {
