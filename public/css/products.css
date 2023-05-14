@@ -51,3 +51,8 @@ img.product-img {
 .h2 a:hover{
   border: 1.5px solid black;
 }
+
+img.product-img {
+  width: 25%; /* sets the image width to 50% of its container */
+  margin: 0 auto; /* centers the image horizontally */
+}
