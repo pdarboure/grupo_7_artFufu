@@ -11,19 +11,19 @@
             <h1><%= product.name %></h1>
             <div class="input-box-edit">  
         <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
-        <label for="name">Nombre del producto:</label>
+        <label for="name">Nombre del producto</label>
                 <input value="<%= product.name %>" type="text" id="name" name="name" <%= product.name %>>
             </div>
             <div class="input-box-edit">
-                <label for="name">Descripción:</label>
+                <label for="name">Descripción</label> <br>
                 <input value="<%= product.description %>" type="text" id="name2" name="description">
             </div>
             <div class="input-box-edit">
-                <label for="number">Precio</label>
+                <label for="number">Precio</label><br>
                 <input value="<%= product.price %>" type="number" id="price" name="price">
             </div>
             <div class="input-box-edit">
-                <label for="name">Seleccionar una imagen para el producto</label>
+                <label for="name">Seleccionar una imagen</label>
                 <input type="file" id="file" name="image" accept=".jpg">
             </div>
                 <div class="input-box-edit">

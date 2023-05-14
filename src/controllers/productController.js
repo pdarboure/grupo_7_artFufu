@@ -64,7 +64,7 @@ const productController = {
             });
             
             res.render('products/index', {
-                css: '../css/homestyles.css',
+                css: '../css/products.css',
                 title: 'Listado de productos',
                 productsList: product
             });

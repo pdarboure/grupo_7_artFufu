@@ -22,9 +22,9 @@
                   <script>
                     var logoutLink = document.getElementById('logout-link');
                     logoutLink.addEventListener('click', function(event) {
-                      event.preventDefault(); // Prevent the default link behavior
+                      event.preventDefault(); 
                       fetch('/logout', { method: 'post' }).then(function() {
-                        window.location.href = '/login'; // Redirect to the login page
+                        window.location.href = '/login';
                       });
                     });
                   </script>
@@ -52,7 +52,6 @@
     <% } %>
 </ul>
 
-<!-- Be sure to include the Font Awesome CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 <script>
@@ -68,7 +67,7 @@
                 <li><a href="#">Más</a></li>
                 <li><a href="#">Blog</a></li>
                 <% if (locals.userIsAdmin) { %>
-                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="/products">Admin</a></li>
                 <% } %>
             </ul>
 
