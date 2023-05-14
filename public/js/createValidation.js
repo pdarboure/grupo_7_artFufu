@@ -108,23 +108,23 @@ formulario.addEventListener("submit", (e)=>{
     }
     if (formulario.description.value.length <= 20) {
         e.preventDefault();
-        alert("Debes ingresar una descripcion de mas de veinte caracteres")
+        // alert("Debes ingresar una descripcion de mas de veinte caracteres")
     }
     if (formulario.capacity.value == "") {
         e.preventDefault();
-        alert("Debes ingresar una capacidad")
+        // alert("Debes ingresar una capacidad")
     }
     if (formulario.price.value == "") {
         e.preventDefault();
-        alert("Debes ingresar un precio")
+        // alert("Debes ingresar un precio")
     }
     if (formulario.image.value == "") {
         e.preventDefault();
-        alert("Debes ingresar una imagen")
+        // alert("Debes ingresar una imagen")
     }
     if (formulario.product_categories_id.value == "") {
         e.preventDefault();
-        alert("Debes ingresar una categoria del producto")
+        // alert("Debes ingresar una categoria del producto")
     }
 
 
