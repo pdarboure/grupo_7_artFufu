@@ -17,7 +17,7 @@
           <% productsList.forEach(products => { %>
               <li>
                   <div class="product-container">
-                      <img class="product-image" src="<%= products.image %>">
+                      <img class="product-image" src="/images/products/<%= products.image %>">
                       <div class="product-details">
                           <h3 class="product-name">
                               <a href="/products/<%= products.id %>"><%= products.name %></a>
