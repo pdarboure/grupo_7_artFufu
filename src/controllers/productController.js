@@ -54,7 +54,7 @@ const productController = {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
 
-    index: async(req, res) => {
+    index: async(req, res) => { 
         try {
             
             const product = await db.Product.findAll({
@@ -66,7 +66,8 @@ const productController = {
             res.render('products/index', {
                 css: '../css/products.css',
                 title: 'Listado de productos',
-                productsList: product
+                productsList: product,
+                user: req.session.userLogged || null
             });
         } catch (error) {
             res.send(error)
@@ -98,7 +99,6 @@ const productController = {
     create: async(req, res) => {
         try {
             const categorie = await db.ProductCategories.findAll()  
-            
             res.render('products/create', {
                 title: 'Nuevo producto',
                 css: '/css/admin.css',
@@ -146,6 +146,7 @@ const productController = {
                 css:'/css/admin.css',
                 product,
                 categorie
+                
             });
             
 

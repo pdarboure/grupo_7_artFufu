@@ -29,7 +29,12 @@
                     });
                   </script>
                   
-              <a href="/profile"> <i class="fa-solid fa-user"></i></a> 
+              <a href="/profile">
+                <% if (user && user.image) { %>
+                    <img src="/images/users/<%= user.image %>" class="profile-img">
+                  <% } else { %>
+                    <i class="fa-solid fa-user"></i>
+                  <% } %>
               <a href="/carritoDeCompras"><i class="fa-solid fa-basket-shopping"></i></a>
                 <div class="content-shopping-cart">
                     <span class="text">Carrito</span>
