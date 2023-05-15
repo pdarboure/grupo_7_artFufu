@@ -4,6 +4,8 @@ const session = require('express-session')
 const loggedMiddleware = require('./middlewares/loggedMiddleware');
 const PORT = process.env.PORT || 3007;
 const cookie = require('cookie-parser'); 
+const cors = require('cors');
+
 
 const path = require("path");
 
@@ -17,6 +19,8 @@ const productsRoutes = require('./routes/productsRoutes');
 // app.use((req, res, next) => {
 //     res.status(404).render('error');
 // });
+
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, '../public')));
 
