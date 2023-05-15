@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs') %> 
-<body>
-    <%- include('../partials/header.ejs') %> 
+<%- include('../partials/head.ejs') %>
 
-    <br>
-    <br>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-    <main class="create-edit">            
-        <!-- metodo aplicado para editar ID -->
-        <div class="container-create-edit">
-                <h1><%= product.name %></h1>
-            
-                <div class="input-box-edit">
+            <br>
+            <br>
 
-            <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
-                
-            <label for="name">Nombre del producto</label>
-                    <input value="<%= product.name %>" type="text" id="name" name="name" <%= product.name %>>
-                </div>
+            <main class="create-edit">
+                <!-- metodo aplicado para editar ID -->
+                <div class="container-create-edit">
+                    <h1>
+                        <%= product.name %>
+                    </h1>
 
-                <div class="input-box-edit">
-                    <label for="name">Descripción</label> <br>
-                    <input value="<%= product.description %>" type="text" id="name2" name="description">
-                </div>
+                    <div class="input-box-edit">
 
-                <div class="input-box-edit">
-                    <label for="number">Precio</label> <br>
-                    <input value="<%= product.price %>" type="number" id="price" name="price">
-                </div>
+                        <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
 
-                <div class="input-box-edit">
-                    <label for="name">Seleccionar una imagen</label>
-                    <input type="file" id="file" name="image" accept=".jpg">
-                </div>
+                            <div class="input-box-edit"><label for="name">Nombre del producto</label><br>
+                                <input value="<%= product.name %>" type="text" id="name" name="name" <%=product.name %>>
+                            </div>
 
-                <div class="input-box-edit">
-                    <label  class="form-label" for="year">Categoría</label>
-                    <select name="product_categories_id" id="product_categories_id">
-                        <option value="" disabled selected >Selecionar:</option>
-                        <% categorie.forEach(categorie => { %>
-                            <option value="<%= categorie.id %>"><%= categorie.category %></option>
-                        <% }) %>
-                    </select>
-                </div>
+                            <div class="input-box-edit">
+                                <label for="name">Descripción</label> <br>
+                                <input value="<%= product.description %>" type="text" id="description"
+                                    name="description">
+                            </div>
 
-                <!-- <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a> -->
-                <button class="cssbuttons-io-button"> Guardar cambios
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            <div class="input-box-edit">
+                                <label for="number">Precio</label> <br>
+                                <input value="<%= product.price %>" type="number" id="price" name="price">
+                            </div>
+
+                            <div class="input-box-edit">
+                                <label for="name">Seleccionar una imagen</label>
+                                <input type="file" id="image" name="image" accept=".jpg">
+                            </div>
+
+                            <div class="input-box-edit">
+                                <label class="form-label" for="year">Categoría</label>
+                                <select name="product_categories_id" id="product_categories_id">
+                                    <option value="" disabled selected>Selecionar:</option>
+                                    <% categorie.forEach(categorie=> { %>
+                                        <option value="<%= categorie.id %>">
+                                            <%= categorie.category %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+
+                            <!-- <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a> -->
+                            <button class="cssbuttons-io-button"> Guardar cambios
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+
+                            <div id="error">
+                            </div>
+
+                        </form>
+
                     </div>
-                </button>
-                
-                <div id="error">
-                </div>
 
-                        <form>
-                            
-        </div>
+            </main>
 
-    </main>
+    </body>
 
-</body>
+    <script src="/js/editProducto.js"></script>
 
-<script src="/js/editProducto.js"></script>
+    <br>
+    <br>
 
-<br>
-<br>
-
-<%- include('../partials/footer.ejs') %> 
+    <%- include('../partials/footer.ejs') %>
 
 </html>

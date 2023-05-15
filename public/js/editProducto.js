@@ -31,7 +31,7 @@ function validarFormulario(evt) {
             if (atributte == "name") {
                 campo = "nombre"
             }
-            if (atributte == "name2") {
+            if (atributte == "description") {
                 campo = "descripcion"
             }
             if (atributte == "description") {
