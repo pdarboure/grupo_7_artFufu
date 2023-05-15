@@ -14,32 +14,34 @@
     
     <br>
     <br>
-  
+    
+    <h2><a href="/products/create">Crear producto</a></h2>
+
+    <br>
+    <br>
+
       <!-- listado de productos, se agrega todo lo que viene por JSON -->
       <ul>
           <% productsList.forEach(products => { %>
               <li>
                   <div class="product-container">
                       <img class="product-img" src="/images/products/<%= products.image %>">
+                      
                       <div class="product-details">
                           <h3 class="product-name">
                               <a href="/products/<%= products.id %>"><%= products.name %></a>
                           </h3>
-                          <!-- add more product details here -->
+                          
                           <div class="product-actions">
                               <a class="product-action" href="/products/edit/<%= products.id %>">Editar</a>
                               <a class="product-action" href="/products/delete/<%= products.id %>">Eliminar</a>
                           </div>
+                        
                       </div>
                   </div>
               </li>
           <% }) %>
       </ul>
-
-      <br>
-      <br>
-
-      <h2><a href="/products/create">Crear producto</a></h2>
 
       <br>
       <br>
