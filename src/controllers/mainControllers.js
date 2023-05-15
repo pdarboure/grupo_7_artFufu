@@ -54,12 +54,6 @@ const mainController = {
         });
     },
 
-    listaDeProductos: (req, res) => {
-        res.render('./products/index',{
-            css: './css/products.css',
-            title: 'Lista de productos'
-        });
-    },
 
     prueba: async (req, res) => {
         try {   
