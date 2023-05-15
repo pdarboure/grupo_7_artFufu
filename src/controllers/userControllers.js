@@ -52,10 +52,12 @@ const userController = {
           });
       },
 
-    login: (req, res) => {
-        res.render('./user/login',{
-            css: './css/login.css',
-            title: 'Login'
+      login: (req, res) => {
+        let user = req.session.userLogged || null; // Check if user is logged in
+        res.render('./user/login', {
+          css: './css/login.css',
+          title: 'Login',
+          user,
         });
     },
     loginProcess:async(req,res) =>{

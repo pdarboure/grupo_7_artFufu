@@ -86,7 +86,8 @@ const productController = {
             res.render('products/show', {
                 css: '/css/detalleproducto.css',
                 title: 'Detalle Producto',
-                producto: product
+                producto: product,
+                user: req.session.userLogged || null
             });
             
         } catch (error) {
