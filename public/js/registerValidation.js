@@ -25,7 +25,7 @@ function validarFormulario(evt) {
         if (!input.value.length) {
             input.style.borderBottomColor = 'red';
             input.style.color = 'red'; 
-            // input.style.backgroundColor = "rgb(168, 110, 110)"; 
+           
             if (atributte == "nombre") {
                 campo = "nombre"             
             }

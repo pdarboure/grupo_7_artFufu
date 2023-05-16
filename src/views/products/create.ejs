@@ -18,38 +18,43 @@
                                     <p>
                                         <%= error.name.msg %>
                                     </p>
-                                    <% } %>
+                                <% } %>
+                                <br>
                             </div>
+                
                             <div class="input-box">
                                 <label for="year">Descripcion</label>
-                                <input type="text" name="description"
+                                <input type="text" name="description" id="description"
                                     value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
                                 <% if (locals.error && error.price) { %>
                                     <p>
                                         <%= error.price.msg %>
                                     </p>
-                                    <% } %>
+                                <% } %>
                             </div>
+
                             <div class="input-box">
                                 <label for="year">Cantidad</label>
-                                <input type="text" name="capacity"
+                                <input type="text" name="cantidad" id="cantidad"
                                     value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
                                 <% if (locals.error && error.price) { %>
                                     <p>
                                         <%= error.price.msg %>
                                     </p>
-                                    <% } %>
+                                <% } %>
                             </div>
+
                             <div class="input-box">
                                 <label for="year">Precio</label>
-                                <input type="number" name="price"
+                                <input type="number" name="price" id="price"
                                     value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
                                 <% if (locals.error && error.price) { %>
                                     <p>
                                         <%= error.price.msg %>
                                     </p>
-                                    <% } %>
+                                <% } %>
                             </div>
+
                             <div class="input-box">
                                 <label for="name">Seleccioná una imagen </label>
                                 <input type="file" name="image" id="image">
@@ -57,11 +62,12 @@
                                     <p>
                                         <%= error.image.msg %>
                                     </p>
-                                    <% } %>
+                                <% } %>
                             </div>
+
                             <div class="input-box">
                                 <label for="year">Categoría</label>
-                                <select name="product_categories_id" id="">
+                                <select name="product_categories_id" id="product_categories_id">
                                     <option value="" disabled selected>Selecionar:</option>
                                     <% categorie.forEach(categorie=> { %>
                                         <option value="<%= categorie.id %>">
@@ -70,6 +76,7 @@
                                         <% }) %>
                                 </select>
                             </div>
+
                             <button class="cssbuttons-io-button"> Crear Producto
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -80,9 +87,13 @@
                                     </svg>
                                 </div>
                             </button>
+
+                        <br>
+                        <br>
+                        <div id="error"></div>
+
                         </div>
                     </h3>
-                    <div id="error"></div>
             </form>
             </main>
     </body>
