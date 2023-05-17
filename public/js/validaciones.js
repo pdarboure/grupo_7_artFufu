@@ -84,29 +84,29 @@ formulario.addEventListener("keyup", ()=>{
 formulario.addEventListener("submit", (e)=>{
       e.preventDefault();
     
-     if (formulario.nombre.value == "") {
-        alert("Debes ingresar tu nombre")
+     if (formulario.nombre.value <= 3) {
+        // alert("Debes ingresar tu nombre")
     }
     
     if (formulario.apellido.value == "") {
-        alert("Debes ingresar tu apellido")
+        // alert("Debes ingresar tu apellido")
     }   
     if (formulario.numeroTelefono.value == "") {
-        alert("Debes ingresar tu numero de telefono")
+        // alert("Debes ingresar tu numero de telefono")
     }
     if (formulario.nombreUsuario.value == "") {
-        alert("Debes ingresar tu nombre usuario")
+        // alert("Debes ingresar tu nombre usuario")
     }
     if (formulario.passwordRegistro.value == "") {
-        alert("Debes ingresar tu contraseña")
+        // alert("Debes ingresar tu contraseña")
     }
     
     if (formulario.emailRegistro.value == "") {
-        alert("Debes ingresar tu email")
+        // alert("Debes ingresar tu email")
     }
     
     if (formulario.checkPassword.value == "") {
-        alert("Debes ingresar una confirmacion de contraseña")
+        // alert("Debes ingresar una confirmacion de contraseña")
     }
     
 })
