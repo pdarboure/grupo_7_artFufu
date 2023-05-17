@@ -10,9 +10,29 @@ inputs.forEach((input) => {
 // ejecuta el evento BLUR x el que se muestran los errores
 
 let contentError = document.getElementById('error');
+let contentErrorName = document.getElementById('errorNombre');
+let contentErrorApellido = document.getElementById('errorApellido');
+let contentErrorMail = document.getElementById('errorMail');
+let contentErrorUsuario = document.getElementById('errorUsuario');
+let contentErrorTelefono = document.getElementById('errorTelefono');
 
 function mostrarError(error) {
     contentError.innerHTML = `<p class='error'>${error}</p>`
+}
+function mostrarErrorNombre(error) {
+    contentErrorName.innerHTML = `<p class='errorNombre'>${error}</p>`
+}
+function mostrarErrorApellido(error) {
+    contentErrorApellido.innerHTML = `<p class='errorApellido'>${error}</p>`
+}
+function mostrarErrorMail(error) {
+    contentErrorMail.innerHTML = `<p class='errorMail'>${error}</p>`
+}
+function mostrarErrorUsuario(error) {
+    contentErrorUsuario.innerHTML = `<p class='errorUsuario'>${error}</p>`
+}
+function mostrarErrorTelefono(error) {
+    contentErrorTelefono.innerHTML = `<p class='errorTelefono'>${error}</p>`
 }
 
 // validar el CADA ERROR EN EL EVENTO BLUR
@@ -89,31 +109,31 @@ formulario.addEventListener("keyup", ()=>{
   formulario.addEventListener("submit", (e)=>{
     if (formulario.nombre.value.length < 3) {
         e.preventDefault();
-        alert("Debes ingresar un nombre de mas de tres caracteres")
+        mostrarErrorNombre("Debes ingresar un nombre de mas de tres caracteres")
     }
     if (formulario.apellido.value.length < 3) {
         e.preventDefault();
-        alert("Debes ingresar un apellido de mas de tres caracteres")
+        mostrarErrorApellido("Debes ingresar un apellido de mas de tres caracteres")
     }
-    if (formulario.emailRegistro.value == "") {
+    if (formulario.emailRegistro.value.length < 5) {
         e.preventDefault();
-        alert("Debes ingresar un mail")
+        mostrarErrorMail("Debes ingresar un email valido")
     }
-    if (formulario.numeroTelefono.value == "") {
+    if (formulario.numeroTelefono.value.length < 10) {
         e.preventDefault();
-        alert("Debes ingresar una numero de telefono")
+        mostrarErrorTelefono("Debes ingresar un usuario de mas de diez caracteres")
     }
-    if (formulario.nombreUsuario.value == "") {
+    if (formulario.nombreUsuario.value.length <3 ) {
         e.preventDefault();
-        alert("Debes ingresar un nombre de usuario")
+        mostrarErrorUsuario("Debes ingresar un usuario de mas de tres caracteres")
     }
     if (formulario.checkPassword.value.length <= 7) {
         e.preventDefault();
-        alert("Debes ingresar una contraseña mayor a 8 caracteres")
+        mostrarError("Debes ingresar una contraseña mayor a 8 caracteres")
     }
     if (formulario.passwordRegistro.length <= 7) {
         e.preventDefault();
-        alert("Debes ingresar una contraseña mayor a 8 caracteres")
+        mostrarError("Debes ingresar una contraseña mayor a 8 caracteres")
     }
 
 

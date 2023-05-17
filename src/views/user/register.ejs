@@ -16,6 +16,7 @@
               <span class="details">Nombre</span>
               <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre"
                 value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
+                <div id="errorNombre"></div>
               <% if (locals.error && error.nombre) { %>
                 <p>
                   <%= error.nombre.msg %>
@@ -26,29 +27,32 @@
               <span class="details">Apellido</span>
               <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido"
                 value="<%= locals.oldBody && oldBody.apellido? oldBody.apellido: '' %>">
-              <% if (locals.error && error.apellido) { %>
-                <p>
-                  <%= error.apellido.msg %>
-                </p>
-                <% } %>
+                <div id="errorApellido"></div>
+                <% if (locals.error && error.apellido) { %>
+                  <p>
+                    <%= error.apellido.msg %>
+                  </p>
+                  <% } %>
             </div>
             <div class="input-box">
               <span class="details">Nombre de Usuario</span>
               <input type="text" placeholder="Ingrese usuario" name="nombreUsuario" id="nombreUsuario"
                 value="<%= locals.oldBody && oldBody.nombreUsuario? oldBody.nombreUsuario: '' %>">
-              <% if (locals.error && error.nombreUsuario) { %>
-                <p>
-                  <%= error.nombreUsuario.msg %>
-                </p>
-                <% } %>
-            </div>
-            <div class="input-box">
-              <span class="details">Email</span>
-              <input type="email" placeholder="Ingrese email" name="emailRegistro" id="emailRegistro"
-                value="<%= locals.oldBody && oldBody.emailRegistro? oldBody.emailRegistro: '' %>">
-              <% if (locals.error && error.emailRegistro) { %>
-                <p>
-                  <%= error.emailRegistro.msg %>
+                <div id="errorUsuario"></div>
+                <% if (locals.error && error.nombreUsuario) { %>
+                  <p>
+                    <%= error.nombreUsuario.msg %>
+                  </p>
+                  <% } %>
+                </div>
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="email" placeholder="Ingrese email" name="emailRegistro" id="emailRegistro"
+                  value="<%= locals.oldBody && oldBody.emailRegistro? oldBody.emailRegistro: '' %>">
+                  <div id="errorMail"></div>
+                  <% if (locals.error && error.emailRegistro) { %>
+                    <p>
+                      <%= error.emailRegistro.msg %>
                 </p>
                 <% } %>
 
@@ -56,7 +60,7 @@
             <div class="input-box">
               <span class="details">Numero de Telefono</span>
               <input type="text" placeholder="Ingrese numero" name="numeroTelefono" id="numeroTelefono">
-
+              <div id="errorTelefono"></div>
             </div>
             <div class="input-box">
               <span class="details">Contraseña</span>
