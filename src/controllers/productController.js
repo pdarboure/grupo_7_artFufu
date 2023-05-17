@@ -54,7 +54,7 @@ const productController = {
         return JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
     },
 
-    index: async(req, res) => {
+    index: async(req, res) => { 
         try {
             
             const product = await db.Product.findAll({
@@ -66,7 +66,8 @@ const productController = {
             res.render('products/index', {
                 css: '../css/products.css',
                 title: 'Listado de productos',
-                productsList: product
+                productsList: product,
+                user: req.session.userLogged || null
             });
         } catch (error) {
             res.send(error)
@@ -86,7 +87,8 @@ const productController = {
             res.render('products/show', {
                 css: '/css/detalleproducto.css',
                 title: 'Detalle Producto',
-                producto: product
+                producto: product,
+                user: req.session.userLogged || null
             });
             
         } catch (error) {
@@ -97,11 +99,11 @@ const productController = {
     create: async(req, res) => {
         try {
             const categorie = await db.ProductCategories.findAll()  
-            
             res.render('products/create', {
                 title: 'Nuevo producto',
                 css: '/css/admin.css',
-                categorie
+                categorie,
+                user: req.session.userLogged || null
             });
         } catch (error) {
             res.send(error)
@@ -117,7 +119,8 @@ const productController = {
                 error: error.mapped(),
                 title: 'Nuevo producto',
                 css: '/css/admin.css',
-                categorie
+                categorie,
+                user: req.session.userLogged || null
             })
         };
         try {
@@ -138,13 +141,15 @@ const productController = {
     edit: async (req, res) => {
 
         try {
+           
             const product = await db.Product.findByPk(req.params.id)
             const categorie = await db.ProductCategories.findAll()
             res.render('products/editarProducto', {
                 title: 'Mi producto',
                 css:'/css/admin.css',
                 product,
-                categorie
+                categorie,
+                user: req.session.userLogged || null
             });
             
 
@@ -184,7 +189,8 @@ const productController = {
             res.render('products/delete', {
                 title: 'Eliminar producto',
                 css:'/css/admin.css',
-                producto: product
+                producto: product,
+                user: req.session.userLogged || null
             });
             
         } catch (error) {

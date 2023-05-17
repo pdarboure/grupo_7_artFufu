@@ -19,6 +19,7 @@ h2 {
 
 .create-btn a:hover{
   background-color: #5fc4ae;
+  border: 1px solid white;
 }
 
 .product-container {
