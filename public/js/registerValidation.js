@@ -76,20 +76,7 @@ function validarFormulario(evt) {
     }
 }
 
-//validacion de password
 
-// formulario.addEventListener("keyup", ()=>{
-//     let password = document.querySelector("#passwordRegistro")
-//     let checkPassword = document.querySelector("#checkPassword")
-//     if (password.value == checkPassword.value) {
-    
-//     }
-//     else{
-//         password.style.backgroundColor="red"
-//     }
-//     console.log(password.value == checkPassword.value, password.value, checkPassword.value);
-    
-// })
 
 formulario.addEventListener("keyup", ()=>{
     let password = document.querySelector("#passwordRegistro")
@@ -141,12 +128,3 @@ formulario.addEventListener("keyup", ()=>{
 })
 
 
-// formulario.addEventListener("submit", (e)=>{
-//      const inputArray = [formulario.nombre,formulario.apellido,formulario.numeroTelefono,formulario.nombreUsuario,formulario.passwordRegistro,formulario.emailRegistro]
-    
-//     const inputEmpty = isEmpty(inputArray)
-
-//     if (inputEmpty.includes(true)) {
-//         e.preventDefault()
-//     }
-// })
