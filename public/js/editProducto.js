@@ -94,9 +94,9 @@ formulario.addEventListener("submit", (e)=>{
         e.preventDefault();
         mostrarErrorCantidad("Debes ingresar una cantidad")
     }
-    if (formulario.price.value.length < 9) {
+    if (formulario.price.value < 1) {
         e.preventDefault();
-        mostrarErrorPrice("Debes ingresar un precio mayor a 9")
+        mostrarErrorPrice("Debes ingresar un precio mayor a 1")
     }
     if (formulario.image.value.length == "") {
         e.preventDefault();
