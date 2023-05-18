@@ -17,9 +17,9 @@
                                 <br>
                                 <input type="text" id="name" name="name" value="<%= product.name %>">
                                 <div id="errorNombre"></div>
-                                    <% if (locals.error && error.nombre) { %>
+                                <% if (locals.error && error.nombre) { %>
                                     <p>
-                                    <%= error.nombre.msg %>
+                                        <%= error.nombre.msg %>
                                     </p>
                                     <% } %>
                             </div>
@@ -28,23 +28,28 @@
                                 <label for="name">Descripción</label> <br>
                                 <input type="text" id="description" name="description"
                                 value="<%= product.description %>">
+                                <div id="errorDescription"></div>
                             </div>
 
                             <div class="input-box-edit">
                                 <label for="name">Cantidad</label> <br>
                                 <input type="text" id="cantidad" name="cantidad"
                                 value="<%= product.description %>">
+                                <div id="errorCantidad"></div>
                             </div>
 
                             <div class="input-box-edit">
                                 <label for="number">Precio</label> <br>
                                 <input type="number" id="price" name="price"
                                 value="<%= product.price %>">
+                                <div id="errorPrice"></div>
                             </div>
 
                             <div class="input-box-edit">
                                 <label for="name">Seleccioná una imagen</label>
                                 <input type="file" id="image" name="image" accept=".jpg">
+                                <div id="errorImage"></div>
+
                             </div>
 
                             <div class="input-box-edit">
@@ -57,6 +62,7 @@
                                         </option>
                                         <% }) %>
                                 </select>
+                                <div id="errorCategory"></div>
                             </div>
 
                             <!-- <a href="/"><input class="boton-register" type="submit" value="Guardar cambios"></a> -->
