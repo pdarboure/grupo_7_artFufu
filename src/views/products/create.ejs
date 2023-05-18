@@ -10,6 +10,7 @@
                 <main class="create">
                     <div class="container-create">
                         <form id= "formulario" method="post" action="/products/create" enctype="multipart/form-data">
+                            
                             <div class="input-box underline">
                                 <label for="name">Nombre</label>
                                 <input type="text" name="name" id="name"
@@ -23,7 +24,7 @@
                             </div>
                 
                             <div class="input-box">
-                                <label for="year">Descripcion</label>
+                                <label for="year">Descripción</label>
                                 <input type="text" name="description" id="description"
                                     value="<%= locals.oldBody && oldBody.price ? oldBody.price:'' %>">
                                 <% if (locals.error && error.price) { %>
@@ -57,7 +58,7 @@
 
                             <div class="input-box">
                                 <label for="name">Seleccioná una imagen </label>
-                                <input type="file" name="image" id="image">
+                                <input type="file" name="image" id="image" accept=".jpg">
                                 <% if (locals.error && error.image) { %>
                                     <p>
                                         <%= error.image.msg %>
@@ -87,9 +88,7 @@
                                     </svg>
                                 </div>
                             </button>
-
-                        <br>
-                        <br>
+                            
                         <div id="error"></div>
 
                         </div>
@@ -97,7 +96,7 @@
             </form>
             </main>
     </body>
-    <!-- <%- include('../partials/footer.ejs') %>  -->
+    <%- include('../partials/footer.ejs') %>
     <script src="/js/createValidation.js"></script>
 
 

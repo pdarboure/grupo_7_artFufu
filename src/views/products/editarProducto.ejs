@@ -6,37 +6,39 @@
     <body>
         <%- include('../partials/header.ejs') %>
 
-            <br>
-            <br>
-
             <main class="create-edit">
                 <!-- metodo aplicado para editar ID -->
                 <div class="container-create-edit">
-                    <h1>
-                        <%= product.name %>
-                    </h1>
 
-                    <div class="input-box-edit">
+                    <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
 
-                        <form id="formulario" method="post" action="/products/edit/<%= product.id %>?_method=PUT">
-
-                            <div class="input-box-edit"><label for="name">Nombre del producto</label><br>
-                                <input value="<%= product.name %>" type="text" id="name" name="name" <%=product.name %>>
+                            <div class="input-box-edit">
+                                <label for="name">Nombre</label>
+                                <br>
+                                <input type="text" id="name" name="name" 
+                                    value="<%= product.name %>">
                             </div>
 
                             <div class="input-box-edit">
                                 <label for="name">Descripción</label> <br>
-                                <input value="<%= product.description %>" type="text" id="description"
-                                    name="description">
+                                <input type="text" id="description" name="description"
+                                value="<%= product.description %>">
+                            </div>
+
+                            <div class="input-box-edit">
+                                <label for="name">Cantidad</label> <br>
+                                <input type="text" id="cantidad" name="cantidad"
+                                value="<%= product.description %>">
                             </div>
 
                             <div class="input-box-edit">
                                 <label for="number">Precio</label> <br>
-                                <input value="<%= product.price %>" type="number" id="price" name="price">
+                                <input type="number" id="price" name="price"
+                                value="<%= product.price %>">
                             </div>
 
                             <div class="input-box-edit">
-                                <label for="name">Seleccionar una imagen</label>
+                                <label for="name">Seleccioná una imagen</label>
                                 <input type="file" id="image" name="image" accept=".jpg">
                             </div>
 
@@ -64,21 +66,15 @@
                                 </div>
                             </button>
 
-                            <div id="error">
-                            </div>
+                        <div id="error"></div>
 
-                        </form>
-
-                    </div>
-
-            </main>
+                    </form>
+                </div>   
+        </main>
 
     </body>
 
     <script src="/js/editProducto.js"></script>
-
-    <br>
-    <br>
 
     <%- include('../partials/footer.ejs') %>
 
