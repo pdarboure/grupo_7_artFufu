@@ -12,17 +12,19 @@
       <div class="content">
         <form id="formulario" action="/register" method="post" enctype="multipart/form-data">
           <div class="user-details">
+
             <div class="input-box">
               <span class="details">Nombre</span>
               <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre"
                 value="<%= locals.oldBody && oldBody.nombre? oldBody.nombre: '' %>">
                 <div id="errorNombre"></div>
-              <% if (locals.error && error.nombre) { %>
+                <% if (locals.error && error.nombre) { %>
                 <p>
                   <%= error.nombre.msg %>
                 </p>
                 <% } %>
             </div>
+
             <div class="input-box">
               <span class="details">Apellido</span>
               <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido"
@@ -34,6 +36,7 @@
                   </p>
                   <% } %>
             </div>
+
             <div class="input-box">
               <span class="details">Nombre de Usuario</span>
               <input type="text" placeholder="Ingrese usuario" name="nombreUsuario" id="nombreUsuario"
@@ -44,8 +47,9 @@
                     <%= error.nombreUsuario.msg %>
                   </p>
                   <% } %>
-                </div>
-                <div class="input-box">
+            </div>
+
+            <div class="input-box">
                   <span class="details">Email</span>
                   <input type="email" placeholder="Ingrese email" name="emailRegistro" id="emailRegistro"
                   value="<%= locals.oldBody && oldBody.emailRegistro? oldBody.emailRegistro: '' %>">
@@ -55,13 +59,14 @@
                       <%= error.emailRegistro.msg %>
                 </p>
                 <% } %>
-
             </div>
+
             <div class="input-box">
               <span class="details">Numero de Telefono</span>
               <input type="text" placeholder="Ingrese numero" name="numeroTelefono" id="numeroTelefono">
               <div id="errorTelefono"></div>
             </div>
+
             <div class="input-box">
               <span class="details">Contraseña</span>
               <input type="password" placeholder="Ingrese contraseña" name="passwordRegistro" id="passwordRegistro">
@@ -70,13 +75,13 @@
                   <%= error.passwordRegistro.msg %>
                 </p>
                 <% } %>
-
             </div>
+
             <div class="input-box">
               <span class="details">Confirme Contraseña</span>
               <input type="password" placeholder="Confirme contraseña" name="checkPassword" id="checkPassword">
-
             </div>
+
             <div class="input-box">
               <span class="details">Ingrese una imagen</span>
               <input type="file" placeholder="Ingrese nombre" name="image" id="image">
@@ -85,8 +90,8 @@
                   <%= error.image.msg %>
                 </p>
                 <% } %>
-
             </div>
+
           </div>
           <!-- <div class="gender-details">
             <span class="gender-title">Aceptar Términos y Condiciones</span>

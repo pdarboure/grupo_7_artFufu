@@ -15,8 +15,13 @@
                             <div class="input-box-edit">
                                 <label for="name">Nombre</label>
                                 <br>
-                                <input type="text" id="name" name="name" 
-                                    value="<%= product.name %>">
+                                <input type="text" id="name" name="name" value="<%= product.name %>">
+                                <div id="errorNombre"></div>
+                                    <% if (locals.error && error.nombre) { %>
+                                    <p>
+                                    <%= error.nombre.msg %>
+                                    </p>
+                                    <% } %>
                             </div>
 
                             <div class="input-box-edit">
